@@ -1,7 +1,7 @@
 baseURL = 'https://joelyyoung.github.io/'
 languageCode = "en-us"
 # Website title
-title = "Blog"
+title = "Homegage"
 # Theme used
 theme = "hugo-astatine-theme"
 # Public dir
@@ -54,7 +54,7 @@ pygmentsStyle = "native"
 [params]
     # Site description. Individual pages can have descriptions too but if
     # missing it will fallback to that one.
-    description = """The homepage of Joel Yang's blog."""
+    description = """Joel Yang's blog."""
     # Author of the site
     authorName = "Joel Yang"
     # Main image for the author. This will be the default image for SEO.

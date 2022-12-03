@@ -19,12 +19,15 @@ personal_title: "Undergraduate Student"
 # An address (you can list multiple)
 address: 
   - 
-    city: Wuhan, China
-    location: HUST
+    name: Huazhong University of Science and Technology
+    street: Luoyu Lu Road
+    postal_code: "420111"
+    locality: Wuhan, China
+    email: joelyyang@outlook.com
 
 # === Optional fields ===
 # Add an email with a mailto: hyperlink
-# email: aaaa@example.com
+
 # Add an email "image" for spam protection. With light and dark mode
 # emailImg: 
 #   dark: /img/dark_email.png
