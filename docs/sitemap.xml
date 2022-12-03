@@ -8,7 +8,7 @@
     </url>
     
     <url>
-        <loc>https://joelyyoung.github.io/post/</loc>
+        <loc>https://joelyyoung.github.io/demopage/</loc>
         <lastmod>2018-05-09T00:00:00+00:00</lastmod>
         <priority>0</priority>
     </url>
@@ -49,7 +49,7 @@
     </url>
     
     <url>
-        <loc>https://joelyyoung.github.io/the-actor-is-a-gander/</loc>
+        <loc>https://joelyyoung.github.io/demopage/the-actor-is-a-gander/</loc>
         <lastmod>2018-05-09T00:00:00+00:00</lastmod>
     </url>
     
@@ -79,7 +79,7 @@
     </url>
     
     <url>
-        <loc>https://joelyyoung.github.io/the-beach-is-a-push/</loc>
+        <loc>https://joelyyoung.github.io/demopage/the-beach-is-a-push/</loc>
         <lastmod>2018-03-09T00:00:00+00:00</lastmod>
     </url>
     
@@ -99,7 +99,7 @@
     </url>
     
     <url>
-        <loc>https://joelyyoung.github.io/extending-this-logic/</loc>
+        <loc>https://joelyyoung.github.io/demopage/extending-this-logic/</loc>
         <lastmod>2018-02-09T00:00:00+00:00</lastmod>
     </url>
     
@@ -114,7 +114,13 @@
     </url>
     
     <url>
-        <loc>https://joelyyoung.github.io/about/</loc>
+        <loc>https://joelyyoung.github.io/contact/</loc>
+        <priority>0</priority>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/post/</loc>
+        <priority>0</priority>
     </url>
     
 </urlset>

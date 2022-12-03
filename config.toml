@@ -1,7 +1,7 @@
 baseURL = 'https://joelyyoung.github.io/'
 languageCode = "en-us"
 # Website title
-title = "Homegage"
+title = "Joel Yang"
 # Theme used
 theme = "hugo-astatine-theme"
 # Public dir
@@ -35,9 +35,15 @@ pygmentsStyle = "native"
 
 # This links to the page about.md
 [[menu.main]]
-    name = "About"
-    url = "/about/"
+    name = "Contact"
+    url = "/contact/"
     weight = -110
+
+# This links to the page about.md
+[[menu.main]]
+    name = "Demo Page"
+    url = "/demopage/"
+    weight = -100
 
 # Make the tags and categories pages accessible directly from the navbar.
 [[menu.main]]
