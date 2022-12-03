@@ -129,7 +129,48 @@
     </div>
 
     <div class="article-content e-content" itemprop="articleBody">
-        <p>to be continued&hellip;</p>
+        <h1 id="target-of-spa">Target of SPA</h1>
+<p><em><strong>Target 1</strong></em>: To answer any none-trivial questions of a program at given <em>program point</em>, e.g.</p>
+<ul>
+<li><strong>Whether</strong> the judgement that <code>x &gt; const</code> always true, i.e., invariant.</li>
+<li><strong>What</strong> is the possible range of a number x?</li>
+</ul>
+<p><em><strong>Target 2</strong></em>: To answer any questions of a program, e.g.</p>
+<ul>
+<li><strong>How</strong> much memory could the program consume?</li>
+<li><strong>Whether</strong> the program terminates on all legal inputs?</li>
+</ul>
+<p>They concerns both &ldquo;yes-or-no&rdquo; questions and more general questions. As to two typical problems, <em>bug detecting</em> and <em>program verification</em>, we can sovle them by reducing to a basic questions: &ldquo;is each statement error free?&rdquo;.</p>
+<h1 id="perfect-analyzer">&ldquo;Perfect&rdquo; Analyzer</h1>
+<p>A perfect analyzer should be able to give the <strong>correct</strong> answer to all &ldquo;yes-or-no&rdquo; questions. Theoratically, correctness can be judged by considering the real execution.</p>
+<h1 id="approximation-analyzer">Approximation Analyzer</h1>
+<p>However, we are facing engeneering challenges like space and time to be <strong>perfect</strong>, i.e., to be always <strong>correct</strong>.</p>
+<p>So for some <strong>practical seneries</strong>, we give <strong>approximation answers</strong>. And they are alway required to be <em><strong>conservative</strong></em> basically.  <em>Conservative</em> means &ldquo;make the <strong>safe</strong> judgement&rdquo;, i.e., when we are <strong>not sure enough</strong> about a question, there are <strong>usually</strong> a safe answer to choose. E.g., for <em>bug detecting</em> problem, we could say <strong>YES</strong> to be safe because we want no false error alarm. And for <em>program verification</em> problem, we could say <strong>NO</strong> to be safe because we don&rsquo;t want any potential errors to be omitted. And for general questions like the range of an int variable, we can say it may be any number to be safe. <strong>Note that safe does not mean correct</strong>.</p>
+<p>However, both of the above answers are obviously not useful enough, i.e., we need more <strong>informative</strong> answers. To achieve the goal, we need to try to be more sure about each question. <strong>And that&rsquo;s what all of our struggles lies in</strong>.</p>
+<h1 id="normalization">Normalization</h1>
+<p>Flatten nested expressions, using fresh variables, e.g.</p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span>x = f(y+<span style="color:#3677a9">3</span>)*<span style="color:#3677a9">5</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// after normalization
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>t1 = y+<span style="color:#3677a9">3</span>;
+</span></span><span style="display:flex;"><span>t2 = f(t1);
+</span></span><span style="display:flex;"><span>x = t2*<span style="color:#3677a9">5</span>;
+</span></span></code></pre></div><h1 id="summary">Summary</h1>
+<ul>
+<li>
+<p>Target of SPA is to <strong>answer questions</strong> about program points and program, and they could be &ldquo;yes-or-no&rdquo; questions and general questions.</p>
+</li>
+<li>
+<p>Being <strong>correct</strong> is not easy, and thus we accept <strong>approximation</strong> answers.</p>
+</li>
+<li>
+<p>Safe or <strong>Conservative</strong> is a basic and must requirement for approximation answers.</p>
+</li>
+<li>
+<p>Except from <strong>soundness</strong>, we also want more <strong>informative</strong> or precise answers. That&rsquo;s will usually consume more resources like time and memory.</p>
+</li>
+</ul>
 
     </div>
 
