@@ -70,3 +70,9 @@ x = t2*5;
 - Safe or **Conservative** is a basic and must requirement for approximation answers.
 - Except from **soundness**, we also want more **informative** or precise answers. That's will usually consume more resources like time and memory.
 
+# Reference
+
+- [*Static Program Analysis*](https://cs.au.dk/~amoeller/spa/)
+
+- [SPA Slide 1](https://cs.au.dk/~amoeller/spa/1-TIP.pdf)
+
