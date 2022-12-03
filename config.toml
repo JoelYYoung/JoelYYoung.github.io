@@ -1,0 +1,6 @@
+baseURL = 'https://joelyyoung.github.io/'
+languageCode = "en-us"
+title = "My website on the web"
+theme = "mero"
+author = "Seth Kenlon"
+description = "My hugo demo"
