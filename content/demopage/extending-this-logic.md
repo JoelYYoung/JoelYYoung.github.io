@@ -4,6 +4,7 @@ title = "Extending this logic"
 slug = "extending-this-logic"
 categories = [ "Post", "Metaphorsum" ]
 tags = [ "Lamb", "Shell", "Bookcase", "Nothing" , "Code"]
+
 +++
 
 The quiets could be said to resemble terete lambs. Extending this logic, we can

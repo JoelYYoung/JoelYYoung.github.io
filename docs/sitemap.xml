@@ -4,7 +4,43 @@
     
     <url>
         <loc>https://joelyyoung.github.io/</loc>
-        <lastmod>2018-05-09T00:00:00+00:00</lastmod>
+        <lastmod>2022-12-03T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/post/</loc>
+        <lastmod>2022-12-03T00:00:00+00:00</lastmod>
+        <priority>0</priority>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/categories/</loc>
+        <lastmod>2022-12-03T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/tags/reading-note/</loc>
+        <lastmod>2022-12-03T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/categories/reading-note/</loc>
+        <lastmod>2022-12-03T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/extending-this-logic/</loc>
+        <lastmod>2022-12-03T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/tags/static-program-anaysis/</loc>
+        <lastmod>2022-12-03T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/tags/</loc>
+        <lastmod>2022-12-03T00:00:00+00:00</lastmod>
     </url>
     
     <url>
@@ -15,11 +51,6 @@
     
     <url>
         <loc>https://joelyyoung.github.io/tags/actor/</loc>
-        <lastmod>2018-05-09T00:00:00+00:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://joelyyoung.github.io/categories/</loc>
         <lastmod>2018-05-09T00:00:00+00:00</lastmod>
     </url>
     
@@ -40,11 +71,6 @@
     
     <url>
         <loc>https://joelyyoung.github.io/tags/snowflakes/</loc>
-        <lastmod>2018-05-09T00:00:00+00:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://joelyyoung.github.io/tags/</loc>
         <lastmod>2018-05-09T00:00:00+00:00</lastmod>
     </url>
     
@@ -115,11 +141,6 @@
     
     <url>
         <loc>https://joelyyoung.github.io/contact/</loc>
-        <priority>0</priority>
-    </url>
-    
-    <url>
-        <loc>https://joelyyoung.github.io/post/</loc>
         <priority>0</priority>
     </url>
     
