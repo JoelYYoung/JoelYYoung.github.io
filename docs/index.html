@@ -1,125 +1,352 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-  <title>My website on the web</title>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <meta name="generator" content="mero theme by Darshan in Hugo 0.107.0" />
+	<meta name="generator" content="Hugo 0.107.0">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1"><title>Blog</title>
+<meta property="og:title" content="Blog">
+<meta property="og:type" content="website">
 
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css?family=Overlock|Roboto+Mono&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="/css/mero.css" />
 
-  <script src="/js/mero.js"></script>
-</head>
+<meta property="og:image" content="img/main.jpg">
 
-  <body class="bg-dark text-white m-auto" style="width:95%; max-width: 1024px;">
-    <div class="wrapper">
-      <nav class="mb-3 mt-3 ml-1">
-  <div class="d-flex flex-row">
-    <div
-      class="menu-item border border-warning bg-dark p-2"
-      style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;"
-    >
-      <a href="/"><span>Home</span> </a>
+<meta property="og:url" content="https://joelyyoung.github.io/"><meta property="og:description" content="The homepage of Joel Yang&#39;s blog.">
+<meta name="Description" property="description" content="The homepage of Joel Yang&#39;s blog.">
+
+
+
+
+
+
+<link rel="stylesheet" href="https://joelyyoung.github.io/css/style.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link href="https://joelyyoung.github.io/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed" />
+<meta name="theme-color" content="#ffffff">
+
+
+<script>function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}</script>
+
+  </head>
+  <body>
+    <header class="md:px-0 px-2">
+        <nav >
+  <div class="container flex flex-wrap justify-between items-center mx-auto">
+    <div class="nav-main my-2.5">
+      <a href="https://joelyyoung.github.io/" class="nav-title py-2.5 text-2xl
+               text-zinc-600 dark:text-zinc-300 hover:border-b-0">Blog</a>
     </div>
-    <div class="menu-item dropdown border border-warning bg-dark p-2">
-      <span class="dropbtn text-warning" onclick="toggleMenu(this)"
-        >Sections <i class="fas fa-angle-down"></i
-      ></span>
-      <div
-        class="dropdown-content p-2 bg-dark2 mt-2 rounded w-auto mt-1 d-none"
-        style="min-width: 200px;"
-      >
-        <ul class="list-unstyled">
-          
-        </ul>
-      </div>
-    </div>
-    <div class="menu-item border border-warning bg-dark p-2">
-      <a
-        href="/alltaxa/"
-        ><span>Taxa</span>
-      </a>
-    </div>
-    <div class="menu-item border border-warning bg-dark p-2"
-    style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
-      <a
-        href="/archive/"
-        ><span>Archive</span>
-      </a>
+    <button type="button"
+            onclick="toggleMenu()"
+            class="inline-flex items-center p-2 ml-3
+                  text-sm text-gray-500
+                  rounded-lg md:hidden hover:bg-gray-100
+                  focus:outline-none focus:ring-2
+                  focus:ring-gray-200 dark:text-gray-400
+                  dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor"
+             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1
+                           0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
+                           01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
+                           01-1-1z" clip-rule="evenodd"></path>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="/post/">Posts</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="/categories/">Categories</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="/tags/">Tags</a>
+        </li>
+        
+        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+          <a class="text-zinc-600 dark:text-zinc-300
+                    hover:border-b-0" href="/about/">About</a>
+        </li>
+        
+        <li class="h-7 pl-2.5 pr-0 list-none">
+          <button type="button" onclick="toggleMode()" class="h-full"  aria-label="Toggle between dark and light mode">
+            <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline"
+                 id="ligh-mode-button-img"
+                 alt="A sun icon for switching to light mode"
+                 src="https://joelyyoung.github.io/img/light_mode.svg">
+            <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden"
+                 id="dark-mode-button-img"
+                 alt="A moon icon for switching to dark mode"
+                 src="https://joelyyoung.github.io/img/dark_mode.svg">
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
 
-      <main>
+
+    </header>
+    <main class="content h-card container mt-2 m-auto
+                 leading-loose md:px-0 px-2 z-0"
+          role="main">
+    
+    <div class="head container grid sm:grid-cols-2 grid-cols-1
+            justify-around flex-wrap items-center"
+     itemscope itemtype="http://schema.org/Person">
+    <div class="picture p-8 max-w-[80%] mx-auto basis-20 grow shrink"
+         itemscope itemtype="http://schema.org/ImageObject">
+        <picture>
+            
+            <source srcset="img/main.jpg"
+                    >
+            <img class="main-image u-photo mx-auto"
+            itemprop="contentUrl" alt="Profile picture"
+                 src="img/main.jpg">
+        </picture>
+    </div>
+    <div class="mx-4 ml-8 basis-60 grow shrink-2 leading-snug text-base">
+        <a  class="u-url font-bold" rel="me" itemprop="url" href="https://joelyyoung.github.io/">
+            <h1 class="text-black dark:text-zinc-300 p-name border-0"
+                itemprop="name">Joel Yang
+            </h1>
+        </a>
         
-<div class="d-flex flex-row flex-wrap justify-content-around">
-  <div class="mt-4 home-flex-item" style="width: calc(35% - 20px); min-width: 250px;">
-    <img class="w-100 rounded mb-2" src="/images/main.jpeg" />
-<div class="d-flex justify-content-center mt-2">
-  
+        <h2 itemprop="jobTitle" class="text-xl my-0 border-none">Undergraduate Student</h2>
+            
+            <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">
+                
+                <br>
+                
+            </span>
+            <br>
+            
+            
+            <br>
+            
+            
+            <br>
+            </div>
+            
+    </div>
 </div>
 
-  </div>
+    <h1 id="bio">Bio</h1>
+<p>I am a undergrate at HUST.</p>
 
-  <div class="home-flex-item mt-4" style="width: calc(65% - 20px);">
-    <div class="position-relative border rounded p-2" style="margin-bottom: 40px;">
-      <h4
-  class="pl-2 pr-2 bg-dark rounded border"
-  style="position: absolute; top: -1rem; right: 0.5em;"
->
-  <b>About</b>
-</h4>
-<h1>I am .</h1>
-<p></p>
-
+    
+        <h2 id="publications">Publications</h2>
+    
+    
+        <div class="pub-wrapper w-full inline-flex flex-wrap items-center
+            my-1.5 p-2.5 rounded bg-slate-100 dark:bg-slate-700 box-border
+            leading-tight justify-around" id="measurement-of-the-first-ionization-potential-of-astatine-by-laser-ionization-spectroscopy"
+     itemscope itemtype="http://schema.org/ScholarlyArticle">
+    <div class="pub-image basis-40 grow-0 shrink" itemprop="image"
+         itemscope itemtype="http://schema.org/ImageObject">
+        <img alt="Measurement of the First Ionization Potential of Astatine by Laser Ionization Spectroscopy paper illustration"
+             itemprop="url" src="img/paper_illustration.png"
+             class="w-full"/>
     </div>
-    <div class="home-flex-item position-relative p-2 border rounded text-center">
-      <h4
-  class="pl-2 pr-2 bg-dark rounded border"
-  style="position: absolute; top: -0.7em; left: 0.5em;"
->
-  <b>Recent</b>
-</h4>
-
-<div class="pt-2">
-  
-  <p class="text-right m-0">
-    <a href="/archive/">See All</a>
-  </p>
+    <div class="publication grow shrink-2 basis-3/4 my-1.5 mx-2">
+        
+        
+        <b>
+        
+            <span itemprop="author">Rothe, S.</span>,
+        </b>
+        
+        
+        
+            <span itemprop="author">Andreyev, A. N.</span>,
+        
+        
+            <span itemprop="author">Antalic, S.</span>
+        
+        
+            <span itemprop="author">Borschevsky, A.</span>
+        
+        
+            <span itemprop="author">Capponi, L.</span>
+        
+        
+            <span itemprop="author">Cocolios, T. E.</span>
+        
+        
+            <span itemprop="author">De Witte, H.</span>
+        
+        
+            <span itemprop="author">Eliav, E.</span>
+        
+        <br>
+        <b>
+            <a href="https://www.nature.com/articles/ncomms2819.pdf">
+                <span itemprop="name">Measurement of the First Ionization Potential of Astatine by Laser Ionization Spectroscopy</span>
+            </a>
+        </b>
+        <meta itemprop="headline" content="Measurement of the First Ionization Potential of Astatine by Laser Ionization Spectroscopy"/>
+        <br>
+        
+        <div>
+        In <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+            <i itemprop="name">Nature Communications</i></span>,
+        
+        <meta itemprop="datePublished" content="2013">2013.
+        </div><div itemprop="description" class="pub-description text-sm my-1.5">The radioactive element astatine exists only in trace amounts in nature. Its properties can therefore only be explored by study of the minute quantities of artificially produced isotopes or by performing theoretical calculations. One of the most important properties influencing the chemical behaviour is the energy required to remove one electron from the valence shell, referred to as the ionization potential.</div><div class="pub-link-wrapper mt-1.5 text-sm"><span class="publication-link cursor-pointer
+                         bg-sky-600 dark:bg-sky-700
+                         hover:bg-sky-800
+                         dark:hover:bg-sky-500
+                         text-white
+                         dark:text-zinc-200
+                         dark:hover:text-gray-800
+                         hover:text-gray-900
+                         rounded-sm p-1 mr-1">
+                <button class="open-modal text-inherit"
+                        data-target="#open-modal-measurement-of-the-first-ionization-potential-of-astatine-by-laser-ionization-spectroscopy">Cite</button></span><span class="publication-link bg-sky-600
+                         dark:bg-sky-700 rounded-sm p-1
+                         dark:hover:bg-sky-500
+                         hover:bg-sky-800 mr-1"><a class="border-none
+                         text-white
+                         dark:text-zinc-200
+                         hover:text-gray-900
+                          hover:dark:text-gray-800"
+                   itemprop="mainEntityOfPage" href="https://www.nature.com/articles/ncomms2819">Main URL</a></span><span class="publication-link bg-sky-600
+                         dark:bg-sky-700 rounded-sm p-1
+                         dark:hover:bg-sky-500
+                         hover:bg-sky-800 mr-1"><a class="border-none
+                         text-white
+                         dark:text-zinc-200
+                         hover:text-gray-900
+                          hover:dark:text-gray-800"
+                   itemprop="mainEntityOfPage" href="https://www.researchgate.net/publication/236836716_Measurement_of_the_first_ionization_potential_of_astatine_by_laser_ionization_spectroscopy">ResearchGate</a></span></div>
+    </div>
 </div>
 
+    
+    
+    
+<div id="#open-modal-measurement-of-the-first-ionization-potential-of-astatine-by-laser-ionization-spectroscopy"
+     class="modal-window bg-tp-black invisible fixed top-0 left-0
+            right-0 bottom-0 transition-all pointer-events-none z-50">
+    <div class="absolute top-1/2 left-1/2 p-8 bg-white
+                dark:bg-neutral-700
+
+                max-w-full
+                rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2">
+        <button id="#close-modal-measurement-of-the-first-ionization-potential-of-astatine-by-laser-ionization-spectroscopy" title="Close" class="modal-close rounded-sm p-2">✕</button>
+        <h3>Cite <i>Measurement of the First Ionization Potential of Astatine by Laser Ionization Spectroscopy</i></h3>
+        <button class="modal-copy-citation pr-2 pl-1 my-2 ml-2
+                       bg-sky-600 dark:bg-sky-700 rounded-sm
+                       text-white
+                       dark:text-zinc-200
+                       dark:hover:text-gray-800
+                       hover:text-gray-900
+                       hover:bg-sky-800
+                       disabled:bg-neutral-500
+                       hover:disabled:text-white
+                       dark:hover:disabled:text-zinc-200
+                       dark:disabled:bg-neutral-500
+                       dark:hover:bg-sky-500" id="#copy-2ede6eea">Copy to clipboard</button>
+        <pre class="bg-slate-100 dark:bg-slate-800"><code id="2ede6eea">@article{article,
+ author = {Rothe, Sebastian and Andreyev, A and Antalic, Stanislav and Borschevsky, Anastasia and Capponi, Luigi and Cocolios, Thomas and De Witte, Hilde and Eliav, Ephraim and Fedorov, D.V. and Fedosseev, Valentin and Fink, D and Fritzsche, s and Ghys, Lars and Huyse, M and Imai, Nobuaki and Kaldor, U and Kudryavtsev, Yu and Koester, Ulli and Lane, J and Wendt, Klaus},
+ year = {2013},
+ month = {05},
+ pages = {1835},
+ title = {Measurement of the first ionization potential of astatine by laser ionization spectroscopy},
+ volume = {4},
+ journal = {Nature communications},
+ doi = {10.1038/ncomms2819}
+ }</code></pre>
     </div>
-  </div>
 </div>
 
-      </main>
-    </div>
-    <footer>
-  <div class="w-50 bg-danger ml-auto mr-auto mt-4" style="height: 2px;"></div>
-  <div class="mt-4 mb-2" style="font-size: 0.9em;">
-    <p class="text-center">
-       |
-      <a href="https://github.com/darshanbaral/mero.git">mero</a> theme by
-      <a href="https://www.darshanbaral.com">Darshan</a>
-    </p>
-  </div>
+
+    
+
+    </main>
+    <footer class="footer container h-10 text-center mt-1">
+<hr class="my-4">
+  <ul class="pl-0 mt-1">
+    
+    <li class="ml-2 first:before:content-none before:content-['•']
+               inline-block list-none">
+      <a class="ml-2 text-neutral-800
+                dark:text-neutral-400 border-none"
+          href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+    </li>
+    <li class="ml-2 first:before:content-none before:content-['•']
+                text-neutral-800 dark:text-neutral-400 inline-block list-none">
+      <span class="ml-2">© Joel Yang 2022</span>
+    </li>
+  </ul>
 </footer>
+
+<script>
+ 
+ function toggleModal(win) {
+     return ((event) => {
+         if (event.target.id.startsWith("#open-modal") || 
+             event.target.id.startsWith("#close-modal") || 
+             event.target.classList.contains("open-modal")) {
+             event.stopPropagation();
+             win.classList.toggle("invisible");
+             win.classList.toggle("pointer-events-auto");
+             document.body.classList.toggle("pointer-events-none");
+         }
+     });
+ }
+ var list = document.getElementsByClassName("open-modal");
+ for (let item of list) {
+     var id = item.attributes["data-target"].textContent;
+	 var modWin = document.getElementById(id);
+     var closeButton = document.getElementById(id.replace("open", "close"));
+
+	 item.addEventListener('click', toggleModal(modWin));
+     closeButton.addEventListener('click', toggleModal(modWin));
+     modWin.addEventListener('click', toggleModal(modWin));
+ }
+ var clipboardCopyButtons = document.getElementsByClassName("modal-copy-citation");
+ for (let button of clipboardCopyButtons) {
+     let citation_id = button.id.replace("#copy-", "");
+     let citation_text = document.getElementById(citation_id);
+     button.addEventListener('click', function (clicked) {
+        return function () {
+            if (!clicked) {
+                var last = this.innerHTML;
+                navigator.clipboard
+                         .writeText(citation_text.innerHTML)
+                         .then(() => {
+                             this.innerHTML = "Copied!";
+                             this.disabled = true;
+                         },
+                               () => {this.innerHTML = "Error copying!";});
+                clicked = true;
+                setTimeout(function () {
+                    this.innerHTML = last;
+                    this.disabled = false;
+                    clicked = false;
+                }.bind(this), 1000);
+            }
+        };
+     }(false), this);
+ }
+</script>
+
 
   </body>
 </html>
