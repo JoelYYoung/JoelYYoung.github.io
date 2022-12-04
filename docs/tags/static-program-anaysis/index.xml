@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 03 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/static-program-anaysis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Static Program Analysis Reading Note: Introduction</title>
-      <link>https://joelyyoung.github.io/extending-this-logic/</link>
+      <link>https://joelyyoung.github.io/static-program-analysis-reading-note-introduction/</link>
       <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://joelyyoung.github.io/extending-this-logic/</guid>
+      <guid>https://joelyyoung.github.io/static-program-analysis-reading-note-introduction/</guid>
       <description>Target of SPA Target 1: To answer any none-trivial questions of a program at given program point, e.g.
 Whether the judgement that x &amp;gt; const always true, i.e., invariant. What is the possible range of a number x? Target 2: To answer any questions of a program, e.g.
 How much memory could the program consume? Whether the program terminates on all legal inputs? They concerns both &amp;ldquo;yes-or-no&amp;rdquo; questions and more general questions.</description>

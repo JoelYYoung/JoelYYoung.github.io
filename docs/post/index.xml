@@ -6,13 +6,23 @@
     <description>Recent content on Joel Yang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Use Hugo and GitHub Pages to Build Personal Blog</title>
+      <link>https://joelyyoung.github.io/how-to-use-hugo-and-github-pages/</link>
+      <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/how-to-use-hugo-and-github-pages/</guid>
+      <description>My Needs I want to build a personal academic blog, which should contain:
+A simple bio page that lists my CV, and publications. Pages of my blog articals, like technique articals and reading notes etc. Catagory and tag system to help me organize my published blog articals. Hugo + Github Pages = Perfect Solution Step1: Install Hugo Follow the Tutorial of Installation is enough. It provides 4 optional ways to install Hugo on Windows: downloading prebuilt binaries, use Chocolatey package manager, use docker image and run in docker, and build from source.</description>
+    </item>
+    
     <item>
       <title>Static Program Analysis Reading Note: Introduction</title>
-      <link>https://joelyyoung.github.io/extending-this-logic/</link>
+      <link>https://joelyyoung.github.io/static-program-analysis-reading-note-introduction/</link>
       <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://joelyyoung.github.io/extending-this-logic/</guid>
+      <guid>https://joelyyoung.github.io/static-program-analysis-reading-note-introduction/</guid>
       <description>Target of SPA Target 1: To answer any none-trivial questions of a program at given program point, e.g.
 Whether the judgement that x &amp;gt; const always true, i.e., invariant. What is the possible range of a number x? Target 2: To answer any questions of a program, e.g.
 How much memory could the program consume? Whether the program terminates on all legal inputs? They concerns both &amp;ldquo;yes-or-no&amp;rdquo; questions and more general questions.</description>
