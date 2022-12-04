@@ -29,7 +29,10 @@ Follow the [Totorial of Hosting on GitHub Pages](https://gohugo.io/hosting-and-d
 
 Github provides two ways to build page from your repository: from branch and from GitHub Action. I choose the former because it seems simpler. And I need to configure in **Settings** of my repository, detailed steps are shown in the following screen shot.
 
-![pic1](https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/set-up-github-pages.png)
+<center>
+<img width="700" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/set-up-github-pages.png">
+<div style="color:black;"> <b> GitHub Pages settings </b>  </div>
+</center>
 
 ## Step3: Use Hugo to generate a new website
 
@@ -37,7 +40,10 @@ Github provides two ways to build page from your repository: from branch and fro
 
 Cd to a new directory that you want to maintain the blog. Type `hugo new site blogname` in terminal and execute it to create a new blog website, and Hugo will create a new directory named `blogname` in your working directory. The `blogname` dir defaultly contains the following subdirs: 
 
-![pic2](https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/blogname-dir-content.png)
+<center>
+<img width="700" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/blogname-dir-content.png">
+<div style="color:black;"> <b> sub-directories of blogname </b>  </div>
+</center>
 
 ### Create a new post artical
 
@@ -63,7 +69,10 @@ Execute `git init` command under website project director (`blogname` dir in thi
 
 Get into **Actions** of your repository, wait until it shows all the steps are finished like shown in the following screen shot, and then you will be able to visit your own page by the address of `https://yougithubusrname.github.io`.
 
-![pic3](https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/states.png)
+<center>
+<img width="700" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/states.png">
+<div style="color:black;"> <b> check status </b>  </div>
+</center>
 
 #### Trouble shooting of Step 5
 
