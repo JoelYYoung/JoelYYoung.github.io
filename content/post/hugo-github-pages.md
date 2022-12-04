@@ -29,7 +29,7 @@ Follow the [Totorial of Hosting on GitHub Pages](https://gohugo.io/hosting-and-d
 
 Github provides two ways to build page from your repository: from branch and from GitHub Action. I choose the former because it seems simpler. And I need to configure in **Settings** of my repository, detailed steps are shown in the following screen shot.
 
-![pic1](https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/set up github pages.png)
+![pic1](https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/set-up-github-pages.png)
 
 ## Step3: Use Hugo to generate a new website
 
@@ -37,7 +37,7 @@ Github provides two ways to build page from your repository: from branch and fro
 
 Cd to a new directory that you want to maintain the blog. Type `hugo new site blogname` in terminal and execute it to create a new blog website, and Hugo will create a new directory named `blogname` in your working directory. The `blogname` dir defaultly contains the following subdirs: 
 
-![pic2](https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/blogname dir content.png)
+![pic2](https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/blogname-dir-content.png)
 
 ### Create a new post artical
 
