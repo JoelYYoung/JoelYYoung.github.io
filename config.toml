@@ -15,6 +15,11 @@ paginate = 10
 pygmentsCodefences = true
 pygmentsStyle = "native"
 
+[markup]  
+  [markup.goldmark]    
+    [markup.goldmark.renderer]     
+      unsafe = true
+
 # Taxonomies (only tags and categories are supported out of the box but you can
 # add more)
 [taxonomies]
