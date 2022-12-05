@@ -132,7 +132,8 @@
         <h1 id="abstract">Abstract</h1>
 <p><strong>Keywords</strong>: Computing Model, Finite Automata (FA or DFA), Undeterministic Finite Automata (UFA), Problem, Decision Problem, Function Problem, Turing Machine (TM), Language, Recognizable Language, Regular Language, Decidable Language</p>
 <p>Above are the major topic that will be talked in this artical. And this artical is basically a digest of <a href="https://web.stanford.edu/class/archive/cs/cs103/cs103.1134/">Stanford CS103</a> course slides, which ignores the proof of some conclusion and detailed explainations of some ideas, but just lists the critical conclusions and notions that are helpful for understanding Static Program Analysis.</p>
-<h1 id="computablility">Computablility</h1>
+<p>Advanced classes are <a href="http://infolab.stanford.edu/~ullman/ialc/spr10/spr10.html">CS154</a> and <a href="http://theory.stanford.edu/~liyang/teaching/complexity22.html">CS254</a>. And this is <a href="http://web.stanford.edu/class/archive/cs/cs103/cs103.1184/">2018 version of CS103</a>, this is <a href="https://web.stanford.edu/class/cs103/">2022 Version of CS103</a>.</p>
+<h1 id="computability">Computability</h1>
 <h2 id="how-to-define-the-terminology-problem">How to define the terminology <em>problem</em>?</h2>
 <blockquote>
 <p>We want a definition that</p>
@@ -143,17 +144,70 @@
 </ul>
 <p>No one definition has all three properties.</p>
 </blockquote>
-<p>So we focus on <em><strong>Decision Problem</strong></em>, which is defined to be <strong>problems with yes/no answers</strong>.</p>
+<p>So we focus on <em><strong>Decision Problems</strong></em>, which are defined to be <strong>problems with yes/no answers</strong>.  The other types of <em>problems</em> are <em>function problems</em>, which require to <strong>take in an input and produce some output object rather than just a yes/no answer</strong>.</p>
+<p><em><strong>Decision Problems</strong></em> has the following advantages over none-decision problems:</p>
+<ul>
+<li>Convenient to reason methematically,</li>
+<li>Have simple methematical forms,</li>
+<li>etc.</li>
+</ul>
 <h2 id="how-do-we-encode-a-problem-language">How do we <em>encode</em> a <em>problem</em>: <em>language</em></h2>
+<blockquote>
+<p>Any <em><strong>Decision Problems</strong></em> can be transformed into the problem of <em>Recognizing a Language</em>, i.e., to decide whether a given string <em><strong>belongs to</strong></em> a defined <em><strong>language</strong></em>.</p>
+</blockquote>
+<p>Since <em><strong>Decision Problem = Language Recognizing</strong></em>, we can talk about <em><strong>Languages</strong></em> instead of a specific Decision Problem in the rest part of this artical. As for <strong>how</strong> a problem could be transformed, it&rsquo;s another story.</p>
 <h1 id="finite-automata">Finite Automata</h1>
 <p><strong>Note</strong>: this is correspondent to CS103 Lecture 11-13</p>
-<h2 id="language-of-fa-regular-language">Language of FA: Regular Language</h2>
+<p>Three crutial aspects of finite automata:</p>
+<ul>
+<li>finite states</li>
+<li>transition over specific inputs (be with an <em><strong>alphabet</strong></em> $\Sigma$)</li>
+<li>only one <em><strong>start state</strong></em> &amp; multiple <em><strong>stop states</strong></em></li>
+</ul>
+<p>And we can define our automata&rsquo;s stop states by deviding them into 2 types: <strong>accept states</strong> and <strong>reject states</strong>, so that we can use this automata to solve <em><strong>Decision Problems</strong></em>.</p>
+<h2 id="language-of-fa-regular-languages">Language of FA: <em>Regular Languages</em></h2>
+<p><strong>Definition</strong>: Languages defined by <em>regular expression</em> are <em><strong>Regular Languages</strong></em>.</p>
+<blockquote>
+<p><strong>Conclusion</strong>: For any single <em><strong>regular language</strong></em>, there exists an finite automata that:</p>
+<ul>
+<li>gets into <em><strong>Accept States</strong></em> and <em><strong>halts</strong></em> with string s, when s <em><strong>belongs to</strong></em> the language, and</li>
+<li>gets into <em><strong>Reject States</strong></em> and halts with string s, when s does NOT <em><strong>belongs to</strong></em> the language.</li>
+</ul>
+</blockquote>
+<p>We call a language that satisfies the above condition to a specific automata as <em>the language of that automata</em>.</p>
 <h2 id="undeterministic-finite-automata">Undeterministic Finite Automata</h2>
+<p>to be completed&hellip;</p>
 <h1 id="turing-machines">Turing Machines</h1>
-<h2 id="language-of-tm-decidability">Language of TM: Decidability</h2>
-<h2 id="how-to-encode-a-tm">How to <em>encode</em> a TM?</h2>
+<p>A <em><strong>Turing Machine</strong></em> consists of:</p>
+<ul>
+<li>a finite automata as controler,</li>
+<li>a <strong>infinite long</strong> tape with a head pointing to one position on the tape</li>
+</ul>
+<p>The <em><strong>Start State</strong></em> of a <em>Turing Machine</em> means:</p>
+<ul>
+<li>the FA is at the <em><strong>Start State</strong></em> and</li>
+<li>the input string is somewhere on the tape (where exactly doesn&rsquo;t really matter), and if not given a input, the tape is defaultly set to all <em>Blank Character</em>.</li>
+<li>the head of the tape points to the first character of the input string.</li>
+</ul>
+<p>The <em><strong>execution</strong></em> of a <em>Turing Machine</em> works by repeating the 3 steps until it gets into a <em><strong>Stop State</strong></em>:</p>
+<ul>
+<li>Read the pointed character of the head as input</li>
+<li>Write back to the pointed position</li>
+<li>Transist to the next state</li>
+</ul>
+<h2 id="language-of-tm-recognizability-and-re-languages">Language of TM: <em>Recognizability</em> and $RE$ Languages</h2>
+<p>We can define <em>Language of a Turing Machine</em> just like the <em>Language of a Finite Automata</em>, i.e., the set of strings containing all strings that could be the input of that TM and make the TM to get into an <em><strong>Accept State</strong></em>.</p>
+<p>Then we can define <em><strong>Recognizable Languages</strong></em>, which is a sub set of <em><strong>Languages</strong></em> in which <em><strong>Language</strong></em> $L$ satisfies: there exisit a <em><strong>Turing Machine</strong></em> $M$ that $L$ is the language of $M$. We denote <em><strong>Recognizable Languages</strong></em> as $RE$ <em><strong>Languages</strong></em>.</p>
+<h2 id="decidability-and-r-languages"><em>Decidability</em> and $R$ Languages</h2>
+<p>Since the <em><strong>execution</strong></em> of a <em><strong>Turing Machine</strong></em> with an input s could be devided into exactly 3 categories: ending at <em><strong>Accept State</strong></em>, ending at <em><strong>Reject State</strong></em> and does <strong>NOT</strong> end at all (i.e. diverge). And if we input a <em><strong>string</strong></em> $S \notin L$, then the <em><strong>Turing Machine</strong></em> $M$  may and may not stop.</p>
+<p>If for any $S \notin L$, the <em><strong>Turing Machine</strong></em> $M$ stops (at an <em><strong>Reject State</strong></em>), then $L$ is <em><strong>Decidable</strong></em>, and the <em><strong>Turing Machine</strong></em> $M$ is a <em><strong>Decider</strong></em>. We denote <em><strong>Decidable Languages</strong></em> as $R$ <em><strong>Languages</strong></em>.</p>
+<p>It is instantly available that $R \subseteq RE$, but is $R = RE$?</p>
+<h2 id="conclusion-r-neq-re">Conclusion: $R \neq RE$!</h2>
+<p>It has been proved.</p>
+<h2 id="how-to-encode-a-tm--its-input">How to <em>encode</em> a TM + its input?</h2>
+<p>We denote the encoding of <em><strong>Turing Machine</strong></em> $M$ plus its <em><strong>input string</strong></em> $S$ as $e&lt;M,S&gt;$ .</p>
 <h1 id="universal-turing-machines">Universal Turing Machines</h1>
-<h2 id="decidability"><em>Decidability</em></h2>
+<p><strong>Definition</strong>: a <em><strong>Universal Turing Machine</strong></em> takes in the encoding $e&lt;M,S&gt;$.</p>
 <h1 id="static-program-analyzer-universal-tm">Static Program Analyzer: Universal TM</h1>
 <h2 id="fail-state-of-a-tm"><em>Fail state</em> of a TM</h2>
 
