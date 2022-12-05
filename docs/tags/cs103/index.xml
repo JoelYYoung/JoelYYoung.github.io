@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS103 on Joel Yang</title>
+    <link>https://joelyyoung.github.io/tags/cs103/</link>
+    <description>Recent content in CS103 on Joel Yang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/cs103/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Methematical Fundations of Computing: Study Note of CS103</title>
+      <link>https://joelyyoung.github.io/methematical-fundations-of-computing-study-note/</link>
+      <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/methematical-fundations-of-computing-study-note/</guid>
+      <description>Abstract Keywords: Computing Model, Finite Automata (FA or DFA), Undeterministic Finite Automata (UFA), Problem, Decision Problem, Function Problem, Turing Machine (TM), Language, Recognizable Language, Regular Language, Decidable Language
+Above are the major topic that will be talked in this artical. And this artical is basically a digest of Stanford CS103 course slides, which ignores the proof of some conclusion and detailed explainations of some ideas, but just lists the critical conclusions and notions that are helpful for understanding Static Program Analysis.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -4,22 +4,52 @@
     
     <url>
         <loc>https://joelyyoung.github.io/</loc>
-        <lastmod>2022-12-04T00:00:00+00:00</lastmod>
+        <lastmod>2022-12-05T00:00:00+00:00</lastmod>
     </url>
     
     <url>
         <loc>https://joelyyoung.github.io/post/</loc>
-        <lastmod>2022-12-04T00:00:00+00:00</lastmod>
+        <lastmod>2022-12-05T00:00:00+00:00</lastmod>
         <priority>0</priority>
     </url>
     
     <url>
-        <loc>https://joelyyoung.github.io/tags/blog/</loc>
-        <lastmod>2022-12-04T00:00:00+00:00</lastmod>
+        <loc>https://joelyyoung.github.io/categories/</loc>
+        <lastmod>2022-12-05T00:00:00+00:00</lastmod>
     </url>
     
     <url>
-        <loc>https://joelyyoung.github.io/categories/</loc>
+        <loc>https://joelyyoung.github.io/tags/computing/</loc>
+        <lastmod>2022-12-05T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/tags/cs103/</loc>
+        <lastmod>2022-12-05T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/tags/methematical/</loc>
+        <lastmod>2022-12-05T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/categories/methematical-fundations-of-computing/</loc>
+        <lastmod>2022-12-05T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/methematical-fundations-of-computing-study-note/</loc>
+        <lastmod>2022-12-05T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/tags/</loc>
+        <lastmod>2022-12-05T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/tags/blog/</loc>
         <lastmod>2022-12-04T00:00:00+00:00</lastmod>
     </url>
     
@@ -35,11 +65,6 @@
     
     <url>
         <loc>https://joelyyoung.github.io/tags/hugo/</loc>
-        <lastmod>2022-12-04T00:00:00+00:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://joelyyoung.github.io/tags/</loc>
         <lastmod>2022-12-04T00:00:00+00:00</lastmod>
     </url>
     

@@ -15,6 +15,7 @@ paginate = 10
 pygmentsCodefences = true
 pygmentsStyle = "native"
 
+# to support inline HTML code, refer to https://www.bilibili.com/read/cv4516916
 [markup]  
   [markup.goldmark]    
     [markup.goldmark.renderer]     

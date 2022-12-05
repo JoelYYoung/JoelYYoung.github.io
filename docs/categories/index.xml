@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Joel Yang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Methematical Fundations of Computing</title>
+      <link>https://joelyyoung.github.io/categories/methematical-fundations-of-computing/</link>
+      <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/categories/methematical-fundations-of-computing/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Techniques</title>
       <link>https://joelyyoung.github.io/categories/techniques/</link>
