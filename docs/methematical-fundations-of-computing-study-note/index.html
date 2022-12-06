@@ -144,7 +144,12 @@
 </ul>
 <p>No one definition has all three properties.</p>
 </blockquote>
-<p>So we focus on <em><strong>Decision Problems</strong></em>, which are defined to be <strong>problems with yes/no answers</strong>.  The other types of <em>problems</em> are <em>function problems</em>, which require to <strong>take in an input and produce some output object rather than just a yes/no answer</strong>.</p>
+<p>So we focus on <em><strong>Decision Problems</strong></em>.</p>
+<blockquote>
+<p><strong>Definition</strong>: A <em><strong>decision problem</strong></em> is the problem of determining an answer to <strong>a class of</strong> yes/no <strong>questions</strong> about some <strong>objects</strong> of interest.</p>
+</blockquote>
+<p><strong>Note</strong>: the above definition points out that a <em><strong>decision problem</strong></em> should contain <strong>a class of</strong> yes/no questions，And these questions should be about some <strong>objects</strong> of interest. <strong>&ldquo;A class of&rdquo;</strong> here should be payed special attention to, which emphasizes that those questions should be of similar forms, i.e., they are about the <strong>same</strong> property of a <strong>same</strong> class of <strong>objects</strong>. <strong>A class of objects</strong> also have some restrictions, there must exist an alphabet $\Sigma$ that and the each object in the <strong>class of objects</strong> has an one-one correspondence to a specific <strong>string</strong> in the string set $\Sigma*$.</p>
+<p>The other types of <em>problems</em> are <em>function problems</em>, which require to <strong>take in an input and produce some output object rather than just a yes/no answer</strong>.</p>
 <p><em><strong>Decision Problems</strong></em> has the following advantages over none-decision problems:</p>
 <ul>
 <li>Convenient to reason methematically,</li>
@@ -153,11 +158,16 @@
 </ul>
 <h2 id="how-do-we-encode-a-problem-language">How do we <em>encode</em> a <em>problem</em>: <em>language</em></h2>
 <blockquote>
-<p>Any <em><strong>Decision Problems</strong></em> can be transformed into the problem of <em>Recognizing a Language</em>, i.e., to decide whether a given string <em><strong>belongs to</strong></em> a defined <em><strong>language</strong></em>.</p>
+<p>Any <em><strong>Decision Problems</strong></em> can be transformed into the problem of <em>recognizing strings&rsquo; membership in a language</em>, i.e., to decide whether a given string <em><strong>belongs to</strong></em> a defined <em><strong>language</strong></em>.</p>
 </blockquote>
-<p>Since <em><strong>Decision Problem = Language Recognizing</strong></em>, we can talk about <em><strong>Languages</strong></em> instead of a specific Decision Problem in the rest part of this artical. As for <strong>how</strong> a problem could be transformed, it&rsquo;s another story.</p>
+<p>This claim seems unreasonable, but remember how we defined the terminology <em><strong>class of objects</strong></em>? We have required  them to be <em>encodable</em>!</p>
+<p>Since <em><strong>Solving Decision Problem = Strings Recognizing</strong></em>, we can talk about <em><strong>Languages</strong></em> instead of a specific Decision Problem in the rest part of this artical. As for <strong>how</strong> a problem could be transformed, it&rsquo;s another story, and <a href="https://www.ccs.neu.edu/home/rjw/csu390-sp06/LectureMaterials/Decision-Problems.pdf">this pdf</a> explains some details. Basically it is the notion same as <em><strong>encoding</strong></em> a class of objects or combinations of classes of objects.</p>
+<p>Note that <em><strong>Finite Automata</strong></em> as a <em><strong>class of objects</strong></em> is encodable!</p>
 <h1 id="finite-automata">Finite Automata</h1>
 <p><strong>Note</strong>: this is correspondent to CS103 Lecture 11-13</p>
+<blockquote>
+<p><em>automaton</em> (/ɔːˈtɒmətən/; plural: <em>automata</em> or <em>automatons</em>)</p>
+</blockquote>
 <p>Three crutial aspects of finite automata:</p>
 <ul>
 <li>finite states</li>
@@ -195,21 +205,41 @@
 <li>Write back to the pointed position</li>
 <li>Transist to the next state</li>
 </ul>
-<h2 id="language-of-tm-recognizability-and-re-languages">Language of TM: <em>Recognizability</em> and $RE$ Languages</h2>
+<h2 id="language-of-tm-recognizability-and-re-languages">Language of TM: <em>Recognizability</em> and <em>RE</em> Languages</h2>
 <p>We can define <em>Language of a Turing Machine</em> just like the <em>Language of a Finite Automata</em>, i.e., the set of strings containing all strings that could be the input of that TM and make the TM to get into an <em><strong>Accept State</strong></em>.</p>
 <p>Then we can define <em><strong>Recognizable Languages</strong></em>, which is a sub set of <em><strong>Languages</strong></em> in which <em><strong>Language</strong></em> $L$ satisfies: there exisit a <em><strong>Turing Machine</strong></em> $M$ that $L$ is the language of $M$. We denote <em><strong>Recognizable Languages</strong></em> as $RE$ <em><strong>Languages</strong></em>.</p>
-<h2 id="decidability-and-r-languages"><em>Decidability</em> and $R$ Languages</h2>
+<p>Note: <strong>NOT</strong> all languages has it&rsquo;s correspondent Turing Machine, only <em>RE</em> has!</p>
+<h2 id="decidability-and-r-languages"><em>Decidability</em> and <em>R​</em> Languages</h2>
 <p>Since the <em><strong>execution</strong></em> of a <em><strong>Turing Machine</strong></em> with an input s could be devided into exactly 3 categories: ending at <em><strong>Accept State</strong></em>, ending at <em><strong>Reject State</strong></em> and does <strong>NOT</strong> end at all (i.e. diverge). And if we input a <em><strong>string</strong></em> $S \notin L$, then the <em><strong>Turing Machine</strong></em> $M$  may and may not stop.</p>
 <p>If for any $S \notin L$, the <em><strong>Turing Machine</strong></em> $M$ stops (at an <em><strong>Reject State</strong></em>), then $L$ is <em><strong>Decidable</strong></em>, and the <em><strong>Turing Machine</strong></em> $M$ is a <em><strong>Decider</strong></em>. We denote <em><strong>Decidable Languages</strong></em> as $R$ <em><strong>Languages</strong></em>.</p>
 <p>It is instantly available that $R \subseteq RE$, but is $R = RE$?</p>
-<h2 id="conclusion-r-neq-re">Conclusion: $R \neq RE$!</h2>
+<h2 id="conclusion-r--re">Conclusion: <em>R ≠ RE</em>​!</h2>
 <p>It has been proved.</p>
 <h2 id="how-to-encode-a-tm--its-input">How to <em>encode</em> a TM + its input?</h2>
-<p>We denote the encoding of <em><strong>Turing Machine</strong></em> $M$ plus its <em><strong>input string</strong></em> $S$ as $e&lt;M,S&gt;$ .</p>
+<p>We denote the encoding of <em><strong>Turing Machine</strong></em> $M$ plus its <em><strong>input string</strong></em> $s$ as $e&lt;M,s&gt;$ .</p>
+<p>to be continued&hellip;</p>
 <h1 id="universal-turing-machines">Universal Turing Machines</h1>
-<p><strong>Definition</strong>: a <em><strong>Universal Turing Machine</strong></em> takes in the encoding $e&lt;M,S&gt;$.</p>
-<h1 id="static-program-analyzer-universal-tm">Static Program Analyzer: Universal TM</h1>
+<p><strong>Definition</strong>: a <em><strong>Universal Turing Machine</strong></em> ($U_{TM}$) takes in the encoding $e&lt;M,s&gt;$, where $M$ is any Turing machine and $s$ is any string in the set of $\Sigma*$. And the $U_{TM}$ should satisfy:</p>
+<ul>
+<li>it rejects $e&lt;M,s&gt;$ iff $M$ reject $s$,</li>
+<li>it accepts $e&lt;M,s&gt;$ iff $M$ accept $s$</li>
+</ul>
+<blockquote>
+<p>Theorem (Turing, 1936): There is a Turing machine UT called the universal Turing machine that, when run on an input of the form ⟨M, w⟩, where M is a Turing machine and w is a string, simulates M running on w and does whatever M does on w (accepts, rejects, or loops). <a href="http://web.stanford.edu/class/archive/cs/cs103/cs103.1184/lectures/22/Small22.pdf">CS103 2018 Small22.pdf</a></p>
+</blockquote>
+<h1 id="static-program-analyzer">Static Program Analyzer</h1>
 <h2 id="fail-state-of-a-tm"><em>Fail state</em> of a TM</h2>
+<blockquote>
+<p>If we model programs as deterministic Turing machines, program failure can be modeled using a special fail state.2 That is, on a given input, a Turing machine will eventually halt in its accept state (intuitively returning “yes”), in its reject state (intuitively returning “no”), in its fail state (meaning that the correctness condition has been violated), or the machine diverges (i.e., never halts). A Turing machine is correct if its fail state is unreachable. <a href="https://cs.au.dk/~amoeller/spa/spa.pdf">Static Program Anaysis Section 1.1</a></p>
+</blockquote>
+<h2 id="does-perfect-universal-analyzer-exist">Does perfect universal analyzer exist?</h2>
+<blockquote>
+<p>It is impossible to build a static program analysis that can decide whether a given program may fail when executed. Moreover, this result holds even if the analysis is only required to work for programs that halt on all inputs.</p>
+</blockquote>
+<p><strong>Note</strong>: such an analyzer is not a $U_{TM}$, because it takes in only $e<M>$ and accept not based on $M$&rsquo;s execution on a single $s$, but based on any of $M$&rsquo;s execution on all $s\in \Sigma*$. And it accepts when $M$&rsquo;s fail state is <em><strong>unreachable</strong></em>.</p>
+<p><strong>Thinking</strong>: is it possible to built such machine if we make more restriction on the input TM?</p>
+<h1 id="reference">Reference</h1>
+<p><a href="https://www.google.com/search?q=decision+problem+encode&amp;oq=&amp;aqs=chrome.2.69i59i450l8.405798079j0j15&amp;sourceid=chrome&amp;ie=UTF-8">Google Search Results</a></p>
 
     </div>
 
