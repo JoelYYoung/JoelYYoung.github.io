@@ -45,6 +45,12 @@ However, both of the above answers are obviously not useful enough, i.e., we nee
 
 
 
+> While it is impossible to build an analysis that would (correctly) decide a property for any program, it is often possible to build analysis that **give useful answers** for **most realistic programs**.
+>
+> -- <cite>Static Program Analysis Page 4</cite>
+
+
+
 # Normalization
 
 Flatten nested expressions, using fresh variables, e.g.

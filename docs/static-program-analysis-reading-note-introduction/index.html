@@ -147,6 +147,10 @@
 <p>However, we are facing engeneering challenges like space and time to be <strong>perfect</strong>, i.e., to be always <strong>correct</strong>.</p>
 <p>So for some <strong>practical seneries</strong>, we give <strong>approximation answers</strong>. And they are alway required to be <em><strong>conservative</strong></em> basically.  <em>Conservative</em> means &ldquo;make the <strong>safe</strong> judgement&rdquo;, i.e., when we are <strong>not sure enough</strong> about a question, there are <strong>usually</strong> a safe answer to choose. E.g., for <em>bug detecting</em> problem, we could say <strong>YES</strong> to be safe because we want no false error alarm. And for <em>program verification</em> problem, we could say <strong>NO</strong> to be safe because we don&rsquo;t want any potential errors to be omitted. And for general questions like the range of an int variable, we can say it may be any number to be safe. <strong>Note that safe does not mean correct</strong>.</p>
 <p>However, both of the above answers are obviously not useful enough, i.e., we need more <strong>informative</strong> answers. To achieve the goal, we need to try to be more sure about each question. <strong>And that&rsquo;s what all of our struggles lies in</strong>.</p>
+<blockquote>
+<p>While it is impossible to build an analysis that would (correctly) decide a property for any program, it is often possible to build analysis that <strong>give useful answers</strong> for <strong>most realistic programs</strong>.</p>
+<p>&ndash; <cite>Static Program Analysis Page 4</cite></p>
+</blockquote>
 <h1 id="normalization">Normalization</h1>
 <p>Flatten nested expressions, using fresh variables, e.g.</p>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span>x = f(y+<span style="color:#3677a9">3</span>)*<span style="color:#3677a9">5</span>;
