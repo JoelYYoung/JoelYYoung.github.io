@@ -69,8 +69,6 @@ pygmentsStyle = "native"
     description = """Joel Yang's blog."""
     # Author of the site
     authorName = "Joel Yang"
-    # math
-    math = true
 
     # Main image for the author. This will be the default image for SEO.
     [params.imgname]
@@ -78,9 +76,9 @@ pygmentsStyle = "native"
         # Add an alt description for the image
         alt = "Profile picture"
 
-    # Indicate if you host Katex yourself. Defaults to using the CDN KaTex.
+    # Indicate if you host Katex yourself. Defaults to using the CDN KaTex. (@JoelYang: this is aborted because I edited ./layout/partial/katex.html)
     # [params.hostedKaTex]
-        hostedKaTex = false
+        # hostedKaTex = false
 
     # Optional: add a twitter handle and mastodon handle for SEO.
     # [params.twitter]

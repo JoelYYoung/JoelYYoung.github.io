@@ -219,7 +219,7 @@
 <p>We denote the encoding of <em><strong>Turing Machine</strong></em> $M$ plus its <em><strong>input string</strong></em> $s$ as $e&lt;M,s&gt;$ .</p>
 <p>to be continued&hellip;</p>
 <h1 id="universal-turing-machines">Universal Turing Machines</h1>
-<p><strong>Definition</strong>: a <em><strong>Universal Turing Machine</strong></em> ($U_{TM}$) takes in the encoding $e&lt;M,s&gt;$, where $M$ is any Turing machine and $s$ is any string in the set of $\Sigma*$. And the $U_{TM}$ should satisfy:</p>
+<p><strong>Definition</strong>: a <em><strong>Universal Turing Machine</strong></em> ($U_{TM}$) takes in the encoding $e&lt; M,s &gt;$, where $M$ is any Turing machine and $s$ is any string in the set of $\Sigma*$. And the $U_{TM}$ should satisfy:</p>
 <ul>
 <li>it rejects $e&lt;M,s&gt;$ iff $M$ reject $s$,</li>
 <li>it accepts $e&lt;M,s&gt;$ iff $M$ accept $s$</li>
@@ -236,7 +236,7 @@
 <blockquote>
 <p>It is impossible to build a static program analysis that can decide whether a given program may fail when executed. Moreover, this result holds even if the analysis is only required to work for programs that halt on all inputs.</p>
 </blockquote>
-<p><strong>Note</strong>: such an analyzer is not a $U_{TM}$, because it takes in only $e<M>$ and accept not based on $M$&rsquo;s execution on a single $s$, but based on any of $M$&rsquo;s execution on all $s\in \Sigma*$. And it accepts when $M$&rsquo;s fail state is <em><strong>unreachable</strong></em>.</p>
+<p><strong>Note</strong>: such an analyzer is not a $U_{TM}$, because it takes in only $e&lt; M &gt;$ and accept not based on $M$&rsquo;s execution on a single $s$, but based on any of $M$&rsquo;s execution on all $s\in \Sigma*$. And it accepts when $M$&rsquo;s fail state is <em><strong>unreachable</strong></em>.</p>
 <p><strong>Thinking</strong>: is it possible to built such machine if we make more restriction on the input TM?</p>
 <h1 id="reference">Reference</h1>
 <p><a href="https://www.google.com/search?q=decision+problem+encode&amp;oq=&amp;aqs=chrome.2.69i59i450l8.405798079j0j15&amp;sourceid=chrome&amp;ie=UTF-8">Google Search Results</a></p>

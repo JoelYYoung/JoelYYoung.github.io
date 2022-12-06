@@ -138,7 +138,7 @@ to be continued...
 
 # Universal Turing Machines
 
-**Definition**: a ***Universal Turing Machine*** ($U_{TM}$) takes in the encoding $e<M,s>$, where $M$ is any Turing machine and $s$ is any string in the set of $\Sigma*$. And the $U_{TM}$ should satisfy:
+**Definition**: a ***Universal Turing Machine*** ($U_{TM}$) takes in the encoding $e< M,s >$, where $M$ is any Turing machine and $s$ is any string in the set of $\Sigma*$. And the $U_{TM}$ should satisfy:
 
 - it rejects $e<M,s>$ iff $M$ reject $s$,
 - it accepts $e<M,s>$ iff $M$ accept $s$
@@ -157,7 +157,7 @@ to be continued...
 
 > It is impossible to build a static program analysis that can decide whether a given program may fail when executed. Moreover, this result holds even if the analysis is only required to work for programs that halt on all inputs.
 
-**Note**: such an analyzer is not a $U_{TM}$, because it takes in only $e<M>$ and accept not based on $M$'s execution on a single $s$, but based on any of $M$'s execution on all $s\in \Sigma*$. And it accepts when $M$'s fail state is ***unreachable***.
+**Note**: such an analyzer is not a $U_{TM}$, because it takes in only $e< M >$ and accept not based on $M$'s execution on a single $s$, but based on any of $M$'s execution on all $s\in \Sigma*$. And it accepts when $M$'s fail state is ***unreachable***.
 
 **Thinking**: is it possible to built such machine if we make more restriction on the input TM? 
 
