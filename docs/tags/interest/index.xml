@@ -6,7 +6,17 @@
     <description>Recent content in Interest on Joel Yang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/interest/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/interest/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Use Hugo and GitHub Pages to Build Personal Blog</title>
+      <link>https://joelyyoung.github.io/how-to-use-hugo-and-github-pages/</link>
+      <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/how-to-use-hugo-and-github-pages/</guid>
+      <description>My Needs I want to build a personal academic blog, which should contain:
+A simple bio page that lists my CV, and publications. Pages of my blog articals, like technique articals and reading notes etc. Catagory and tag system to help me organize my published blog articals. Hugo + Github Pages = Perfect Solution Step1: Install Hugo Follow the Tutorial of Installation is enough. It provides 4 optional ways to install Hugo on Windows: downloading prebuilt binaries, use Chocolatey package manager, use docker image and run in docker, and build from source.</description>
+    </item>
+    
     <item>
       <title>The actor is a gander</title>
       <link>https://joelyyoung.github.io/demopage/the-actor-is-a-gander/</link>

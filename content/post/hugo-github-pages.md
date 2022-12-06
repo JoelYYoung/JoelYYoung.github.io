@@ -3,7 +3,7 @@ date = "2022-12-04"
 title = "How to Use Hugo and GitHub Pages to Build Personal Blog"
 slug = "how-to-use-hugo-and-github-pages"
 categories = [ "Techniques" ]
-tags = ["Blog", "Hugo", "GitHub"]
+tags = ["Blog", "Hugo", "GitHub", "Interest"]
 
 +++
 
