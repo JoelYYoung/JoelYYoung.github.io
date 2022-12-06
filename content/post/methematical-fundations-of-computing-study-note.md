@@ -4,6 +4,7 @@ title = "Methematical Fundations of Computing: Study Note of CS103"
 slug = "methematical-fundations-of-computing-study-note"
 categories = [ "Methematical Fundations of Computing" ]
 tags = ["Methematical", "Computing", "CS103"]
+katex = true
 
 +++
 
