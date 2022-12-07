@@ -6,13 +6,49 @@
     <description>Recent content in Tags on Joel Yang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CMU</title>
+      <link>https://joelyyoung.github.io/tags/cmu/</link>
+      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/tags/cmu/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Computing</title>
       <link>https://joelyyoung.github.io/tags/computing/</link>
-      <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://joelyyoung.github.io/tags/computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CS251</title>
+      <link>https://joelyyoung.github.io/tags/cs251/</link>
+      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/tags/cs251/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Methematical</title>
+      <link>https://joelyyoung.github.io/tags/methematical/</link>
+      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/tags/methematical/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theory</title>
+      <link>https://joelyyoung.github.io/tags/theory/</link>
+      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/tags/theory/</guid>
       <description></description>
     </item>
     
@@ -26,11 +62,11 @@
     </item>
     
     <item>
-      <title>Methematical</title>
-      <link>https://joelyyoung.github.io/tags/methematical/</link>
+      <title>Stanford</title>
+      <link>https://joelyyoung.github.io/tags/stanford/</link>
       <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://joelyyoung.github.io/tags/methematical/</guid>
+      <guid>https://joelyyoung.github.io/tags/stanford/</guid>
       <description></description>
     </item>
     
@@ -58,42 +94,6 @@
       <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://joelyyoung.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Interest</title>
-      <link>https://joelyyoung.github.io/tags/interest/</link>
-      <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://joelyyoung.github.io/tags/interest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reading Note</title>
-      <link>https://joelyyoung.github.io/tags/reading-note/</link>
-      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://joelyyoung.github.io/tags/reading-note/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Static Program Anaysis</title>
-      <link>https://joelyyoung.github.io/tags/static-program-anaysis/</link>
-      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://joelyyoung.github.io/tags/static-program-anaysis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Actor</title>
-      <link>https://joelyyoung.github.io/tags/actor/</link>
-      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://joelyyoung.github.io/tags/actor/</guid>
       <description></description>
     </item>
     

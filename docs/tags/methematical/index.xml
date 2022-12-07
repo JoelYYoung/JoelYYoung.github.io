@@ -6,7 +6,16 @@
     <description>Recent content in Methematical on Joel Yang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/methematical/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/methematical/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CMU CS251 Great Ideas in Theoretical CS: Study Note 1</title>
+      <link>https://joelyyoung.github.io/cmu-cs251-great-ideas-in-theoretical/</link>
+      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/cmu-cs251-great-ideas-in-theoretical/</guid>
+      <description>Abstract I just walked through the Stanford CS103 course&amp;rsquo;s major slides and tried to fix some confusions of Automaton and Turing Machine in such a fulgural way. However, I found that I still felt not clear enough of come key ideas, so I guess maybe this is not a effective way to study something so tough like Theory of Computing. Therefore, I plan to relearn this content as a course, i.</description>
+    </item>
+    
     <item>
       <title>Methematical Fundations of Computing: Study Note of CS103</title>
       <link>https://joelyyoung.github.io/methematical-fundations-of-computing-study-note/</link>
