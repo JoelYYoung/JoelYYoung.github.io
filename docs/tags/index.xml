@@ -6,13 +6,49 @@
     <description>Recent content in Tags on Joel Yang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CMU</title>
       <link>https://joelyyoung.github.io/tags/cmu/</link>
-      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://joelyyoung.github.io/tags/cmu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computer Science</title>
+      <link>https://joelyyoung.github.io/tags/computer-science/</link>
+      <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/tags/computer-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CS251</title>
+      <link>https://joelyyoung.github.io/tags/cs251/</link>
+      <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/tags/cs251/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Methematical</title>
+      <link>https://joelyyoung.github.io/tags/methematical/</link>
+      <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/tags/methematical/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theory</title>
+      <link>https://joelyyoung.github.io/tags/theory/</link>
+      <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/tags/theory/</guid>
       <description></description>
     </item>
     
@@ -22,33 +58,6 @@
       <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://joelyyoung.github.io/tags/computing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CS251</title>
-      <link>https://joelyyoung.github.io/tags/cs251/</link>
-      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://joelyyoung.github.io/tags/cs251/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Methematical</title>
-      <link>https://joelyyoung.github.io/tags/methematical/</link>
-      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://joelyyoung.github.io/tags/methematical/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Theory</title>
-      <link>https://joelyyoung.github.io/tags/theory/</link>
-      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://joelyyoung.github.io/tags/theory/</guid>
       <description></description>
     </item>
     
@@ -85,15 +94,6 @@
       <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://joelyyoung.github.io/tags/github/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://joelyyoung.github.io/tags/hugo/</link>
-      <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://joelyyoung.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

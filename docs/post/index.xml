@@ -6,7 +6,18 @@
     <description>Recent content on Joel Yang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS251 Introduction: What is Computer Science?</title>
+      <link>https://joelyyoung.github.io/cs251-introduction-what-is-computer-science/</link>
+      <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/cs251-introduction-what-is-computer-science/</guid>
+      <description>Computer Science is no more about computers than astronomy is about telescopes.
+&amp;ndash; Edsger Wybe Dijkstra
+What about Mathematics? Before diving into the question of what is computer science, let&amp;rsquo;s deal with the question of what is mathematics first. Obviously it is a big question that no one would ever be confident to answer to. However, I still want to share some of my ideas of what mathematics is.</description>
+    </item>
+    
     <item>
       <title>CMU CS251 Great Ideas in Theoretical CS: Study Note 1</title>
       <link>https://joelyyoung.github.io/cmu-cs251-great-ideas-in-theoretical/</link>
