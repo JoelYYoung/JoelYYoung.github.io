@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Joel Yang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading Note</title>
+      <link>https://joelyyoung.github.io/tags/reading-note/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/tags/reading-note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Static Program Anaysis</title>
+      <link>https://joelyyoung.github.io/tags/static-program-anaysis/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/tags/static-program-anaysis/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CMU</title>
       <link>https://joelyyoung.github.io/tags/cmu/</link>
@@ -76,24 +94,6 @@
       <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://joelyyoung.github.io/tags/stanford/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>https://joelyyoung.github.io/tags/blog/</link>
-      <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://joelyyoung.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GitHub</title>
-      <link>https://joelyyoung.github.io/tags/github/</link>
-      <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://joelyyoung.github.io/tags/github/</guid>
       <description></description>
     </item>
     

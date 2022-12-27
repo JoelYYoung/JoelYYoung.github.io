@@ -4,18 +4,43 @@
     
     <url>
         <loc>https://joelyyoung.github.io/</loc>
-        <lastmod>2022-12-12T00:00:00+00:00</lastmod>
+        <lastmod>2022-12-27T00:00:00+00:00</lastmod>
     </url>
     
     <url>
         <loc>https://joelyyoung.github.io/post/</loc>
-        <lastmod>2022-12-12T00:00:00+00:00</lastmod>
+        <lastmod>2022-12-27T00:00:00+00:00</lastmod>
         <priority>0</priority>
     </url>
     
     <url>
         <loc>https://joelyyoung.github.io/categories/</loc>
-        <lastmod>2022-12-12T00:00:00+00:00</lastmod>
+        <lastmod>2022-12-27T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/tags/reading-note/</loc>
+        <lastmod>2022-12-27T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/categories/reading-note/</loc>
+        <lastmod>2022-12-27T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/static-program-analysis-reading-note-chapter4/</loc>
+        <lastmod>2022-12-27T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/tags/static-program-anaysis/</loc>
+        <lastmod>2022-12-27T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://joelyyoung.github.io/tags/</loc>
+        <lastmod>2022-12-27T00:00:00+00:00</lastmod>
     </url>
     
     <url>
@@ -40,11 +65,6 @@
     
     <url>
         <loc>https://joelyyoung.github.io/tags/methematical/</loc>
-        <lastmod>2022-12-12T00:00:00+00:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://joelyyoung.github.io/tags/</loc>
         <lastmod>2022-12-12T00:00:00+00:00</lastmod>
     </url>
     
@@ -114,22 +134,7 @@
     </url>
     
     <url>
-        <loc>https://joelyyoung.github.io/tags/reading-note/</loc>
-        <lastmod>2022-12-03T00:00:00+00:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://joelyyoung.github.io/categories/reading-note/</loc>
-        <lastmod>2022-12-03T00:00:00+00:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://joelyyoung.github.io/static-program-analysis-reading-note-introduction/</loc>
-        <lastmod>2022-12-03T00:00:00+00:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://joelyyoung.github.io/tags/static-program-anaysis/</loc>
         <lastmod>2022-12-03T00:00:00+00:00</lastmod>
     </url>
     
