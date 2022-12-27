@@ -5,6 +5,7 @@ slug = "static-program-analysis-reading-note-chapter4"
 categories = [ "Reading Note" ]
 headline = "Lattices and Fixpoints"
 tags = ["Static Program Anaysis", "Reading Note"]
+katex = true
 
 +++
 
@@ -15,8 +16,8 @@ tags = ["Static Program Anaysis", "Reading Note"]
 **Def *partial order***: A *set* $S$ as well as a *binary relation* $R$ on $S$ that satisfies the following rules:
 
 - reflexitivity: $\forall x \in S, x R x$.
-- transitivity: $\forall x, y, z \in S, xRy \and yRz \rightarrow xRz$
-- anti-semmetry: $\forall x, y \in S, x R y \and y R x \rightarrow x=y$
+- transitivity: $\forall x,y,z \in S, x R y \wedge y R z \rightarrow x R z$.
+- anti-semmetry: $ \forall x, y \in S, x R y \wedge y R x \rightarrow x=y $
 
 **Note**: If we denote a partial order, we usually refer to $S$ instead of $(S,R)$.
 
@@ -40,7 +41,7 @@ tags = ["Static Program Anaysis", "Reading Note"]
 
 
 
-**Def *product lattice***: We can define the product *lattices* $L$, which is basically the product of a set $P=L_1 \times L_2$. And we can define a relation on the product $P$: $\forall (x1, x2), (x1',x2') \in P$,  $(x1, x2) \sqsubseteq (x1', x2‘)$ if and only if $x1 \sqsubseteq x1' \and x2 \sqsubseteq x2'$.
+**Def *product lattice***: We can define the product *lattices* $L$, which is basically the product of a set $P=L_1 \times L_2$. And we can define a relation on the product $P$: $\forall (x1, x2), (x1',x2') \in P$,  $(x1, x2) \sqsubseteq (x1', x2‘)$ if and only if $x1 \sqsubseteq x1' \wedge x2 \sqsubseteq x2'$.
 
 
 
