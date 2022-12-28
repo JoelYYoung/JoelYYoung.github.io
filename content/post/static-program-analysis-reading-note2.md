@@ -84,7 +84,7 @@ We introduce an algorithm call *naive fixpoint solution*, since $f$ is monotone,
 
 ## What does fixpoint mean
 
-The fix point is just an approximation of the 
+The fix point is just an approximation answer to the question "what values could the variables be at each program point".
 
 ## Reference
 
