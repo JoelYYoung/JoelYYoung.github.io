@@ -147,10 +147,20 @@
 <p><strong>Def <em>lattice</em></strong>:  If a <em>partial order</em> $ (S,R)$ satisfies, $\forall x, y \in S, \exists \sqcup{x,y} \in S$, then it is a <em>lattice</em>.</p>
 <p><strong>Def <em>complete lattice</em></strong>: If a <em>partial order</em> $ (S,R)$ satisfies, $\forall X \subseteq S, \exists \sqcup X \in S$, then it is a <em>complete lattice</em>.</p>
 <p><strong>Def <em>map lattice</em></strong>: If $A$ is any set, and $L$ is a complete lattice, then we can define a set of functions $M$ that map from $A$ to $L$. And we can define a <em>partial relation</em> on $M$: $\forall f,g \in M$, $f \sqsubseteq g$ if and only if $\forall x \in S, f(x) \sqsubseteq g(x)$.</p>
-<p><strong>Def <em>product lattice</em></strong>: We can define the product <em>lattices</em> $L$, which is basically the product of a set $P=L_1 \times L_2$. And we can define a relation on the product $P$: $\forall (x1, x2), (x1&rsquo;,x2&rsquo;) \in P$,  $(x1, x2) \sqsubseteq (x1&rsquo;, x2‘)$ if and only if $x1 \sqsubseteq x1&rsquo; \wedge x2 \sqsubseteq x2&rsquo;$.</p>
+<p><strong>Def <em>product lattice</em></strong>: We can define the product <em>lattices</em> $L$, which is basically the product of a set $P=L_1 \times L_2$. And we can define a relation on the product $P$: $\forall (x1, x2), (x1&rsquo;,x2&rsquo;) \in P$,  $(x1, x2) \sqsubseteq (x1&rsquo;, x2&rsquo;)$ if and only if $x1 \sqsubseteq x1&rsquo; \wedge x2 \sqsubseteq x2&rsquo;$.</p>
+<p><strong>Def <em>homomorphisim</em></strong>: If for 2 lattices $L_1$ and $L_2$, if function $f:L_1 \rightarrow L_2$ satisfies: $\forall x_1, x_2 \in L_1, x_1 \sqsubseteq x_2 \rightarrow f(x_1) \sqsubseteq f(x_2)$, then we say the function $f$ is <em>homomorphisim</em>. A <em>bijective</em> homomorphisim is call <em>isomorphisim</em>.</p>
+<p><strong>Def <em>isomorphic lattice pair</em></strong>: If for 2 lattices $L_1$ and $L_2$, exists a isomorphisim between them, than those 2 lattices are <em>isomorphic</em> to each other.</p>
+<p><strong>Eg. Some $A$ makes product lattice $L^n$ and map lattice $A\rightarrow L$ <em>isomorphic</em></strong>: This is an intuitive example of <em>isomorphic</em>, if $|A|=n$, and we define a function $f$ that maps between $L^n$ and $A\rightarrow L$ in the following way:</p>
+<p>For some $g \in A\rightarrow L$ and $Ln \in L^n$, if $\forall i \in [1, n], g(a_i)=Ln_i$, then $f$ maps $g$ with the $Ln$,</p>
+<p>then the function $f$ is a <em>isomorphisim</em>, and thus the product and map lattice are <em>isomorphic</em>. Note this property is essential to apply the theory of <em>lattice</em> to formalizing the process of <em>Sing Analysis</em>.</p>
 <h2 id="how-to-formalize-sign-analysis-with-the-above-defs">How to Formalize <em>Sign Analysis</em> with the Above Defs?</h2>
-<p><em>to be completed.</em></p>
+<p>We model a program into a <em>CFG</em>, that contains $n$ <em>CFG nodes</em>. And we define the <em><strong>states</strong></em> at a single program point into a <em>map lattice</em> $ML:Vars\rightarrow L$ where $Vars$ is a set of program&rsquo;s variables and $L$ is the <em><strong>sign lattice</strong></em>. Then we can define the <em><strong>states</strong></em> of the whole program $ML^n$.</p>
+<p>According to the whole program can build a set of constraints which can be formalized as $f(x) = x$, $x \in ML^n$, then the whole Sign Analysis job is formalized into solving this <em>equation</em>, and the solution is called <em>fixed point</em> of the function.</p>
 <h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://cs.au.dk/~amoeller/spa/">Static Program Analysis Chapter 4</a></li>
+<li><a href="https://cs.au.dk/~amoeller/spa/3-lattices-and-fixpoints.pdf">SPA Slide 3</a></li>
+</ul>
 
     </div>
 
