@@ -4,6 +4,7 @@ title = "Extending this logic"
 slug = "extending-this-logic"
 categories = [ "Post", "Metaphorsum" ]
 tags = [ "Lamb", "Shell", "Bookcase", "Nothing" , "Code"]
+modified = "2022-12-28"
 
 +++
 

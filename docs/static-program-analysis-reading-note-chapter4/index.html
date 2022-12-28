@@ -13,7 +13,7 @@
 <meta name="Description" property="description" content="Joel Yang&#39;s blog.">
 
 
-<meta property="keywords" content ="static program anaysis, reading note">
+<meta property="keywords" content ="static program analysis, reading note">
 
 
 
@@ -137,9 +137,9 @@
 <h2 id="basic-math-languages">Basic Math Languages</h2>
 <p><strong>Def <em>partial order</em></strong>: A <em>set</em> $S$ as well as a <em>binary relation</em> $R$ on $S$ that satisfies the following rules:</p>
 <ul>
-<li>reflexitivity: $\forall x \in S, x R x$.</li>
+<li>reflexivity: $\forall x \in S, x R x$.</li>
 <li>transitivity: $\forall x,y,z \in S, x R y \wedge y R z \rightarrow x R z$.</li>
-<li>anti-semmetry: $ \forall x, y \in S, x R y \wedge y R x \rightarrow x=y $</li>
+<li>anti-symmetry: $ \forall x, y \in S, x R y \wedge y R x \rightarrow x=y $</li>
 </ul>
 <p><strong>Note</strong>: If we denote a partial order, we usually refer to $S$ instead of $(S,R)$.</p>
 <p><strong>Def <em>upper bound/lower bound</em></strong>: For $X\subseteq S$, the <em>upper bound</em> of $X$ is any $y \in S$ that satisfies $\forall x \in X, x R y$. We use $X \sqsubseteq y$ to denote that. And <em>lower bound</em> is similarly defined. We use $\sqcup X$ to denote any single <em>upper bound</em> of $X$.</p>
@@ -148,14 +148,26 @@
 <p><strong>Def <em>complete lattice</em></strong>: If a <em>partial order</em> $ (S,R)$ satisfies, $\forall X \subseteq S, \exists \sqcup X \in S$, then it is a <em>complete lattice</em>.</p>
 <p><strong>Def <em>map lattice</em></strong>: If $A$ is any set, and $L$ is a complete lattice, then we can define a set of functions $M$ that map from $A$ to $L$. And we can define a <em>partial relation</em> on $M$: $\forall f,g \in M$, $f \sqsubseteq g$ if and only if $\forall x \in S, f(x) \sqsubseteq g(x)$.</p>
 <p><strong>Def <em>product lattice</em></strong>: We can define the product <em>lattices</em> $L$, which is basically the product of a set $P=L_1 \times L_2$. And we can define a relation on the product $P$: $\forall (x1, x2), (x1&rsquo;,x2&rsquo;) \in P$,  $(x1, x2) \sqsubseteq (x1&rsquo;, x2&rsquo;)$ if and only if $x1 \sqsubseteq x1&rsquo; \wedge x2 \sqsubseteq x2&rsquo;$.</p>
-<p><strong>Def <em>homomorphisim</em></strong>: If for 2 lattices $L_1$ and $L_2$, if function $f:L_1 \rightarrow L_2$ satisfies: $\forall x_1, x_2 \in L_1, x_1 \sqsubseteq x_2 \rightarrow f(x_1) \sqsubseteq f(x_2)$, then we say the function $f$ is <em>homomorphisim</em>. A <em>bijective</em> homomorphisim is call <em>isomorphisim</em>.</p>
-<p><strong>Def <em>isomorphic lattice pair</em></strong>: If for 2 lattices $L_1$ and $L_2$, exists a isomorphisim between them, than those 2 lattices are <em>isomorphic</em> to each other.</p>
+<p><strong>Def <em>homomorphism</em></strong>: If for 2 lattices $L_1$ and $L_2$, if function $f:L_1 \rightarrow L_2$ satisfies: $\forall x_1, x_2 \in L_1, x_1 \sqsubseteq x_2 \rightarrow f(x_1) \sqsubseteq f(x_2)$, then we say the function $f$ is <em>homomorphism</em>. A <em>bijective</em> homomorphism is call <em>isomorphism</em>.</p>
+<p><strong>Def <em>isomorphic lattice pair</em></strong>: If for 2 lattices $L_1$ and $L_2$, exists a isomorphism between them, than those 2 lattices are <em>isomorphic</em> to each other.</p>
 <p><strong>Eg. Some $A$ makes product lattice $L^n$ and map lattice $A\rightarrow L$ <em>isomorphic</em></strong>: This is an intuitive example of <em>isomorphic</em>, if $|A|=n$, and we define a function $f$ that maps between $L^n$ and $A\rightarrow L$ in the following way:</p>
 <p>For some $g \in A\rightarrow L$ and $Ln \in L^n$, if $\forall i \in [1, n], g(a_i)=Ln_i$, then $f$ maps $g$ with the $Ln$,</p>
-<p>then the function $f$ is a <em>isomorphisim</em>, and thus the product and map lattice are <em>isomorphic</em>. Note this property is essential to apply the theory of <em>lattice</em> to formalizing the process of <em>Sing Analysis</em>.</p>
+<p>then the function $f$ is a <em>isomorphism</em>, and thus the product and map lattice are <em>isomorphic</em>. Note this property is essential to apply the theory of <em>lattice</em> to formalizing the process of <em>Sing Analysis</em>.</p>
 <h2 id="how-to-formalize-sign-analysis-with-the-above-defs">How to Formalize <em>Sign Analysis</em> with the Above Defs?</h2>
 <p>We model a program into a <em>CFG</em>, that contains $n$ <em>CFG nodes</em>. And we define the <em><strong>states</strong></em> at a single program point into a <em>map lattice</em> $ML:Vars\rightarrow L$ where $Vars$ is a set of program&rsquo;s variables and $L$ is the <em><strong>sign lattice</strong></em>. Then we can define the <em><strong>states</strong></em> of the whole program $ML^n$.</p>
 <p>According to the whole program can build a set of constraints which can be formalized as $f(x) = x$, $x \in ML^n$, then the whole Sign Analysis job is formalized into solving this <em>equation</em>, and the solution is called <em>fixed point</em> of the function.</p>
+<h2 id="constraint">Constraint</h2>
+<p>Given a simple CFG (no loops or branches), let $x_1, x_2, &hellip;, x_n$ be the <em><strong>states</strong></em> of program points (CFG nodes), then we can generate constraints of node $i$ by the following 3 rules:</p>
+<ul>
+<li>if node $i$ is var declaring statement<code>var a</code>: $x_i = x_{i-1}[a = \top]$</li>
+<li>if node $i$ is var definition statement<code>a = c</code>: $x_i = x_{i-1}[a=x_{i-1}(c)]$</li>
+<li>all else statement: $x_i = x_{i-1}$</li>
+</ul>
+<p>If the CFG contains loops or branches instead, we replace $x_{i-1}$ with the <em>least upper bound</em> of all predecessors&rsquo; states of node $i$.</p>
+<h2 id="solution-to-the-constraint-system">Solution to the constraint system</h2>
+<p>We introduce an algorithm call <em>naive fixpoint solution</em>, since $f$ is monotone, we can calculate $f(x)$ and use the output as input repeatedly and finally get to the fix point $x$ that makes $x = f(x)$.</p>
+<h2 id="what-does-fixpoint-mean">What does fixpoint mean</h2>
+<p>The fix point is just an approximation of the</p>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://cs.au.dk/~amoeller/spa/">Static Program Analysis Chapter 4</a></li>
@@ -188,7 +200,7 @@
     Tags:
     
     <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200"
-       href="/tags/static-program-anaysis">
+       href="/tags/static-program-analysis">
         <span class="flex flex-row justify-start items-center
                      dark:bg-zinc-900 dark:hover:bg-zinc-700
                      hover:bg-zinc-200 bg-zinc-100
@@ -198,7 +210,7 @@
             
             <img class="h-4 mr-2 inline" src="https://joelyyoung.github.io/images/tag_logo.svg"
                  alt="Logo of a tag: indicates that a tag item follows.">
-            Static Program Anaysis
+            Static Program Analysis
         </span>
     </a>
     
@@ -227,9 +239,9 @@
     
     <div class="text-neutral-500 mb-4">
         Last modified <span itemprop="dateModified"
-                            datetime="2022-12-27T00:00:00Z"
-                            content="2022-12-27T00:00:00Z">
-        2022.12.27
+                            datetime="2022-12-28T00:00:00Z"
+                            content="2022-12-28T00:00:00Z">
+        2022.12.28
         </span>
     </div>
     

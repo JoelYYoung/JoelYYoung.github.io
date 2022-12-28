@@ -3,7 +3,7 @@ date = "2022-12-03"
 title = "Static Program Analysis Reading Note: Introduction"
 slug = "static-program-analysis-reading-note-introduction"
 categories = [ "Reading Note" ]
-tags = ["Static Program Anaysis", "Reading Note"]
+tags = ["Static Program Analysis", "Reading Note"]
 
 +++
 

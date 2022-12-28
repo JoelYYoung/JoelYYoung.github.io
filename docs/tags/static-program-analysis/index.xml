@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reading Note on Joel Yang</title>
-    <link>https://joelyyoung.github.io/tags/reading-note/</link>
-    <description>Recent content in Reading Note on Joel Yang</description>
+    <title>Static Program Analysis on Joel Yang</title>
+    <link>https://joelyyoung.github.io/tags/static-program-analysis/</link>
+    <description>Recent content in Static Program Analysis on Joel Yang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/reading-note/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/static-program-analysis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Static Program Analysis Reading Note: Chapter 4</title>
       <link>https://joelyyoung.github.io/static-program-analysis-reading-note-chapter4/</link>

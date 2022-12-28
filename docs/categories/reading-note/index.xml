@@ -14,7 +14,7 @@
       
       <guid>https://joelyyoung.github.io/static-program-analysis-reading-note-chapter4/</guid>
       <description>Static Program Analysis Reading Note: Chapter 4 Basic Math Languages Def partial order: A set $S$ as well as a binary relation $R$ on $S$ that satisfies the following rules:
-reflexitivity: $\forall x \in S, x R x$. transitivity: $\forall x,y,z \in S, x R y \wedge y R z \rightarrow x R z$. anti-semmetry: $ \forall x, y \in S, x R y \wedge y R x \rightarrow x=y $ Note: If we denote a partial order, we usually refer to $S$ instead of $(S,R)$.</description>
+reflexivity: $\forall x \in S, x R x$. transitivity: $\forall x,y,z \in S, x R y \wedge y R z \rightarrow x R z$. anti-symmetry: $ \forall x, y \in S, x R y \wedge y R x \rightarrow x=y $ Note: If we denote a partial order, we usually refer to $S$ instead of $(S,R)$.</description>
     </item>
     
     <item>

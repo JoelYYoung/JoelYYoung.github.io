@@ -4,8 +4,9 @@ title = "Static Program Analysis Reading Note: Chapter 4"
 slug = "static-program-analysis-reading-note-chapter4"
 categories = [ "Reading Note" ]
 headline = "Lattices and Fixpoints"
-tags = ["Static Program Anaysis", "Reading Note"]
+tags = ["Static Program Analysis", "Reading Note"]
 katex = true
+modified = "2022-12-28"
 
 +++
 
@@ -15,9 +16,9 @@ katex = true
 
 **Def *partial order***: A *set* $S$ as well as a *binary relation* $R$ on $S$ that satisfies the following rules:
 
-- reflexitivity: $\forall x \in S, x R x$.
+- reflexivity: $\forall x \in S, x R x$.
 - transitivity: $\forall x,y,z \in S, x R y \wedge y R z \rightarrow x R z$.
-- anti-semmetry: $ \forall x, y \in S, x R y \wedge y R x \rightarrow x=y $
+- anti-symmetry: $ \forall x, y \in S, x R y \wedge y R x \rightarrow x=y $
 
 **Note**: If we denote a partial order, we usually refer to $S$ instead of $(S,R)$.
 
@@ -45,11 +46,11 @@ katex = true
 
 
 
-**Def *homomorphisim***: If for 2 lattices $L_1$ and $L_2$, if function $f:L_1 \rightarrow L_2$ satisfies: $\forall x_1, x_2 \in L_1, x_1 \sqsubseteq x_2 \rightarrow f(x_1) \sqsubseteq f(x_2)$, then we say the function $f$ is *homomorphisim*. A *bijective* homomorphisim is call *isomorphisim*.
+**Def *homomorphism***: If for 2 lattices $L_1$ and $L_2$, if function $f:L_1 \rightarrow L_2$ satisfies: $\forall x_1, x_2 \in L_1, x_1 \sqsubseteq x_2 \rightarrow f(x_1) \sqsubseteq f(x_2)$, then we say the function $f$ is *homomorphism*. A *bijective* homomorphism is call *isomorphism*.
 
 
 
-**Def *isomorphic lattice pair***: If for 2 lattices $L_1$ and $L_2$, exists a isomorphisim between them, than those 2 lattices are *isomorphic* to each other.
+**Def *isomorphic lattice pair***: If for 2 lattices $L_1$ and $L_2$, exists a isomorphism between them, than those 2 lattices are *isomorphic* to each other.
 
 
 
@@ -57,7 +58,7 @@ katex = true
 
 For some $g \in A\rightarrow L$ and $Ln \in L^n$, if $\forall i \in [1, n], g(a_i)=Ln_i$, then $f$ maps $g$ with the $Ln$, 
 
-then the function $f$ is a *isomorphisim*, and thus the product and map lattice are *isomorphic*. Note this property is essential to apply the theory of *lattice* to formalizing the process of *Sing Analysis*.
+then the function $f$ is a *isomorphism*, and thus the product and map lattice are *isomorphic*. Note this property is essential to apply the theory of *lattice* to formalizing the process of *Sing Analysis*.
 
   
 
@@ -67,7 +68,26 @@ We model a program into a *CFG*, that contains $n$ *CFG nodes*. And we define th
 
 According to the whole program can build a set of constraints which can be formalized as $f(x) = x$, $x \in ML^n$, then the whole Sign Analysis job is formalized into solving this *equation*, and the solution is called *fixed point* of the function.
 
+## Constraint
+
+Given a simple CFG (no loops or branches), let $x_1, x_2, ..., x_n$ be the ***states*** of program points (CFG nodes), then we can generate constraints of node $i$ by the following 3 rules:
+
+- if node $i$ is var declaring statement`var a`: $x_i = x_{i-1}[a = \top]$
+- if node $i$ is var definition statement`a = c`: $x_i = x_{i-1}[a=x_{i-1}(c)]$
+- all else statement: $x_i = x_{i-1}$
+
+If the CFG contains loops or branches instead, we replace $x_{i-1}$ with the *least upper bound* of all predecessors' states of node $i$.
+
+## Solution to the constraint system
+
+We introduce an algorithm call *naive fixpoint solution*, since $f$ is monotone, we can calculate $f(x)$ and use the output as input repeatedly and finally get to the fix point $x$ that makes $x = f(x)$.
+
+## What does fixpoint mean
+
+The fix point is just an approximation of the 
+
 ## Reference
 
 - [Static Program Analysis Chapter 4](https://cs.au.dk/~amoeller/spa/)
 - [SPA Slide 3](https://cs.au.dk/~amoeller/spa/3-lattices-and-fixpoints.pdf)
+
