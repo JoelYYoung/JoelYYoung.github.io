@@ -13,7 +13,8 @@
       <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://joelyyoung.github.io/static-program-analysis-reading-note-chapter5/</guid>
-      <description>Static Program Analysis Reading Note: Chapter 5 Reference Static Program Analysis Chapter 5 SPA Slide 4 </description>
+      <description>Static Program Analysis Reading Note: Chapter 5 Brief Recap How do we build a constraint system for a given program (CFG)?
+We firstly define a states variable $[v]$ for each CFG vertex $v$, and we then generate constraints between those states variables, usually between neighboring vertexes, according to dataflow relations represented by the CFG and the programming language. Note that those constraints could be equations or inequations, and the latter could be transformed into equations.</description>
     </item>
     
     <item>

@@ -11,7 +11,23 @@ katex = true
 
 # Static Program Analysis Reading Note: Chapter 5
 
+## Brief
 
+***Recap*** How do we build a constraint system for a given program (CFG)?
+
+We firstly define a *states* variable $[v]$ for each CFG vertex $v$, and we then generate constraints between those *states* variables, usually between neighboring vertexes, according to dataflow relations represented by the CFG and the programming language. Note that those constraints could be *equations* or *inequations*, and the latter could be transformed into *equations*. 
+
+Then we can define a *constraint function* for each *equation* and solve the equation system by calculating *lfp* of the *combined constraint function*, if and only if the *combined constraint function* is monotone.
+
+In order to solve the constraints with *fixed-points algorithm*, the key lies in making the *constraint functions* ***monotone***. And that's the topic today, the *monotone frameworks*. Note that *monotone constraints* may **NOT** generate the right answer, as shown in the pic in last article.
+
+**Def**: *monotone framework* is the combination of a complete lattice and a space of monotone functions.
+
+We classify those *monotone frameworks* according to the lattice system they use:
+
+- Sign Lattice: Sign Analysis
+- Constant Lattice: Constant Propagation Analysis
+- etc
 
 ## Reference
 

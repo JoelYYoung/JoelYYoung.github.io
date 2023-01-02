@@ -58,7 +58,7 @@ modified = "2023-01-02"
 
 For some $g \in A\rightarrow L$ and $Ln \in L^n$, if $\forall i \in [1, n], g(a_i)=Ln_i$, then $f$ maps $g$ with the $Ln$, 
 
-then the function $f$ is a *isomorphism*, and thus the product and map lattice are *isomorphic*. Note this property is essential to apply the theory of *lattice* to formalizing the process of *Sing Analysis*.
+then the function $f$ is a *isomorphism*, and thus the product and map lattice are *isomorphic*. Note this property is essential to apply the theory of *lattice* to formalizing the process of *Sign Analysis*.
 
   
 

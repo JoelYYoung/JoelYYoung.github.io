@@ -134,6 +134,18 @@
 
     <div class="article-content e-content" itemprop="articleBody">
         <h1 id="static-program-analysis-reading-note-chapter-5">Static Program Analysis Reading Note: Chapter 5</h1>
+<h2 id="brief">Brief</h2>
+<p><em><strong>Recap</strong></em> How do we build a constraint system for a given program (CFG)?</p>
+<p>We firstly define a <em>states</em> variable $[v]$ for each CFG vertex $v$, and we then generate constraints between those <em>states</em> variables, usually between neighboring vertexes, according to dataflow relations represented by the CFG and the programming language. Note that those constraints could be <em>equations</em> or <em>inequations</em>, and the latter could be transformed into <em>equations</em>.</p>
+<p>Then we can define a <em>constraint function</em> for each <em>equation</em> and solve the equation system by calculating <em>lfp</em> of the <em>combined constraint function</em>, if and only if the <em>combined constraint function</em> is monotone.</p>
+<p>In order to solve the constraints with <em>fixed-points algorithm</em>, the key lies in making the <em>constraint functions</em> <em><strong>monotone</strong></em>. And that&rsquo;s the topic today, the <em>monotone frameworks</em>. Note that <em>monotone constraints</em> may <strong>NOT</strong> generate the right answer, as shown in the pic in last article.</p>
+<p><strong>Def</strong>: <em>monotone framework</em> is the combination of a complete lattice and a space of monotone functions.</p>
+<p>We classify those <em>monotone frameworks</em> according to the lattice system they use:</p>
+<ul>
+<li>Sign Lattice: Sign Analysis</li>
+<li>Constant Lattice: Constant Propagation Analysis</li>
+<li>etc</li>
+</ul>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://cs.au.dk/~amoeller/spa/">Static Program Analysis Chapter 5</a></li>
