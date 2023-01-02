@@ -6,7 +6,7 @@ categories = [ "Reading Note" ]
 headline = "Lattices and Fixpoints"
 tags = ["Static Program Analysis", "Reading Note"]
 katex = true
-modified = "2023-01-01"
+modified = "2023-01-02"
 
 +++
 
@@ -107,6 +107,11 @@ According to the *fixed-point theorem*, we can define an algorithm call *naive f
 ## What does fixpoint means
 
 The fix point is just an approximation answer to the question "what values could the variables be at each program point". And the  $lfp$ means the most *accurate* answer to the equation system. 
+
+<center>
+<img width="700" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/lattice-points-as-answers.png">
+<div style="color:black;"> <b> lattice points as answers </b>  </div>
+</center>
 
 ## Reference
 

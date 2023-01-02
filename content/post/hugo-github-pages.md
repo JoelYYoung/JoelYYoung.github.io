@@ -34,6 +34,7 @@ Github provides two ways to build page from your repository: from branch and fro
 <div style="color:black;"> <b> GitHub Pages settings </b>  </div>
 </center>
 
+
 ## Step3: Use Hugo to generate a new website
 
 ### Create a new website project
