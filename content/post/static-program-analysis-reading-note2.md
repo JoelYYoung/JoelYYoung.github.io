@@ -6,7 +6,7 @@ categories = [ "Reading Note" ]
 headline = "Lattices and Fixpoints"
 tags = ["Static Program Analysis", "Reading Note"]
 katex = true
-modified = "2023-01-02"
+modified = "2023-02-07"
 
 +++
 
@@ -14,13 +14,13 @@ modified = "2023-01-02"
 
 ## Basic Math Languages
 
-**Def *partial order***: A *set* $S$ as well as a *binary relation* $R$ on $S$ that satisfies the following rules:
+**Def *partial order set (poset)***: A pair $(S,R)$. $S$ is a set; $R$ (also denoted as $\sqsubseteq$) is a *binary relation* on $S$ that satisfies the following rules:
 
 - reflexivity: $\forall x \in S, x R x$.
 - transitivity: $\forall x,y,z \in S, x R y \wedge y R z \rightarrow x R z$.
 - anti-symmetry: $ \forall x, y \in S, x R y \wedge y R x \rightarrow x=y $
 
-**Note**: If we denote a partial order, we usually refer to $S$ instead of $(S,R)$.
+**Note**: If we use the terminology *partial order relation*, we usually denote $R$ instead of $(S,R)$.
 
 
 
@@ -112,6 +112,7 @@ The fix point is just an approximation answer to the question "what values could
 <img width="700" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/lattice-points-as-answers.png">
 <div style="color:black;"> <b> lattice points as answers </b>  </div>
 </center>
+
 
 ## Reference
 

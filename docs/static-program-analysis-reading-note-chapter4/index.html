@@ -135,13 +135,13 @@
     <div class="article-content e-content" itemprop="articleBody">
         <h1 id="static-program-analysis-reading-note-chapter-4">Static Program Analysis Reading Note: Chapter 4</h1>
 <h2 id="basic-math-languages">Basic Math Languages</h2>
-<p><strong>Def <em>partial order</em></strong>: A <em>set</em> $S$ as well as a <em>binary relation</em> $R$ on $S$ that satisfies the following rules:</p>
+<p><strong>Def <em>partial order set (poset)</em></strong>: A pair $(S,R)$. $S$ is a set; $R$ (also denoted as $\sqsubseteq$) is a <em>binary relation</em> on $S$ that satisfies the following rules:</p>
 <ul>
 <li>reflexivity: $\forall x \in S, x R x$.</li>
 <li>transitivity: $\forall x,y,z \in S, x R y \wedge y R z \rightarrow x R z$.</li>
 <li>anti-symmetry: $ \forall x, y \in S, x R y \wedge y R x \rightarrow x=y $</li>
 </ul>
-<p><strong>Note</strong>: If we denote a partial order, we usually refer to $S$ instead of $(S,R)$.</p>
+<p><strong>Note</strong>: If we use the terminology <em>partial order relation</em>, we usually denote $R$ instead of $(S,R)$.</p>
 <p><strong>Def <em>upper bound/lower bound</em></strong>: For $X\subseteq S$, the <em>upper bound</em> of $X$ is any $y \in S$ that satisfies $\forall x \in X, x R y$. We use $X \sqsubseteq y$ to denote that. And <em>lower bound</em> is similarly defined. We use $\sqcup X$ to denote any single <em>upper bound</em> of $X$.</p>
 <p><strong>Note</strong>: $xRy$ is the same as $x\sqsubseteq y$.</p>
 <p><strong>Def <em>lattice</em></strong>:  If a <em>partial order</em> $ (S,R)$ satisfies, $\forall x, y \in S, \exists \sqcup{x,y} \in S$, then it is a <em>lattice</em>.</p>
@@ -254,9 +254,9 @@
     
     <div class="text-neutral-500 mb-4">
         Last modified <span itemprop="dateModified"
-                            datetime="2023-01-02T00:00:00Z"
-                            content="2023-01-02T00:00:00Z">
-        2023.01.02
+                            datetime="2023-02-07T00:00:00Z"
+                            content="2023-02-07T00:00:00Z">
+        2023.02.07
         </span>
     </div>
     
