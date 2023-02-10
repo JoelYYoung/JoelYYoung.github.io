@@ -112,19 +112,21 @@ Fix points are approximation answer to the question "what abstract states are po
 </center>
 
 
-**Note**: ***Fixed points*** are for each designed constraint, i.e., different constraints could yield different ***Fixed points*** and $lfp$; The above framework is path insensitive, and path sensitive approximation like *MOP*(meet over every path) is proved to be more precise for the same data abstraction.
+**Note**: ***Fixed points*** are for each designed constraint, i.e., different constraints could yield different ***Fixed points*** and $lfp$; The above framework is path insensitive, and path sensitive approximation like *MOP*(meet over every path) is proved to be more precise for the same data abstraction. 
 
 ## *May Analysis* and *Must Analysis*
 
 | May Analysis                                                 | Must Analysis                                                |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Give answers based on a collection that covers **ALL** possible ***run time situations*** in order to be ***safe***. | Give answers based on a collection that exclude any **impossible** ***run time situations*** in order to be ***safe***. |
-| From $\bot$ to do iterations, gets least fixed-point         | From $\top$ to do iterations, gets biggest fixed-point       |
-| Usually used for bug detection and software verification, e.g., **pointer analysis** | Usually used for compilation optimization, e.g., **constant propagation** |
+| - Give answers based on a collection that covers **ALL** possible ***run time situations*** in order to be ***safe***. | - Give answers based on a collection that exclude any **impossible** ***run time situations*** in order to be ***safe***. |
+| - From $\bot$ to do iterations, gets least fixed-point       | - From $\top$ to do iterations, gets biggest fixed-point     |
+| - Usually used for bug detection and software verification, e.g., **pointer analysis** | - Usually used for compilation optimization, e.g., **constant propagation** |
 
 For the same data abstraction, they have the same ***Truth*** answer.
 
+## Summary
 
+The key lies in designing *monotonic*, *safe* guaranteed and *precise* transfer functions.
 
 - [Static Program Analysis Chapter 4](https://cs.au.dk/~amoeller/spa/)
 - [SPA Slide 3](https://cs.au.dk/~amoeller/spa/3-lattices-and-fixpoints.pdf)
