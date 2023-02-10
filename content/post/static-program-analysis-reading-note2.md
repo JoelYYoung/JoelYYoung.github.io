@@ -6,7 +6,7 @@ categories = [ "Reading Note" ]
 headline = "Lattices and Fixpoints"
 tags = ["Static Program Analysis", "Reading Note"]
 katex = true
-modified = "2023-02-07"
+modified = "2023-02-10"
 
 +++
 
@@ -16,17 +16,15 @@ modified = "2023-02-07"
 
 **Def *partial order set (poset)***: A pair $(S,R)$. $S$ is a set; $R$ (also denoted as $\sqsubseteq$) is a *binary relation* on $S$ that satisfies the following rules:
 
-- reflexivity: $\forall x \in S, x R x$.
-- transitivity: $\forall x,y,z \in S, x R y \wedge y R z \rightarrow x R z$.
-- anti-symmetry: $ \forall x, y \in S, x R y \wedge y R x \rightarrow x=y $
+- reflexivity: $\forall x \in S, x \sqsubseteq x$.
+- transitivity: $\forall x,y,z \in S, x \sqsubseteq y \wedge y \sqsubseteq z \rightarrow x \sqsubseteq z$.
+- anti-symmetry: $ \forall x, y \in S, x \sqsubseteq y \wedge y \sqsubseteq x \rightarrow x=y $
 
 **Note**: If we use the terminology *partial order relation*, we usually denote $R$ instead of $(S,R)$.
 
 
 
-**Def *upper bound/lower bound***: For $X\subseteq S$, the *upper bound* of $X$ is any $y \in S$ that satisfies $\forall x \in X, x R y$. We use $X \sqsubseteq y$ to denote that. And *lower bound* is similarly defined. We use $\sqcup X$ to denote any single *upper bound* of $X$.
-
-**Note**: $xRy$ is the same as $x\sqsubseteq y$.
+**Def *upper bound/lower bound***: For $X\subseteq S$, the *upper bound* of $X$ is any $y \in S$ that satisfies $\forall x \in X, x \sqsubseteq y$, written $X \sqsubseteq y$. And *lower bound* is similarly defined. We use $\sqcup X$ to denote *least upper bound* (also called *lub*) of $X$, indicating $\forall X \sqsubseteq y, lub \sqsubseteq y$.
 
 
 
@@ -68,7 +66,7 @@ We model a program into a *CFG*, that contains $n$ *CFG nodes*. And we define th
 
 According to the whole program can build a set of constraints which can be formalized as $f(x) = x$, $x \in ML^n$, then the whole Sign Analysis job is formalized into solving this *equation*, and the solutions (the equation system could have multiple solutions) are the same things as the *fixed-points* of the function.
 
-## Constraints
+## Constraints: *Transfer functions* and *Control Flow Merges*
 
 Given a simple CFG (no loops or branches), let $x_1, x_2, ..., x_n$ be the ***states*** of program points (CFG nodes), then we can generate constraints of node $i$ by the following 3 rules:
 
@@ -84,9 +82,9 @@ The above constraints are all ***equations***, and we can certainly define a ***
 
 **Note**: The constraint function $f$ **is not always monotone**.
 
-## Solution to the constraints
+## Solutions to the constraints
 
-Legal solutions to the constraint equations are the same things as the ***fixed-point*** of the *constraint function* $f$. So we can try to get the solution by calculating the *fix-point* of the *constraint function* $f$. 
+Legal solutions to the constraint equations are the same things as the ***fixed-points*** of the *constraint function* $f$. So we can try to get the solution by calculating the *fix-point* of the *constraint function* $f$. 
 
 
 
@@ -104,17 +102,28 @@ According to the *fixed-point theorem*, we can define an algorithm call *naive f
 
 **PS**: If the constraint system is not constructed into equations, it can still be transformed into equations! (*SPA* P49)
 
-## What does fixpoint means
+## Fixed points and Approximation answers
 
-The fix point is just an approximation answer to the question "what values could the variables be at each program point". And the  $lfp$ means the most *accurate* answer to the equation system. 
+Fix points are approximation answer to the question "what abstract states are possible at each program point". And for ***May Analysis***, the  $lfp$ means the most *accurate* answer to the given constraint system. 
 
 <center>
-<img width="700" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/lattice-points-as-answers.png">
+<img width="700" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/fixed-point.svg">
 <div style="color:black;"> <b> lattice points as answers </b>  </div>
 </center>
 
+**Note**: ***Fixed points*** are for each designed constraint, i.e., different constraints could yield different ***Fixed points*** and $lfp$; The above framework is path insensitive, and path sensitive approximation like *MOP*(meet over every path) is proved to be more precise for the same data abstraction.
 
-## Reference
+## *May Analysis* and *Must Analysis*
+
+| May Analysis                                                 | Must Analysis                                                |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Give answers based on a collection that covers **ALL** possible ***run time situations*** in order to be ***safe***. | Give answers based on a collection that exclude any **impossible** ***run time situations*** in order to be ***safe***. |
+| From $\bot$ to do iterations, gets least fixed-point         | From $\top$ to do iterations, gets biggest fixed-point       |
+| Usually used for bug detection and software verification, e.g., **pointer analysis** | Usually used for compilation optimization, e.g., **constant propagation** |
+
+For the same data abstraction, they have the same ***Truth*** answer.
+
+
 
 - [Static Program Analysis Chapter 4](https://cs.au.dk/~amoeller/spa/)
 - [SPA Slide 3](https://cs.au.dk/~amoeller/spa/3-lattices-and-fixpoints.pdf)

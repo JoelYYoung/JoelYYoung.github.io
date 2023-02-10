@@ -24,7 +24,7 @@ We firstly define a states variable $[v]$ for each CFG vertex $v$, and we then g
       
       <guid>https://joelyyoung.github.io/static-program-analysis-reading-note-chapter4/</guid>
       <description>Static Program Analysis Reading Note: Chapter 4 Basic Math Languages Def partial order set (poset): A pair $(S,R)$. $S$ is a set; $R$ (also denoted as $\sqsubseteq$) is a binary relation on $S$ that satisfies the following rules:
-reflexivity: $\forall x \in S, x R x$. transitivity: $\forall x,y,z \in S, x R y \wedge y R z \rightarrow x R z$. anti-symmetry: $ \forall x, y \in S, x R y \wedge y R x \rightarrow x=y $ Note: If we use the terminology partial order relation, we usually denote $R$ instead of $(S,R)$.</description>
+reflexivity: $\forall x \in S, x \sqsubseteq x$. transitivity: $\forall x,y,z \in S, x \sqsubseteq y \wedge y \sqsubseteq z \rightarrow x \sqsubseteq z$. anti-symmetry: $ \forall x, y \in S, x \sqsubseteq y \wedge y \sqsubseteq x \rightarrow x=y $ Note: If we use the terminology partial order relation, we usually denote $R$ instead of $(S,R)$.</description>
     </item>
     
     <item>
