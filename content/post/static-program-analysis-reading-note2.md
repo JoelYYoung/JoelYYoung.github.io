@@ -6,7 +6,7 @@ categories = [ "Reading Note" ]
 headline = "Lattices and Fixpoints"
 tags = ["Static Program Analysis", "Reading Note"]
 katex = true
-modified = "2023-02-10"
+modified = "2023-02-12"
 
 +++
 
@@ -107,9 +107,10 @@ According to the *fixed-point theorem*, we can define an algorithm call *naive f
 Fix points are approximation answer to the question "what abstract states are possible at each program point". And for ***May Analysis***, the  $lfp$ means the most *accurate* answer to the given constraint system. 
 
 <center>
-<img width="300" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/fixed-point1.svg">
-<div style="color:black;"> <b> lattice points as answers </b>  </div>
+<img width="300" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/fixed-point.svg">
+<div style="color:black;"> <b> May Analysis </b>  </div>
 </center>
+
 
 
 
