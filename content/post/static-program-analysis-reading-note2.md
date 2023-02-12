@@ -118,7 +118,7 @@ Fix points are approximation answer to the question "what abstract states are po
 
 | May Analysis                                                 | Must Analysis                                                |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| - Give answers (*Abstract State*) **based on** a collection that covers **ALL** possible ***run time situations*** (val of vars at each PC of any given input) in order to be ***safe***. | - Give answers (*Abstract State*) **based on** a collection that exclude any **impossible** ***run time situations*** in order to be ***safe***. |
+| - Give answers (*Abstract State*) **based on** a collection that covers **ALL** possible ***run time situations*** in order to be ***safe***. | - Give answers (*Abstract State*) **based on** a collection that exclude any **impossible** ***run time situations*** in order to be ***safe***. |
 | - From $\bot$ to do iterations, gets least fixed-point       | - From $\top$ to do iterations, gets biggest fixed-point     |
 | - Usually used for bug detection and software verification, e.g., **pointer analysis** | - Usually used for compilation optimization, e.g., **constant propagation** |
 
