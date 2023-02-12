@@ -107,9 +107,10 @@ According to the *fixed-point theorem*, we can define an algorithm call *naive f
 Fix points are approximation answer to the question "what abstract states are possible at each program point". And for ***May Analysis***, the  $lfp$ means the most *accurate* answer to the given constraint system. 
 
 <center>
-<img width="300" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/fixed-point.svg">
+<img width="300" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/fixed-point3.svg">
 <div style="color:black;"> <b> May Analysis </b>  </div>
 </center>
+
 
 
 
