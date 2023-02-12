@@ -193,8 +193,8 @@
 </thead>
 <tbody>
 <tr>
-<td>- Give answers based on a collection that covers <strong>ALL</strong> possible <em><strong>run time situations</strong></em> in order to be <em><strong>safe</strong></em>.</td>
-<td>- Give answers based on a collection that exclude any <strong>impossible</strong> <em><strong>run time situations</strong></em> in order to be <em><strong>safe</strong></em>.</td>
+<td>- Give answers (<em>Abstract State</em>) <strong>based on</strong> a collection that covers <strong>ALL</strong> possible <em><strong>run time situations</strong></em> (val of vars at each PC of any given input) in order to be <em><strong>safe</strong></em>.</td>
+<td>- Give answers (<em>Abstract State</em>) <strong>based on</strong> a collection that exclude any <strong>impossible</strong> <em><strong>run time situations</strong></em> in order to be <em><strong>safe</strong></em>.</td>
 </tr>
 <tr>
 <td>- From $\bot$ to do iterations, gets least fixed-point</td>
@@ -206,7 +206,8 @@
 </tr>
 </tbody>
 </table>
-<p>For the same data abstraction, they have the same <em><strong>Truth</strong></em> answer.</p>
+<p>For the same data abstraction, May and Must Analysis have the same <em><strong>Truth</strong></em> answer.</p>
+<p><em><strong>run time situations</strong></em>: values of vars at each PC over any given inputs.</p>
 <h2 id="summary">Summary</h2>
 <p>The key lies in designing <em>monotonic</em>, <em>safe</em> guaranteed and <em>precise</em> transfer functions.</p>
 <ul>
