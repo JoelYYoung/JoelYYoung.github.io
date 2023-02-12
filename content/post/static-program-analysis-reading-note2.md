@@ -107,9 +107,10 @@ According to the *fixed-point theorem*, we can define an algorithm call *naive f
 Fix points are approximation answer to the question "what abstract states are possible at each program point". And for ***May Analysis***, the  $lfp$ means the most *accurate* answer to the given constraint system. 
 
 <center>
-<img width="300" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/fixed-point.svg">
+<img width="300" src="https://github.com/JoelYYoung/JoelYYoung.github.io/blob/a82d18f87e9f61b895349fe98fc0e7d4c317f589/static/img/fixed-point.svg">
 <div style="color:black;"> <b> lattice points as answers </b>  </div>
 </center>
+
 
 
 **Note**: ***Fixed points*** are for each designed constraint, i.e., different constraints could yield different ***Fixed points*** and $lfp$; The above framework is path insensitive, and path sensitive approximation like *MOP*(meet over every path) is proved to be more precise for the same data abstraction. 
