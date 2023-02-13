@@ -146,6 +146,23 @@
 <li>Constant Lattice: Constant Propagation Analysis</li>
 <li>etc</li>
 </ul>
+<h2 id="fix-point-algorithm-a-general-analysis-template">Fix-Point Algorithm: a General Analysis Template</h2>
+<p>The monotonic constraint in Chapter 4 has an equivalent algorithm form. Its pseudo code is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>OUT[EntryBlock] = some lattice value
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">for</span> block <span style="color:#6ab825;font-weight:bold">in</span> OtherBlocks:
+</span></span><span style="display:flex;"><span>    OUT[OtherBlocks] = some lattice value
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">while</span> true:
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">for</span> block <span style="color:#6ab825;font-weight:bold">in</span> AllBlocks:
+</span></span><span style="display:flex;"><span>        IN[block] = merge(OUT[predecessor_1], ..., OUT[predecessor_n])
+</span></span><span style="display:flex;"><span>        OUT[block] = transfer(IN[block])
+</span></span><span style="display:flex;"><span>	<span style="color:#6ab825;font-weight:bold">if</span> no OUT changes:
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">break</span>
+</span></span></code></pre></div><h3 id="worklist-algorithm">worklist algorithm</h3>
+<p>Since a node need to be calculated if and only if its predecessors&rsquo; $OUT$ have changed, so we could use a <code>worklist</code> to record the changed nodes and only apply calculation on them in each iteration. It saves a lot of time.</p>
+<h3 id="wto-and-iterating-until-not-change-strategy">WTO and &ldquo;iterating until not change&rdquo; strategy</h3>
+<h2 id="constant-propagation-analysis">Constant Propagation Analysis</h2>
+<h2 id="reach-definitions-analysis">Reach Definitions Analysis</h2>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://cs.au.dk/~amoeller/spa/">Static Program Analysis Chapter 5</a></li>
@@ -217,9 +234,9 @@
     
     <div class="text-neutral-500 mb-4">
         Last modified <span itemprop="dateModified"
-                            datetime="2023-01-02T00:00:00Z"
-                            content="2023-01-02T00:00:00Z">
-        2023.01.02
+                            datetime="2023-02-12T00:00:00Z"
+                            content="2023-02-12T00:00:00Z">
+        2023.02.12
         </span>
     </div>
     

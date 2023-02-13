@@ -6,6 +6,7 @@ categories = [ "Reading Note" ]
 headline = "Dataflow Analysis with Monotone Frameworks"
 tags = ["Static Program Analysis", "Reading Note"]
 katex = true
+modified = "2023-02-12"
 
 +++
 
@@ -28,6 +29,39 @@ We classify those *monotone frameworks* according to the lattice system they use
 - Sign Lattice: Sign Analysis
 - Constant Lattice: Constant Propagation Analysis
 - etc
+
+## Fix-Point Algorithm: a General Analysis Template
+
+The monotonic constraint in Chapter 4 has an equivalent algorithm form. Its pseudo code is as follows:
+
+```Python
+OUT[EntryBlock] = some lattice value
+for block in OtherBlocks:
+    OUT[OtherBlocks] = some lattice value
+
+while true:
+    for block in AllBlocks:
+        IN[block] = merge(OUT[predecessor_1], ..., OUT[predecessor_n])
+        OUT[block] = transfer(IN[block])
+	if no OUT changes:
+        break
+```
+
+### worklist algorithm
+
+Since a node need to be calculated if and only if its predecessors' $OUT$ have changed, so we could use a `worklist` to record the changed nodes and only apply calculation on them in each iteration. It saves a lot of time.
+
+### WTO and "iterating until not change" strategy
+
+
+
+## Constant Propagation Analysis
+
+
+
+## Reach Definitions Analysis
+
+
 
 ## Reference
 
