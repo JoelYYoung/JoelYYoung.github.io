@@ -6,7 +6,17 @@
     <description>Recent content in Reading Note on Joel Yang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/reading-note/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/reading-note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Static Program Analysis Reading Note: Chapter 6</title>
+      <link>https://joelyyoung.github.io/static-program-analysis-reading-note-chapter6/</link>
+      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joelyyoung.github.io/static-program-analysis-reading-note-chapter6/</guid>
+      <description>Static Program Analysis Reading Note: Chapter 6 Why Need Widening? Recap: In Chapter 5, we introduced Iterative Algorithm and Worklist Algorithm to calculate the $lfp$ of the given constraint (for May Analysis). The correctness of the mentioned algorithm demands that the lattice has limited height.
+Problem: What happens if the lattice has infinit height? E.g., in interval analysis, we use ${[l,u]|l,u \in N }$ as the lattice, which has infinit height.</description>
+    </item>
+    
     <item>
       <title>Static Program Analysis Reading Note: Chapter 5</title>
       <link>https://joelyyoung.github.io/static-program-analysis-reading-note-chapter5/</link>
