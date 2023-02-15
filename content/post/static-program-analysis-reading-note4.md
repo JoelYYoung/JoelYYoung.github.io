@@ -52,7 +52,7 @@ N={-\infin,...,-2,-1,0,1,2,\infin}
 $$
 And We define the ralation on the lattice as follows
 $$
-[l,u]\sqsubseteq[a,b] \Longleftrightarrow a<l \and b > u
+[l,u]\sqsubseteq[a,b] \Longleftrightarrow a<l \wedge b>u
 $$
 
 ### Transfer Function and Control Flow Handling
