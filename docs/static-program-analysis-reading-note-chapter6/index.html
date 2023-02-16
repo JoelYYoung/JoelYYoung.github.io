@@ -167,7 +167,41 @@ $$
 [l,u]\sqsubseteq[a,b] \Longleftrightarrow a&lt;l \wedge b&gt;u
 $$</p>
 <h3 id="transfer-function-and-control-flow-handling">Transfer Function and Control Flow Handling</h3>
+<p>For any single statement $s_i$ that contains assignment operation, we define the transfer funtion as follows:
+$$
+f_s(IN[s_i])=eval(IN[s_i],E)
+$$
+,where $E$ is the right value of statement $x=E$. For statements that contains NO assignment operation, we have $f_s(IN[s_i])=IN[s_i]$. $eval(IN[s_i], E)$ is defined as follows according to what expression $E$ is:</p>
+<ol>
+<li>if $E$ is a variable $y$, then we have $eval(IN[s_i],E)=IN[s_i][x\mapsto IN<a href="y">s_i</a>]$</li>
+<li>if $E$ is a constant value $C$, $eval(IN[s_i],E)=IN[s_i][x\mapsto [C,C]]$</li>
+<li>if $E$ is an external input value, then $eval(IN[s_i],E)=IN[s_i][x\mapsto [-\infin,\infin]]$</li>
+<li>else if $E$ is an expression $E_1 op E_2$, then we have:</li>
+</ol>
+<p>$$
+eval(IN[s_i,E])=IN[s_i][x\mapsto [l,h]],
+$$</p>
+<p>$$
+l=min{a OPb|a\in eval(IN[S_i],E_1),b\in eval(IN[S_i],E_1)},
+$$</p>
+<p>$$
+h=max{a OPb|a\in eval(IN[S_i],E_1),b\in eval(IN[S_i],E_1)}.
+$$</p>
+<p>Control handling is simple that we take <em>least upper bound</em> of each $OUT$ of predecessors.</p>
 <h2 id="a-new-framework-lattice-with-infinit-height">A New Framework: Lattice with Infinit Height</h2>
+<h3 id="does-lfp-exist">Does $lfp$ exist?</h3>
+<p>yes, it is $\sqcap{x|x\in L, f(x)\sqsubseteq x}$.</p>
+<h3 id="does-iterative-algorithm-end">Does <em>iterative algorithm</em> end?</h3>
+<p>not necessarily.</p>
+<h3 id="widening-step-over-infinit-heights-at-one-time">Widening: step over infinit heights at one time</h3>
+<h4 id="narrowing">Narrowing</h4>
+<p>We iteratively calculate $f(lfp(\omega \circ f))$ for arbitary times, until we get a satisfying result.</p>
+<h4 id="do-not-widen-all-nodes">Do not widen ALL nodes</h4>
+<p>We define $\nabla (\sigma_1, \sigma_2)$ to respect the former abstract states, and just apply $\omega&rsquo;$ funtion (widen point wise) to those unstable, i.e., changed variables.</p>
+<h3 id="co-work-with-wto-to-deal-with-cycles">Co-work with WTO to deal with cycles</h3>
+<p>Furthermore, widen can be applied to only cycle head nodes (in WTO) in order to have a better solution.</p>
+<h3 id="widen-delay">Widen delay</h3>
+<p>We can apply to loops $f$ for the first several times, and then apply $\omega \circ f$ to get a more precise result.</p>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://cs.au.dk/~amoeller/spa/">Static Program Analysis Chapter 6</a></li>

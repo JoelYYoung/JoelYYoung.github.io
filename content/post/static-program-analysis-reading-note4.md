@@ -57,11 +57,58 @@ $$
 
 ### Transfer Function and Control Flow Handling
 
+For any single statement $s_i$ that contains assignment operation, we define the transfer funtion as follows:
+$$
+f_s(IN[s_i])=eval(IN[s_i],E)
+$$
+,where $E$ is the right value of statement $x=E$. For statements that contains NO assignment operation, we have $f_s(IN[s_i])=IN[s_i]$. $eval(IN[s_i], E)$ is defined as follows according to what expression $E$ is:
 
+1. if $E$ is a variable $y$, then we have $eval(IN[s_i],E)=IN[s_i][x\mapsto IN[s_i](y)]$
+2. if $E$ is a constant value $C$, $eval(IN[s_i],E)=IN[s_i][x\mapsto [C,C]]$
+3. if $E$ is an external input value, then $eval(IN[s_i],E)=IN[s_i][x\mapsto [-\infin,\infin]]$
+4. else if $E$ is an expression $E_1 op E_2$, then we have: 
 
+$$
+eval(IN[s_i,E])=IN[s_i][x\mapsto [l,h]],
+$$
 
+$$
+l=min\{a OPb|a\in eval(IN[S_i],E_1),b\in eval(IN[S_i],E_1)\},
+$$
+
+$$
+h=max\{a OPb|a\in eval(IN[S_i],E_1),b\in eval(IN[S_i],E_1)\}.
+$$
+
+Control handling is simple that we take *least upper bound* of each $OUT$ of predecessors.
 
 ## A New Framework: Lattice with Infinit Height
+
+### Does $lfp$ exist?
+
+yes, it is $\sqcap\{x|x\in L, f(x)\sqsubseteq x\}$.
+
+### Does *iterative algorithm* end?
+
+not necessarily.
+
+### Widening: step over infinit heights at one time
+
+#### Narrowing
+
+We iteratively calculate $f(lfp(\omega \circ f))$ for arbitary times, until we get a satisfying result.
+
+#### Do not widen ALL nodes
+
+We define $\nabla (\sigma_1, \sigma_2)$ to respect the former abstract states, and just apply $\omega'$ funtion (widen point wise) to those unstable, i.e., changed variables. 
+
+### Co-work with WTO to deal with cycles
+
+Furthermore, widen can be applied to only cycle head nodes (in WTO) in order to have a better solution.
+
+### Widen delay
+
+We can apply to loops $f$ for the first several times, and then apply $\omega \circ f$ to get a more precise result.
 
 
 
