@@ -134,15 +134,34 @@ for(int i = 0; i < input; i++){
 
 Assume $B=\\{-\infin,-1,0,1,7,\infin\\}$, if we do widening to $x$, then we will get $x\mapsto[7,\infin]$, but if we do not do widening on $x$, we will have $x\mapsto [8,8]$, which is obviously more precise than the former result.
 
+**Def**: $\nabla'([l,h],f([l,h]))$ is defined as follows: 
+$$
+\nabla'([l,h],[l',h'])=\begin{cases}
+l& l\le l'\\\\
+max\\{x|x \in B \wedge x<l'\\}& l>l'
+\end{cases}
+$$
+Note that since $f$ is already monotonic, so we actually always have $l' \le l$ so the first case happens when and only when $l=l'$ saying that **the iterated result will either remain unchanged or go upstairs along the newly defined $B$ lattice**.And $\nabla$ can be defined by combining the point wise $\nabla'$ like $\omega$, obmitted here.
 
 
-Won't this strategy make the whole iteration divergent? Hopefully, it won't! Note that only **unstables** variables causes divergency. 
+
+**Problem**: Does this strategy make the whole iteration divergent? 
+
+**Answer**: Hopefully, it won't! Note that only **unstables** variables causes divergency. 
+
+**Proof**: We give an intuitive proof of this conclusion: it can be proved that the $\nabla$ function is monotonic, so the iteration will have its variables' states remain unchanged or increase along a limited **stairs** (a vivid metaphor).
+
+
 
 #### Narrowing
 
-We iteratively calculate $f(lfp(\omega \circ f))$ for arbitary times, until we get a satisfying result.
+**Brief**: Iteratively calculate $f(lfp(\omega \circ f))$ for arbitary times, until we get a satisfying result.
 
+**Problem**: Why narrowing works?
 
+Firstly, it can be proved from the defnition that the $lfp$ of $\omega \circ f$ and $\nabla\circ f$ are both **greater than** the $lfp$ of $f$. Secondly, we have $\forall \sigma, \sigma\sqsubseteq \omega(\sigma)$, i.e., $\omega$ is extensive. So $lfp_\omega=\omega(f(lfp_\omega))\sqsubseteq f(lfp_\omega)$.
+
+**Note**: be careful to distinguish monotone and extensive, $f$ is monotonic but not extensive!
 
 ### Co-work with WTO to deal with cycles
 

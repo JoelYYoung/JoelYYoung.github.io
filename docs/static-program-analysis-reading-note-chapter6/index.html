@@ -218,9 +218,22 @@ note that $\sigma_i(X)$ means the abstract state of variable $X$ at program poin
 </span></span><span style="display:flex;"><span>    y = i * i;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Assume $B=\{-\infin,-1,0,1,7,\infin\}$, if we do widening to $x$, then we will get $x\mapsto[7,\infin]$, but if we do not do widening on $x$, we will have $x\mapsto [8,8]$, which is obviously more precise than the former result.</p>
-<p>Won&rsquo;t this strategy make the whole iteration divergent? Hopefully, it won&rsquo;t! Note that only <strong>unstables</strong> variables causes divergency.</p>
+<p><strong>Def</strong>: $\nabla&rsquo;([l,h],f([l,h]))$ is defined as follows:
+$$
+\nabla&rsquo;([l,h],[l&rsquo;,h&rsquo;])=\begin{cases}
+l&amp; l\le l&rsquo;\\
+max\{x|x \in B \wedge x&lt;l&rsquo;\}&amp; l&gt;l&rsquo;
+\end{cases}
+$$
+Note that since $f$ is already monotonic, so we actually always have $l&rsquo; \le l$ so the first case happens when and only when $l=l&rsquo;$ saying that <strong>the iterated result will either remain unchanged or go upstairs along the newly defined $B$ lattice</strong>.And $\nabla$ can be defined by combining the point wise $\nabla&rsquo;$ like $\omega$, obmitted here.</p>
+<p><strong>Problem</strong>: Does this strategy make the whole iteration divergent?</p>
+<p><strong>Answer</strong>: Hopefully, it won&rsquo;t! Note that only <strong>unstables</strong> variables causes divergency.</p>
+<p><strong>Proof</strong>: We give an intuitive proof of this conclusion: it can be proved that the $\nabla$ function is monotonic, so the iteration will have its variables&rsquo; states remain unchanged or increase along a limited <strong>stairs</strong> (a vivid metaphor).</p>
 <h4 id="narrowing">Narrowing</h4>
-<p>We iteratively calculate $f(lfp(\omega \circ f))$ for arbitary times, until we get a satisfying result.</p>
+<p><strong>Brief</strong>: Iteratively calculate $f(lfp(\omega \circ f))$ for arbitary times, until we get a satisfying result.</p>
+<p><strong>Problem</strong>: Why narrowing works?</p>
+<p>Firstly, it can be proved from the defnition that the $lfp$ of $\omega \circ f$ and $\nabla\circ f$ are both <strong>greater than</strong> the $lfp$ of $f$. Secondly, we have $\forall \sigma, \sigma\sqsubseteq \omega(\sigma)$, i.e., $\omega$ is extensive. So $lfp_\omega=\omega(f(lfp_\omega))\sqsubseteq f(lfp_\omega)$.</p>
+<p><strong>Note</strong>: be careful to distinguish monotone and extensive, $f$ is monotonic but not extensive!</p>
 <h3 id="co-work-with-wto-to-deal-with-cycles">Co-work with WTO to deal with cycles</h3>
 <h4 id="wto-fixed-point-algorithm">WTO fixed-point algorithm</h4>
 <p>An insight into the changes happens in each program points.</p>
