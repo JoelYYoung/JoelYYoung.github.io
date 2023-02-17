@@ -148,19 +148,19 @@
 <li>$[i\mapsto[-\infin,+\infin],j\mapsto[0, 0],x\mapsto[0,0]]$</li>
 <li>$[i\mapsto[-\infin,+\infin],j\mapsto[0, 1],x\mapsto[0,1]]$</li>
 <li>$[i\mapsto[-\infin,+\infin],j\mapsto[0, 2],x\mapsto[0,4]]$</li>
-<li>etc.</li>
+<li>$&hellip;$</li>
 </ol>
-<p>It will never stop ever!</p>
+<p>It will never stop!</p>
 <h2 id="interval-analysis">Interval Analysis</h2>
 <p>Before heading into widening, we give a formal definition of <em>Interval Analysis</em> first.</p>
 <h3 id="data-abstraction-interval-lattice">Data Abstraction: Interval Lattice</h3>
 <p>In <em>Interval Analysis</em>, we use
 $$
-{[l,u]|l,u \in N }
+\{[l,u]|l,u \in N\}
 $$
 to represent a lattice, where
 $$
-N={-\infin,&hellip;,-2,-1,0,1,2,\infin}
+N=\{-\infin,&hellip;,-2,-1,0,1,2,\infin\}
 $$
 And We define the ralation on the lattice as follows
 $$
@@ -176,29 +176,55 @@ $$
 <li>if $E$ is a variable $y$, then we have $eval(IN[s_i],E)=IN[s_i][x\mapsto IN<a href="y">s_i</a>]$</li>
 <li>if $E$ is a constant value $C$, $eval(IN[s_i],E)=IN[s_i][x\mapsto [C,C]]$</li>
 <li>if $E$ is an external input value, then $eval(IN[s_i],E)=IN[s_i][x\mapsto [-\infin,\infin]]$</li>
-<li>else if $E$ is an expression $E_1 op E_2$, then we have:</li>
+<li>else if $E$ is an expression $E_1 op E_2$, then we have $eval(IN[s_i,E])=IN[s_i][x\mapsto [l,h]]$, where</li>
 </ol>
 <p>$$
-eval(IN[s_i,E])=IN[s_i][x\mapsto [l,h]],
+l=min\{a\, op\, b|a\in eval(IN[S_i],E_1),b\in eval(IN[S_i],E_1)\},
 $$</p>
 <p>$$
-l=min{a OPb|a\in eval(IN[S_i],E_1),b\in eval(IN[S_i],E_1)},
-$$</p>
-<p>$$
-h=max{a OPb|a\in eval(IN[S_i],E_1),b\in eval(IN[S_i],E_1)}.
+h=max\{a\, op\, b|a\in eval(IN[S_i],E_1),b\in eval(IN[S_i],E_1)\};
 $$</p>
 <p>Control handling is simple that we take <em>least upper bound</em> of each $OUT$ of predecessors.</p>
 <h2 id="a-new-framework-lattice-with-infinit-height">A New Framework: Lattice with Infinit Height</h2>
 <h3 id="does-lfp-exist">Does $lfp$ exist?</h3>
-<p>yes, it is $\sqcap{x|x\in L, f(x)\sqsubseteq x}$.</p>
+<p><strong>Answer</strong>: Yes! it is $d=\sqcap{x|x\in L, f(x)\sqsubseteq x}$.</p>
+<p><strong>Proof</strong>: We just need to prove $d$ is a fixed point, i.e., $f(d) = d$.</p>
+<p>Let $D=\{x|x\in L\}$, then we have $\forall x \in D, d\sqsubseteq x$. Therefore, $f(d)\sqsubseteq f(x) \sqsubseteq x$. So $f(d)$ <strong>is also a lower bound of</strong> $D$. Since $d$ is the <strong>greatest</strong> lower bound of $D$, we have $f(d)\sqsubseteq d$ instantly. Therefore, we have a valueable conclusion that $d \in D$. Then we further have $f(f(d))\sqsubseteq f(d)$, saying $f(d)\in D$. Since d is the greatest <strong>lower bound</strong> of $D$, we have our second conclusion that $d \sqsubseteq f(d)$.  The two conclusion combines to prove that $f(d)=d$.</p>
 <h3 id="does-iterative-algorithm-end">Does <em>iterative algorithm</em> end?</h3>
-<p>not necessarily.</p>
+<p><strong>Answer</strong>: NOT necessarily!</p>
+<p>E.g., in the above example of a simple loop, the iteration will never come to an end. An intuitive explaination is that although the $lfp$ is proved to uniquely exist, it takes <strong>infinite steps</strong> to iterate from $\bot$ to $lfp$.</p>
 <h3 id="widening-step-over-infinit-heights-at-one-time">Widening: step over infinit heights at one time</h3>
+<h4 id="an-insight-into-widening">An insight into widening</h4>
+<p>Since iterating from $\bot$ to $lfp$ <strong>one step at a time</strong> seems to take infinite rounds, we would like to solve the problem by stepping over those inifite steps at one time, and that&rsquo;s how widening works.</p>
+<p>We can achieve this by mapping the infinit interval lattice to an finite one. This is done by restricting the interval lattice&rsquo;s $l$ and $h$ to a <strong>finite set</strong> $B$, which contians $-\infin,\infin$ and several other integers. Those integers can be specially choosen (heuristically), e.g., all integers occurring in the program.</p>
+<p>We just need to apply $\omega&rsquo;$ function to each variable respectively after calculating $f_s(IN[s_i])$ of each node iteratively. The $\omega&rsquo;$ function is defined as follows:$\omega&rsquo;([l,h])=[a, b]$, where
+$$
+a=max\{i\in B | i &lt; l\},\\ b=min\{i\in B|i&gt;h\}.
+$$
+We can then define the constraint of all nodes as $w(f(\sigma))$, where $f$ is defined by control flow handling and transfering rules, and $\sigma =[\sigma_1, \sigma_2, &hellip;, \sigma_n]$. $\omega$ function is defined as follows:
+$$
+\sigma&rsquo;&rsquo;=\omega(\sigma&rsquo;)=w(\sigma_1&rsquo;, \sigma_2&rsquo;, &hellip;, \sigma_n&rsquo;)=[\sigma_1&rsquo;&rsquo;, \sigma_2&rsquo;&rsquo;, &hellip;, \sigma_n&rsquo;&rsquo;]
+$$
+where
+$$
+\sigma_i&rsquo;&rsquo;(X)=w&rsquo;(\sigma_i&rsquo;(X))
+$$
+note that $\sigma_i(X)$ means the abstract state of variable $X$ at program point $i$.</p>
+<h4 id="do-not-widen-all-variables">Do not widen ALL variables</h4>
+<p>We define $\nabla (\sigma, \sigma&rsquo;)$ to respect the former abstract states, and just apply $\omega&rsquo;$ funtion (widen point wise) to those unstable, i.e., changed variables. $\nabla$ is mostly the same as $\omega$ except that it takes the former program state $\sigma$ additionally. It uses $\sigma$ to evaluate if variable $X$ is stable at some program point and only do widening to those unstable variables.</p>
+<p>Here is an example of how this strategy helps to improve precision:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">for</span>(<span style="color:#6ab825;font-weight:bold">int</span> i = <span style="color:#3677a9">0</span>; i &lt; input; i++){
+</span></span><span style="display:flex;"><span>    x = <span style="color:#3677a9">8</span>;
+</span></span><span style="display:flex;"><span>    y = i * i;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Assume $B=\{-\infin,-1,0,1,7,\infin\}$, if we do widening to $x$, then we will get $x\mapsto[7,\infin]$, but if we do not do widening on $x$, we will have $x\mapsto [8,8]$, which is obviously more precise than the former result.</p>
+<p>Won&rsquo;t this strategy make the whole iteration divergent? Hopefully, it won&rsquo;t! Note that only <strong>unstables</strong> variables causes divergency.</p>
 <h4 id="narrowing">Narrowing</h4>
 <p>We iteratively calculate $f(lfp(\omega \circ f))$ for arbitary times, until we get a satisfying result.</p>
-<h4 id="do-not-widen-all-nodes">Do not widen ALL nodes</h4>
-<p>We define $\nabla (\sigma_1, \sigma_2)$ to respect the former abstract states, and just apply $\omega&rsquo;$ funtion (widen point wise) to those unstable, i.e., changed variables.</p>
 <h3 id="co-work-with-wto-to-deal-with-cycles">Co-work with WTO to deal with cycles</h3>
+<h4 id="wto-fixed-point-algorithm">WTO fixed-point algorithm</h4>
+<p>An insight into the changes happens in each program points.</p>
+<h4 id="widen-at-cycle-head">Widen at cycle head</h4>
 <p>Furthermore, widen can be applied to only cycle head nodes (in WTO) in order to have a better solution.</p>
 <h3 id="widen-delay">Widen delay</h3>
 <p>We can apply to loops $f$ for the first several times, and then apply $\omega \circ f$ to get a more precise result.</p>
