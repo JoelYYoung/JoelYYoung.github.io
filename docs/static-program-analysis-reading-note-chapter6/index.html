@@ -236,9 +236,36 @@ Note that since $f$ is already monotonic, so we actually always have $l&rsquo; \
 <p><strong>Note</strong>: be careful to distinguish monotone and extensive, $f$ is monotonic but not extensive!</p>
 <h3 id="co-work-with-wto-to-deal-with-cycles">Co-work with WTO to deal with cycles</h3>
 <h4 id="wto-fixed-point-algorithm">WTO fixed-point algorithm</h4>
-<p>An insight into the changes happens in each program points.</p>
-<h4 id="widen-at-cycle-head">Widen at cycle head</h4>
-<p>Furthermore, widen can be applied to only cycle head nodes (in WTO) in order to have a better solution.</p>
+<p>In previous iterative fixed-point algorithm, we recalculate the $OUT$ of every nodes in CFG during each iteration. And worklist algorithm improves performance by keeping a record to changed $OUT$ and only recalculate those changed nodes. However, when we look deeply in to the changes happing to the $OUT$ of each node, we will find that some moves are actually <strong>unnecessary</strong>. Take the following program as example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">int</span> x;
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">for</span>(<span style="color:#6ab825;font-weight:bold">int</span> i = <span style="color:#3677a9">0</span>; i &lt; input; i+=x){
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">for</span>(<span style="color:#6ab825;font-weight:bold">int</span> j = <span style="color:#3677a9">0</span>; j &lt; input; j++){
+</span></span><span style="display:flex;"><span>        x += j*j;  <span style="color:#999;font-style:italic">// program point 1
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The iteration process of WTO fixed-point algorithm is as follows:</p>
+<center>
+<img width="300" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/WTO_example1.svg">
+<div style="color:black;"> <b> WTO fixed-point algorithm: example 1 </b>  </div>
+</center>
+<p>If we apply worklist fixed-point algorithm on it, then we would have to interpret <code>i=i+x</code> when <code>x</code> has <strong>not been stable</strong> yet, which causes unnecessary coasts. And WTO fixed-point algorithm interpret <code>i=i+x</code> only after <code>x</code> has iterated to a stable state through inner loop. Therefore, WTO algorithm has a better performance on this testcase.</p>
+<p><strong>Question</strong>: Is WTO fixed-point algorithm always faster than a normal <em>worklist algorithm</em>?</p>
+<p><strong>Answer</strong>: NOT necessary, take the following program as an example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">for</span>(<span style="color:#6ab825;font-weight:bold">int</span> i = <span style="color:#3677a9">0</span>; i &lt; input; i++){
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">for</span>(<span style="color:#6ab825;font-weight:bold">int</span> j = i; j &lt; input; j++){
+</span></span><span style="display:flex;"><span>        x = j * j; <span style="color:#999;font-style:italic">// program point 1
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The iteration process of WTO fixed-point algorithm is as follows:</p>
+<center>
+<img width="300" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/WTO_example2.svg">
+<div style="color:black;"> <b> WTO fixed-point algorithm: example 2 </b>  </div>
+</center>
+<p>Obviously, we iterate until widening on the inner loop during <strong>each</strong> iteration on the external loop (left picture), which can be avoided by doing interpreting all nodes at the same time (right picture).</p>
+<h4 id="widen-at-feedback-vertex-set-fvs">Widen at <em>feedback vertex set</em> (FVS)</h4>
+<p>Based on the observation that <strong>unstablity is resulted from loops</strong>, we can apply widening only on one node of each loops, then we can asure the whole iteration process to stop after finite steps.</p>
+<p><strong>Proof</strong>: Does it promise to make the iteration finite?</p>
+<p>Here we define a smaller lattice that is producted by the state lattices of the nodes in FVS, and we focus on the changes of the smaller lattice. After each iteration, the states of FVS will either increase or remain unchanged. And the states of other nodes will change for finite iteration rounds until the states of FVS change or remains unchanged and reach the fixed point. Because if states of FVS remains unchanged, it is equivalent to delete all feedback edges at each iteration rounds. So</p>
 <h3 id="widen-delay">Widen delay</h3>
 <p>We can apply to loops $f$ for the first several times, and then apply $\omega \circ f$ to get a more precise result.</p>
 <h2 id="reference">Reference</h2>

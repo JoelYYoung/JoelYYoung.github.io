@@ -114,7 +114,6 @@ Fix points are approximation answer to the question "what abstract states are po
 
 
 
-
 **Note**: ***Fixed points*** are for each designed constraint, i.e., different constraints could yield different ***Fixed points*** and $lfp$; The above framework is path insensitive, and path sensitive approximation like *MOP*(meet over every path) is proved to be more precise for the same data abstraction. 
 
 ## *May Analysis* and *Must Analysis*
