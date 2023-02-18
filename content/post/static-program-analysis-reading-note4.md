@@ -181,9 +181,10 @@ for(int i = 0; i < input; i+=x){
 The iteration process of WTO fixed-point algorithm is as follows:
 
 <center>
-<img width="300" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/WTO_example1.svg">
+<img width="400" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/WTO_example1.svg">
 <div style="color:black;"> <b> WTO fixed-point algorithm: example 1 </b>  </div>
 </center>
+
 
 If we apply worklist fixed-point algorithm on it, then we would have to interpret `i=i+x` when `x` has **not been stable** yet, which causes unnecessary coasts. And WTO fixed-point algorithm interpret `i=i+x` only after `x` has iterated to a stable state through inner loop. Therefore, WTO algorithm has a better performance on this testcase.
 
@@ -202,9 +203,10 @@ for(int i = 0; i < input; i++){
 The iteration process of WTO fixed-point algorithm is as follows:
 
 <center>
-<img width="300" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/WTO_example2.svg">
+<img width="800" src="https://github.com/JoelYYoung/JoelYYoung.github.io/raw/master/static/img/WTO_example2.svg">
 <div style="color:black;"> <b> WTO fixed-point algorithm: example 2 </b>  </div>
 </center>
+
 
 Obviously, we iterate until widening on the inner loop during **each** iteration on the external loop (left picture), which can be avoided by doing interpreting all nodes at the same time (right picture).
 
