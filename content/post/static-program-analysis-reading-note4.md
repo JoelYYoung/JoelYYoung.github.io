@@ -226,6 +226,47 @@ We can apply to loops $f$ for the first several times, and then apply $\omega \c
 
 
 
+## Summary
+
+| fixed-point algo | widen on                | fixed-points                                   |
+| ---------------- | ----------------------- | ---------------------------------------------- |
+| WTO              | head, changed variables | $lfp(\nabla \circ f)$, $\nabla$ only for heads |
+| worklist         | all variables           | $lfp(\omega)$                                  |
+
+- WTO fixed-point doesn't influence precision, but just influences the speed!
+- widen on head/changed variables actually incluences the precision!
+
+
+
+## Appendex: Proof of WTO Fixed-point Algorithm
+
+**def** $f_p(\sigma) = [\sigma_1, \sigma_2,...,\sigma_n']$
+
+**def** $\nabla \circ f_p$ applying selective widening on $\sigma$s of FVS.
+
+we have $\bot \sqsubseteq \nabla \circ f(\bot)$
+
+**lemma 1**: $x\sqsubseteq f(x) \Rightarrow x\sqsubseteq f_p(x) \sqsubseteq f(x)$
+
+**lemma 2**: $\nabla \circ f_p$ is monotonic.
+
+**Conclusion **1: $\bot \sqsubseteq \nabla \circ f_p(\bot) \sqsubseteq\nabla\circ f(\bot)$, from lemma 1.
+
+So $\nabla \circ f_p(\bot) \sqsubseteq \nabla \circ f(\nabla \circ f_p(\bot))$, from $\nabla\circ f(\bot)\sqsubseteq \nabla \circ f(\nabla \circ f_p(\bot))$
+
+which means $\nabla \circ f_p(\bot) \sqsubseteq \nabla \circ f_p(\nabla \circ f_p(\bot)) \sqsubseteq\nabla\circ f(\nabla \circ f_p(\bot))$, from lemma 1.
+
+
+
+then we replace $\bot$ with any $x$ that makes conclusion 1 true, and we will have if those conclusions also true for $\nabla\circ f_p(x)$.
+
+finally, we will have a increasing sequence that satisfies:
+
+- always increasing
+- always $\sqsubseteq (\nabla \circ f)^n(\bot) \sqsubseteq lfp(\nabla \circ f)$
+
+And we have proven that widening the sequence is finite, so it will finally reach the $lfp(\nabla \circ f)$.
+
 ## Reference
 
 - [Static Program Analysis Chapter 6](https://cs.au.dk/~amoeller/spa/)

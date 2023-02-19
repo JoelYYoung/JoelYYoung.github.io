@@ -268,6 +268,48 @@ Note that since $f$ is already monotonic, so we actually always have $l&rsquo; \
 <p>Here we define a smaller lattice that is producted by the state lattices of the nodes in FVS, and we focus on the changes of the smaller lattice. After each iteration, the states of FVS will either increase or remain unchanged. And the states of other nodes will change for finite iteration rounds until the states of FVS change or remains unchanged and reach the fixed point. Because if states of FVS remains unchanged, it is equivalent to delete all feedback edges at each iteration rounds. So</p>
 <h3 id="widen-delay">Widen delay</h3>
 <p>We can apply to loops $f$ for the first several times, and then apply $\omega \circ f$ to get a more precise result.</p>
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>fixed-point algo</th>
+<th>widen on</th>
+<th>fixed-points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WTO</td>
+<td>head, changed variables</td>
+<td>$lfp(\nabla \circ f)$, $\nabla$ only for heads</td>
+</tr>
+<tr>
+<td>worklist</td>
+<td>all variables</td>
+<td>$lfp(\omega)$</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>WTO fixed-point doesn&rsquo;t influence precision, but just influences the speed!</li>
+<li>widen on head/changed variables actually incluences the precision!</li>
+</ul>
+<h2 id="appendex-proof-of-wto-fixed-point-algorithm">Appendex: Proof of WTO Fixed-point Algorithm</h2>
+<p><strong>def</strong> $f_p(\sigma) = [\sigma_1, \sigma_2,&hellip;,\sigma_n&rsquo;]$</p>
+<p><strong>def</strong> $\nabla \circ f_p$ applying selective widening on $\sigma$s of FVS.</p>
+<p>we have $\bot \sqsubseteq \nabla \circ f(\bot)$</p>
+<p><strong>lemma 1</strong>: $x\sqsubseteq f(x) \Rightarrow x\sqsubseteq f_p(x) \sqsubseteq f(x)$</p>
+<p><strong>lemma 2</strong>: $\nabla \circ f_p$ is monotonic.</p>
+<p>**Conclusion **1: $\bot \sqsubseteq \nabla \circ f_p(\bot) \sqsubseteq\nabla\circ f(\bot)$, from lemma 1.</p>
+<p>So $\nabla \circ f_p(\bot) \sqsubseteq \nabla \circ f(\nabla \circ f_p(\bot))$, from $\nabla\circ f(\bot)\sqsubseteq \nabla \circ f(\nabla \circ f_p(\bot))$</p>
+<p>which means $\nabla \circ f_p(\bot) \sqsubseteq \nabla \circ f_p(\nabla \circ f_p(\bot)) \sqsubseteq\nabla\circ f(\nabla \circ f_p(\bot))$, from lemma 1.</p>
+<p>then we replace $\bot$ with any $x$ that makes conclusion 1 true, and we will have if those conclusions also true for $\nabla\circ f_p(x)$.</p>
+<p>finally, we will have a increasing sequence that satisfies:</p>
+<ul>
+<li>always increasing</li>
+<li>always $\sqsubseteq (\nabla \circ f)^n(\bot) \sqsubseteq lfp(\nabla \circ f)$</li>
+</ul>
+<p>And we have proven that widening the sequence is finite, so it will finally reach the $lfp(\nabla \circ f)$.</p>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://cs.au.dk/~amoeller/spa/">Static Program Analysis Chapter 6</a></li>
