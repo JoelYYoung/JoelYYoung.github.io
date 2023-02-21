@@ -2,18 +2,18 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1"><title>Categories - Joel Yang</title>
-<meta property="og:title" content="Categories - Joel Yang">
-<meta property="og:type" content="website">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1"><title>Static Program Analysis Thought: path conditions - Joel Yang</title>
+<meta property="og:title" content="Static Program Analysis Thought: path conditions - Joel Yang">
+<meta property="og:type" content="article">
 
 
 <meta property="og:image" content="img/main.jpg">
 
-<meta property="og:url" content="https://joelyyoung.github.io/categories/"><meta property="og:description" content="Joel Yang&#39;s blog.">
+<meta property="og:url" content="https://joelyyoung.github.io/static-program-analysis-thought-path-conditions/"><meta property="og:description" content="Joel Yang&#39;s blog.">
 <meta name="Description" property="description" content="Joel Yang&#39;s blog.">
 
 
-
+<meta property="keywords" content ="static program analysis, thought">
 
 
 
@@ -109,77 +109,106 @@
                  leading-loose md:px-0 px-2 z-0"
           role="main">
     
-<div class="category">
-  <h2 class="category-title">Categories</h2>
-  
-  
-  <ul class="category-item">
-    <li>
-      <a href="https://joelyyoung.github.io/categories/metaphorsum">
-        metaphorsum
-      </a>
-      <span class="category-item-count">
-        <sup>(3)</sup>
-      </span>
-    </li>
-  </ul>
-  
-  <ul class="category-item">
-    <li>
-      <a href="https://joelyyoung.github.io/categories/post">
-        post
-      </a>
-      <span class="category-item-count">
-        <sup>(3)</sup>
-      </span>
-    </li>
-  </ul>
-  
-  <ul class="category-item">
-    <li>
-      <a href="https://joelyyoung.github.io/categories/reading-note">
-        reading-note
-      </a>
-      <span class="category-item-count">
-        <sup>(4)</sup>
-      </span>
-    </li>
-  </ul>
-  
-  <ul class="category-item">
-    <li>
-      <a href="https://joelyyoung.github.io/categories/techniques">
-        techniques
-      </a>
-      <span class="category-item-count">
-        <sup>(1)</sup>
-      </span>
-    </li>
-  </ul>
-  
-  <ul class="category-item">
-    <li>
-      <a href="https://joelyyoung.github.io/categories/theory-of-computing">
-        theory-of-computing
-      </a>
-      <span class="category-item-count">
-        <sup>(3)</sup>
-      </span>
-    </li>
-  </ul>
-  
-  <ul class="category-item">
-    <li>
-      <a href="https://joelyyoung.github.io/categories/thought">
-        thought
-      </a>
-      <span class="category-item-count">
-        <sup>(1)</sup>
-      </span>
-    </li>
-  </ul>
-  
-</div>
+<article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="title-container">
+        <h1 class="article-title p-name" itemprop="name">Static Program Analysis Thought: path conditions</h1>
+        
+        <b><i itemprop="headline" class="article-headline text-lg p-summary">
+            A Formal Framework of Path Condition Handling
+        </i></b>
+        
+        <div class="flex justify-between items-center">
+            
+            <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="https://joelyyoung.github.io/static-program-analysis-thought-path-conditions/">
+                <time itemprop="datePublished" class="dt-published"
+                    datetime="2022-12-03T00:00:00Z"
+                    content="2022-12-03T00:00:00Z">
+                    2022.12.03
+                </time>
+            </a>
+            
+            
+        </div>
+        
+    </div>
+
+    <div class="article-content e-content" itemprop="articleBody">
+        <h1 id="path-conditions">Path Conditions</h1>
+<h2 id="brief">Brief</h2>
+<p>In this artical, I give the formal statement of handling path conditions.</p>
+
+    </div>
+
+    
+<ul class="list-none pl-0 font-sm align-left">
+
+<hr>
+<li class="list-none">
+    Categories:
+    
+    <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200"
+       href="/categories/thought">
+    <span class="tag-item dark:bg-zinc-900 dark:hover:bg-zinc-700
+                 hover:bg-zinc-200 bg-zinc-100
+                 dark:border-zinc-600 py-0.5
+                 px-1 rounded-t border-b-2 border-zinc-300
+                 hover:border-zinc-500">
+    Thought
+    </span>
+</a>
+</li >
+
+
+<li class="list-none">
+    Tags:
+    
+    <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200"
+       href="/tags/static-program-analysis">
+        <span class="flex flex-row justify-start items-center
+                     dark:bg-zinc-900 dark:hover:bg-zinc-700
+                     hover:bg-zinc-200 bg-zinc-100
+                     dark:border-zinc-600 py-0.5
+                     px-1 rounded-t border-b-2 border-zinc-300
+                     hover:border-zinc-500">
+            
+            <img class="h-4 mr-2 inline" src="https://joelyyoung.github.io/images/tag_logo.svg"
+                 alt="Logo of a tag: indicates that a tag item follows.">
+            Static Program Analysis
+        </span>
+    </a>
+    
+    <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200"
+       href="/tags/thought">
+        <span class="flex flex-row justify-start items-center
+                     dark:bg-zinc-900 dark:hover:bg-zinc-700
+                     hover:bg-zinc-200 bg-zinc-100
+                     dark:border-zinc-600 py-0.5
+                     px-1 rounded-t border-b-2 border-zinc-300
+                     hover:border-zinc-500">
+            
+            <img class="h-4 mr-2 inline" src="https://joelyyoung.github.io/images/tag_logo.svg"
+                 alt="Logo of a tag: indicates that a tag item follows.">
+            Thought
+        </span>
+    </a>
+    
+</li>
+
+</ul>
+
+
+
+    
+    
+    <div class="text-neutral-500 mb-4">
+        Last modified <span itemprop="dateModified"
+                            datetime="2022-12-03T00:00:00Z"
+                            content="2022-12-03T00:00:00Z">
+        2022.12.03
+        </span>
+    </div>
+    
+</article>
 
     </main>
     <footer class="footer container h-10 text-center mt-1">
@@ -200,6 +229,21 @@
 </footer>
 
 
+<link rel="stylesheet" href="/js/katex/katex.min.css">
+<script src="/js/katex/katex.min.js"></script>
+<script src="/js/katex/contrib/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false},
+                {left: "\\[", right: "\\]", display: true}
+            ]
+        });
+    });
+</script>
 
   </body>
 </html>

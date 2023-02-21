@@ -6,6 +6,7 @@ categories = [ "Reading Note" ]
 headline = "Widening and Narrowing"
 tags = ["Static Program Analysis", "Reading Note"]
 katex = true
+modified = "2023-02-21"
 
 +++
 
@@ -159,9 +160,13 @@ Note that since $f$ is already monotonic, so we actually always have $l' \le l$ 
 
 **Problem**: Why narrowing works?
 
-Firstly, it can be proved from the defnition that the $lfp$ of $\omega \circ f$ and $\nabla\circ f$ are both **greater than** the $lfp$ of $f$. Secondly, we have $\forall \sigma, \sigma\sqsubseteq \omega(\sigma)$, i.e., $\omega$ is extensive. So $lfp_\omega=\omega(f(lfp_\omega))\sqsubseteq f(lfp_\omega)$.
+**Lamma**: $\forall \sigma, \sigma\sqsubseteq \omega(\sigma)$, i.e., $\omega$ is ***extensive***. and $\nabla$ is also ***extensive***.
 
-**Note**: be careful to distinguish monotone and extensive, $f$ is monotonic but not extensive!
+Firstly, from  $\omega$ is *extensive*, we know that $f(lfp_\omega)\sqsubseteq \omega \circ f(lfp_\omega)=lfp_\omega$. Then, from $lfp_f=\sqcap\\{x|f(x)\sqsubseteq x\\}$, so we further have $lfp_f\sqsubseteq lfp_\omega$ . Finally, from $f$ is *monotonic*, and $\omega$ is *extensive*, we have $f(lfp_f)=lfp_f\sqsubseteq f(lfp_\omega)\sqsubseteq \omega \circ f(lfp_\omega) = lfp_\omega$
+
+
+
+**Note**: Be careful to distinguish ***monotone*** and ***extensive***, $f$ is *monotonic* but NOT *extensive*! The predicate of narrowing is that we have a *monotonic* $f$ and *extensive* $w$ on a *complete lattice* $L$.
 
 ### Co-work with WTO to deal with cycles
 
@@ -240,17 +245,17 @@ We can apply to loops $f$ for the first several times, and then apply $\omega \c
 
 ## Appendex: Proof of WTO Fixed-point Algorithm
 
-**def** $f_p(\sigma) = [\sigma_1, \sigma_2,...,\sigma_n']$
+**Def** $f_p(\sigma) = [\sigma_1, \sigma_2,...,\sigma_n']$
 
-**def** $\nabla \circ f_p$ applying selective widening on $\sigma$s of FVS.
+**Def** $\nabla \circ f_p$ applying selective widening on $\sigma$s of FVS.
 
 we have $\bot \sqsubseteq \nabla \circ f(\bot)$
 
-**lemma 1**: $x\sqsubseteq f(x) \Rightarrow x\sqsubseteq f_p(x) \sqsubseteq f(x)$
+**Lemma 1**: $x\sqsubseteq f(x) \Rightarrow x\sqsubseteq f_p(x) \sqsubseteq f(x)$
 
-**lemma 2**: $\nabla \circ f_p$ is monotonic.
+**Lemma 2**: $\nabla \circ f_p$ is monotonic.
 
-**Conclusion **1: $\bot \sqsubseteq \nabla \circ f_p(\bot) \sqsubseteq\nabla\circ f(\bot)$, from lemma 1.
+**Conclusion 1**: $\bot \sqsubseteq \nabla \circ f_p(\bot) \sqsubseteq\nabla\circ f(\bot)$, from lemma 1.
 
 So $\nabla \circ f_p(\bot) \sqsubseteq \nabla \circ f(\nabla \circ f_p(\bot))$, from $\nabla\circ f(\bot)\sqsubseteq \nabla \circ f(\nabla \circ f_p(\bot))$
 

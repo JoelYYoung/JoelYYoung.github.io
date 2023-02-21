@@ -232,8 +232,9 @@ Note that since $f$ is already monotonic, so we actually always have $l&rsquo; \
 <h4 id="narrowing">Narrowing</h4>
 <p><strong>Brief</strong>: Iteratively calculate $f(lfp(\omega \circ f))$ for arbitary times, until we get a satisfying result.</p>
 <p><strong>Problem</strong>: Why narrowing works?</p>
-<p>Firstly, it can be proved from the defnition that the $lfp$ of $\omega \circ f$ and $\nabla\circ f$ are both <strong>greater than</strong> the $lfp$ of $f$. Secondly, we have $\forall \sigma, \sigma\sqsubseteq \omega(\sigma)$, i.e., $\omega$ is extensive. So $lfp_\omega=\omega(f(lfp_\omega))\sqsubseteq f(lfp_\omega)$.</p>
-<p><strong>Note</strong>: be careful to distinguish monotone and extensive, $f$ is monotonic but not extensive!</p>
+<p><strong>Lamma</strong>: $\forall \sigma, \sigma\sqsubseteq \omega(\sigma)$, i.e., $\omega$ is <em><strong>extensive</strong></em>. and $\nabla$ is also <em><strong>extensive</strong></em>.</p>
+<p>Firstly, from  $\omega$ is <em>extensive</em>, we know that $f(lfp_\omega)\sqsubseteq \omega \circ f(lfp_\omega)=lfp_\omega$. Then, from $lfp_f=\sqcap\{x|f(x)\sqsubseteq x\}$, so we further have $lfp_f\sqsubseteq lfp_\omega$ . Finally, from $f$ is <em>monotonic</em>, and $\omega$ is <em>extensive</em>, we have $f(lfp_f)=lfp_f\sqsubseteq f(lfp_\omega)\sqsubseteq \omega \circ f(lfp_\omega) = lfp_\omega$</p>
+<p><strong>Note</strong>: Be careful to distinguish <em><strong>monotone</strong></em> and <em><strong>extensive</strong></em>, $f$ is <em>monotonic</em> but NOT <em>extensive</em>! The predicate of narrowing is that we have a <em>monotonic</em> $f$ and <em>extensive</em> $w$ on a <em>complete lattice</em> $L$.</p>
 <h3 id="co-work-with-wto-to-deal-with-cycles">Co-work with WTO to deal with cycles</h3>
 <h4 id="wto-fixed-point-algorithm">WTO fixed-point algorithm</h4>
 <p>In previous iterative fixed-point algorithm, we recalculate the $OUT$ of every nodes in CFG during each iteration. And worklist algorithm improves performance by keeping a record to changed $OUT$ and only recalculate those changed nodes. However, when we look deeply in to the changes happing to the $OUT$ of each node, we will find that some moves are actually <strong>unnecessary</strong>. Take the following program as example:</p>
@@ -295,12 +296,12 @@ Note that since $f$ is already monotonic, so we actually always have $l&rsquo; \
 <li>widen on head/changed variables actually incluences the precision!</li>
 </ul>
 <h2 id="appendex-proof-of-wto-fixed-point-algorithm">Appendex: Proof of WTO Fixed-point Algorithm</h2>
-<p><strong>def</strong> $f_p(\sigma) = [\sigma_1, \sigma_2,&hellip;,\sigma_n&rsquo;]$</p>
-<p><strong>def</strong> $\nabla \circ f_p$ applying selective widening on $\sigma$s of FVS.</p>
+<p><strong>Def</strong> $f_p(\sigma) = [\sigma_1, \sigma_2,&hellip;,\sigma_n&rsquo;]$</p>
+<p><strong>Def</strong> $\nabla \circ f_p$ applying selective widening on $\sigma$s of FVS.</p>
 <p>we have $\bot \sqsubseteq \nabla \circ f(\bot)$</p>
-<p><strong>lemma 1</strong>: $x\sqsubseteq f(x) \Rightarrow x\sqsubseteq f_p(x) \sqsubseteq f(x)$</p>
-<p><strong>lemma 2</strong>: $\nabla \circ f_p$ is monotonic.</p>
-<p>**Conclusion **1: $\bot \sqsubseteq \nabla \circ f_p(\bot) \sqsubseteq\nabla\circ f(\bot)$, from lemma 1.</p>
+<p><strong>Lemma 1</strong>: $x\sqsubseteq f(x) \Rightarrow x\sqsubseteq f_p(x) \sqsubseteq f(x)$</p>
+<p><strong>Lemma 2</strong>: $\nabla \circ f_p$ is monotonic.</p>
+<p><strong>Conclusion 1</strong>: $\bot \sqsubseteq \nabla \circ f_p(\bot) \sqsubseteq\nabla\circ f(\bot)$, from lemma 1.</p>
 <p>So $\nabla \circ f_p(\bot) \sqsubseteq \nabla \circ f(\nabla \circ f_p(\bot))$, from $\nabla\circ f(\bot)\sqsubseteq \nabla \circ f(\nabla \circ f_p(\bot))$</p>
 <p>which means $\nabla \circ f_p(\bot) \sqsubseteq \nabla \circ f_p(\nabla \circ f_p(\bot)) \sqsubseteq\nabla\circ f(\nabla \circ f_p(\bot))$, from lemma 1.</p>
 <p>then we replace $\bot$ with any $x$ that makes conclusion 1 true, and we will have if those conclusions also true for $\nabla\circ f_p(x)$.</p>
@@ -381,9 +382,9 @@ Note that since $f$ is already monotonic, so we actually always have $l&rsquo; \
     
     <div class="text-neutral-500 mb-4">
         Last modified <span itemprop="dateModified"
-                            datetime="2023-02-15T00:00:00Z"
-                            content="2023-02-15T00:00:00Z">
-        2023.02.15
+                            datetime="2023-02-21T00:00:00Z"
+                            content="2023-02-21T00:00:00Z">
+        2023.02.21
         </span>
     </div>
     
