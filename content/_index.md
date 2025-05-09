@@ -75,21 +75,20 @@ address:
 
 publications:
   - authors:
-        - name: Jiawei Yang
-          me: true
-          equal_contribution: true
-        - name: Xiao Cheng
-          equal_contribution: true
-        - name: Bor-Yuh Evan Chang
-        - name: Xiapu Luo
-        - name: Yulei Sui
-          corresponding: true
+      - name: Jiawei Yang
+        me: true
+        equal_contribution: true
+      - name: Xiao Cheng
+        equal_contribution: true
+      - name: Bor-Yuh Evan Chang
+      - name: Xiapu Luo
+      - name: Yulei Sui
+        corresponding: true
     title: "Taming and Dissecting Recursions through Interprocedural Weak Topological Ordering"
     date: 2025
     journal: ECOOP
     image: img/ecoop_25.png
     pdf: img/ecoop_25.png
-
 ---
 
 # Bio
