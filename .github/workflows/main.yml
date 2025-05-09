@@ -57,3 +57,10 @@ jobs:
         with:
           commit_message: Update example site
           file_pattern: docs/*
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs
+
