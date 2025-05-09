@@ -1,383 +1,55 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1"><title>Methematical Fundations of Computing: Study Note of CS103 - Joel Yang</title>
-<meta property="og:title" content="Methematical Fundations of Computing: Study Note of CS103 - Joel Yang">
-<meta property="og:type" content="article">
-
-
-<meta property="og:image" content="img/main.jpg">
-
-<meta property="og:url" content="https://joelyyoung.github.io/methematical-fundations-of-computing-study-note/"><meta property="og:description" content="Joel Yang&#39;s blog.">
-<meta name="Description" property="description" content="Joel Yang&#39;s blog.">
-
-
-<meta property="keywords" content ="methematical, computing, stanford, cs103">
-
-
-
-<link rel="stylesheet" href="https://joelyyoung.github.io/css/style.min.css">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link href="https://joelyyoung.github.io/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed" />
-<meta name="theme-color" content="#ffffff">
-
-
-<script>function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}</script>
-
-  </head>
-  <body>
-    <header class="md:px-0 px-2">
-        <nav >
-  <div class="container flex flex-wrap justify-between items-center mx-auto">
-    <div class="nav-main my-2.5">
-      <a href="https://joelyyoung.github.io/" class="nav-title py-2.5 text-2xl
-               text-zinc-600 dark:text-zinc-300 hover:border-b-0">Joel Yang</a>
-    </div>
-    <button type="button"
-            onclick="toggleMenu()"
-            class="inline-flex items-center p-2 ml-3
-                  text-sm text-gray-500
-                  rounded-lg md:hidden hover:bg-gray-100
-                  focus:outline-none focus:ring-2
-                  focus:ring-gray-200 dark:text-gray-400
-                  dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-default"
-            aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor"
-             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1
-                           0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
-                           01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0
-                           01-1-1z" clip-rule="evenodd"></path>
-        </svg>
-    </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
-        
-        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-          <a class="text-zinc-600 dark:text-zinc-300
-                    hover:border-b-0" href="/post/">Posts</a>
-        </li>
-        
-        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-          <a class="text-zinc-600 dark:text-zinc-300
-                    hover:border-b-0" href="/categories/">Categories</a>
-        </li>
-        
-        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-          <a class="text-zinc-600 dark:text-zinc-300
-                    hover:border-b-0" href="/tags/">Tags</a>
-        </li>
-        
-        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-          <a class="text-zinc-600 dark:text-zinc-300
-                    hover:border-b-0" href="/contact/">Contact</a>
-        </li>
-        
-        <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-          <a class="text-zinc-600 dark:text-zinc-300
-                    hover:border-b-0" href="/demopage/">Demo Page</a>
-        </li>
-        
-        <li class="h-7 pl-2.5 pr-0 list-none">
-          <button type="button" onclick="toggleMode()" class="h-full"  aria-label="Toggle between dark and light mode">
-            <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline"
-                 id="ligh-mode-button-img"
-                 alt="A sun icon for switching to light mode"
-                 src="https://joelyyoung.github.io/img/light_mode.svg">
-            <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden"
-                 id="dark-mode-button-img"
-                 alt="A moon icon for switching to dark mode"
-                 src="https://joelyyoung.github.io/img/dark_mode.svg">
-          </button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-    </header>
-    <main class="content h-card container mt-2 m-auto
-                 leading-loose md:px-0 px-2 z-0"
-          role="main">
-    
-<article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="title-container">
-        <h1 class="article-title p-name" itemprop="name">Methematical Fundations of Computing: Study Note of CS103</h1>
-        
-        <div class="flex justify-between items-center">
-            
-            <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="https://joelyyoung.github.io/methematical-fundations-of-computing-study-note/">
-                <time itemprop="datePublished" class="dt-published"
-                    datetime="2022-12-05T00:00:00Z"
-                    content="2022-12-05T00:00:00Z">
-                    2022.12.05
-                </time>
-            </a>
-            
-            
-        </div>
-        
-    </div>
-
-    <div class="article-content e-content" itemprop="articleBody">
-        <h1 id="abstract">Abstract</h1>
-<p><strong>Keywords</strong>: Computing Model, Finite Automata (FA or DFA), Undeterministic Finite Automata (UFA), Problem, Decision Problem, Function Problem, Turing Machine (TM), Language, Recognizable Language, Regular Language, Decidable Language</p>
-<p>Above are the major topic that will be talked in this artical. And this artical is basically a digest of <a href="https://web.stanford.edu/class/archive/cs/cs103/cs103.1134/">Stanford CS103</a> course slides, which ignores the proof of some conclusion and detailed explainations of some ideas, but just lists the critical conclusions and notions that are helpful for understanding Static Program Analysis.</p>
-<p>Advanced classes are <a href="http://infolab.stanford.edu/~ullman/ialc/spr10/spr10.html">CS154</a> and <a href="http://theory.stanford.edu/~liyang/teaching/complexity22.html">CS254</a>. And this is <a href="http://web.stanford.edu/class/archive/cs/cs103/cs103.1184/">2018 version of CS103</a>, this is <a href="https://web.stanford.edu/class/cs103/">2022 Version of CS103</a>.</p>
-<h1 id="computability">Computability</h1>
-<h2 id="how-to-define-the-terminology-problem">How to define the terminology <em>problem</em>?</h2>
-<blockquote>
-<p>We want a definition that</p>
-<ul>
-<li>corresponds to the problems we want to solve,</li>
-<li>captures a large class of problems, and</li>
-<li>is mathematically simple to reason about.</li>
-</ul>
-<p>No one definition has all three properties.</p>
-</blockquote>
-<p>So we focus on <em><strong>Decision Problems</strong></em>.</p>
-<blockquote>
-<p><strong>Definition</strong>: A <em><strong>decision problem</strong></em> is the problem of determining an answer to <strong>a class of</strong> yes/no <strong>questions</strong> about some <strong>objects</strong> of interest.</p>
-</blockquote>
-<p><strong>Note</strong>: the above definition points out that a <em><strong>decision problem</strong></em> should contain <strong>a class of</strong> yes/no questions，And these questions should be about some <strong>objects</strong> of interest. <strong>&ldquo;A class of&rdquo;</strong> here should be payed special attention to, which emphasizes that those questions should be of similar forms, i.e., they are about the <strong>same</strong> property of a <strong>same</strong> class of <strong>objects</strong>. <strong>A class of objects</strong> also have some restrictions, there must exist an alphabet $\Sigma$ that and the each object in the <strong>class of objects</strong> has an one-one correspondence to a specific <strong>string</strong> in the string set $\Sigma*$.</p>
-<p>The other types of <em>problems</em> are <em>function problems</em>, which require to <strong>take in an input and produce some output object rather than just a yes/no answer</strong>.</p>
-<p><em><strong>Decision Problems</strong></em> has the following advantages over none-decision problems:</p>
-<ul>
-<li>Convenient to reason methematically,</li>
-<li>Have simple methematical forms,</li>
-<li>etc.</li>
-</ul>
-<h2 id="how-do-we-encode-a-problem-language">How do we <em>encode</em> a <em>problem</em>: <em>language</em></h2>
-<blockquote>
-<p>Any <em><strong>Decision Problems</strong></em> can be transformed into the problem of <em>recognizing strings&rsquo; membership in a language</em>, i.e., to decide whether a given string <em><strong>belongs to</strong></em> a defined <em><strong>language</strong></em>.</p>
-</blockquote>
-<p>This claim seems unreasonable, but remember how we defined the terminology <em><strong>class of objects</strong></em>? We have required  them to be <em>encodable</em>!</p>
-<p>Since <em><strong>Solving Decision Problem = Strings Recognizing</strong></em>, we can talk about <em><strong>Languages</strong></em> instead of a specific Decision Problem in the rest part of this artical. As for <strong>how</strong> a problem could be transformed, it&rsquo;s another story, and <a href="https://www.ccs.neu.edu/home/rjw/csu390-sp06/LectureMaterials/Decision-Problems.pdf">this pdf</a> explains some details. Basically it is the notion same as <em><strong>encoding</strong></em> a class of objects or combinations of classes of objects.</p>
-<p>Note that <em><strong>Finite Automata</strong></em> as a <em><strong>class of objects</strong></em> is encodable!</p>
-<h1 id="finite-automata">Finite Automata</h1>
-<p><strong>Note</strong>: this is correspondent to CS103 Lecture 11-13</p>
-<blockquote>
-<p><em>automaton</em> (/ɔːˈtɒmətən/; plural: <em>automata</em> or <em>automatons</em>)</p>
-</blockquote>
-<p>Three crutial aspects of finite automata:</p>
-<ul>
-<li>finite states</li>
-<li>transition over specific inputs (be with an <em><strong>alphabet</strong></em> $\Sigma$)</li>
-<li>only one <em><strong>start state</strong></em> &amp; multiple <em><strong>stop states</strong></em></li>
-</ul>
-<p>And we can define our automata&rsquo;s stop states by deviding them into 2 types: <strong>accept states</strong> and <strong>reject states</strong>, so that we can use this automata to solve <em><strong>Decision Problems</strong></em>.</p>
-<h2 id="language-of-fa-regular-languages">Language of FA: <em>Regular Languages</em></h2>
-<p><strong>Definition</strong>: Languages defined by <em>regular expression</em> are <em><strong>Regular Languages</strong></em>.</p>
-<blockquote>
-<p><strong>Conclusion</strong>: For any single <em><strong>regular language</strong></em>, there exists an finite automata that:</p>
-<ul>
-<li>gets into <em><strong>Accept States</strong></em> and <em><strong>halts</strong></em> with string s, when s <em><strong>belongs to</strong></em> the language, and</li>
-<li>gets into <em><strong>Reject States</strong></em> and halts with string s, when s does NOT <em><strong>belongs to</strong></em> the language.</li>
-</ul>
-</blockquote>
-<p>We call a language that satisfies the above condition to a specific automata as <em>the language of that automata</em>.</p>
-<h2 id="undeterministic-finite-automata">Undeterministic Finite Automata</h2>
-<p>to be completed&hellip;</p>
-<h1 id="turing-machines">Turing Machines</h1>
-<p>A <em><strong>Turing Machine</strong></em> consists of:</p>
-<ul>
-<li>a finite automata as controler,</li>
-<li>a <strong>infinite long</strong> tape with a head pointing to one position on the tape</li>
-</ul>
-<p>The <em><strong>Start State</strong></em> of a <em>Turing Machine</em> means:</p>
-<ul>
-<li>the FA is at the <em><strong>Start State</strong></em> and</li>
-<li>the input string is somewhere on the tape (where exactly doesn&rsquo;t really matter), and if not given a input, the tape is defaultly set to all <em>Blank Character</em>.</li>
-<li>the head of the tape points to the first character of the input string.</li>
-</ul>
-<p>The <em><strong>execution</strong></em> of a <em>Turing Machine</em> works by repeating the 3 steps until it gets into a <em><strong>Stop State</strong></em>:</p>
-<ul>
-<li>Read the pointed character of the head as input</li>
-<li>Write back to the pointed position</li>
-<li>Transist to the next state</li>
-</ul>
-<h2 id="language-of-tm-recognizability-and-re-languages">Language of TM: <em>Recognizability</em> and <em>RE</em> Languages</h2>
-<p>We can define <em>Language of a Turing Machine</em> just like the <em>Language of a Finite Automata</em>, i.e., the set of strings containing all strings that could be the input of that TM and make the TM to get into an <em><strong>Accept State</strong></em>.</p>
-<p>Then we can define <em><strong>Recognizable Languages</strong></em>, which is a sub set of <em><strong>Languages</strong></em> in which <em><strong>Language</strong></em> $L$ satisfies: there exisit a <em><strong>Turing Machine</strong></em> $M$ that $L$ is the language of $M$. We denote <em><strong>Recognizable Languages</strong></em> as $RE$ <em><strong>Languages</strong></em>.</p>
-<p>Note: <strong>NOT</strong> all languages has it&rsquo;s correspondent Turing Machine, only <em>RE</em> has!</p>
-<h2 id="decidability-and-r-languages"><em>Decidability</em> and <em>R​</em> Languages</h2>
-<p>Since the <em><strong>execution</strong></em> of a <em><strong>Turing Machine</strong></em> with an input s could be devided into exactly 3 categories: ending at <em><strong>Accept State</strong></em>, ending at <em><strong>Reject State</strong></em> and does <strong>NOT</strong> end at all (i.e. diverge). And if we input a <em><strong>string</strong></em> $S \notin L$, then the <em><strong>Turing Machine</strong></em> $M$  may and may not stop.</p>
-<p>If for any $S \notin L$, the <em><strong>Turing Machine</strong></em> $M$ stops (at an <em><strong>Reject State</strong></em>), then $L$ is <em><strong>Decidable</strong></em>, and the <em><strong>Turing Machine</strong></em> $M$ is a <em><strong>Decider</strong></em>. We denote <em><strong>Decidable Languages</strong></em> as $R$ <em><strong>Languages</strong></em>.</p>
-<p>It is instantly available that $R \subseteq RE$, but is $R = RE$?</p>
-<h2 id="conclusion-r--re">Conclusion: <em>R ≠ RE</em>​!</h2>
-<p>It has been proved.</p>
-<h2 id="how-to-encode-a-tm--its-input">How to <em>encode</em> a TM + its input?</h2>
-<p>We denote the encoding of <em><strong>Turing Machine</strong></em> $M$ plus its <em><strong>input string</strong></em> $s$ as $e&lt;M,s&gt;$ .</p>
-<p>to be continued&hellip;</p>
-<h1 id="universal-turing-machines">Universal Turing Machines</h1>
-<p><strong>Definition</strong>: a <em><strong>Universal Turing Machine</strong></em> ($U_{TM}$) takes in the encoding $e&lt; M,s &gt;$, where $M$ is any Turing machine and $s$ is any string in the set of $\Sigma*$. And the $U_{TM}$ should satisfy:</p>
-<ul>
-<li>it rejects $e&lt;M,s&gt;$ iff $M$ reject $s$,</li>
-<li>it accepts $e&lt;M,s&gt;$ iff $M$ accept $s$</li>
-</ul>
-<blockquote>
-<p>Theorem (Turing, 1936): There is a Turing machine UT called the universal Turing machine that, when run on an input of the form ⟨M, w⟩, where M is a Turing machine and w is a string, simulates M running on w and does whatever M does on w (accepts, rejects, or loops). <a href="http://web.stanford.edu/class/archive/cs/cs103/cs103.1184/lectures/22/Small22.pdf">CS103 2018 Small22.pdf</a></p>
-</blockquote>
-<h1 id="static-program-analyzer">Static Program Analyzer</h1>
-<h2 id="fail-state-of-a-tm"><em>Fail state</em> of a TM</h2>
-<blockquote>
-<p>If we model programs as deterministic Turing machines, program failure can be modeled using a special fail state.2 That is, on a given input, a Turing machine will eventually halt in its accept state (intuitively returning “yes”), in its reject state (intuitively returning “no”), in its fail state (meaning that the correctness condition has been violated), or the machine diverges (i.e., never halts). A Turing machine is correct if its fail state is unreachable. <a href="https://cs.au.dk/~amoeller/spa/spa.pdf">Static Program Anaysis Section 1.1</a></p>
-</blockquote>
-<h2 id="does-perfect-universal-analyzer-exist">Does perfect universal analyzer exist?</h2>
-<blockquote>
-<p>It is impossible to build a static program analysis that can decide whether a given program may fail when executed. Moreover, this result holds even if the analysis is only required to work for programs that halt on all inputs.</p>
-</blockquote>
-<p><strong>Note</strong>: such an analyzer is not a $U_{TM}$, because it takes in only $e&lt; M &gt;$ and accept not based on $M$&rsquo;s execution on a single $s$, but based on any of $M$&rsquo;s execution on all $s\in \Sigma*$. And it accepts when $M$&rsquo;s fail state is <em><strong>unreachable</strong></em>.</p>
-<p><strong>Thinking</strong>: is it possible to built such machine if we make more restriction on the input TM?</p>
-<h1 id="reference">Reference</h1>
-<p><a href="https://www.google.com/search?q=decision+problem+encode&amp;oq=&amp;aqs=chrome.2.69i59i450l8.405798079j0j15&amp;sourceid=chrome&amp;ie=UTF-8">Google Search Results</a></p>
-
-    </div>
-
-    
-<ul class="list-none pl-0 font-sm align-left">
-
-<hr>
-<li class="list-none">
-    Categories:
-    
-    <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200"
-       href="/categories/theory-of-computing">
-    <span class="tag-item dark:bg-zinc-900 dark:hover:bg-zinc-700
-                 hover:bg-zinc-200 bg-zinc-100
-                 dark:border-zinc-600 py-0.5
-                 px-1 rounded-t border-b-2 border-zinc-300
-                 hover:border-zinc-500">
-    Theory of Computing
-    </span>
-</a>
-</li >
-
-
-<li class="list-none">
-    Tags:
-    
-    <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200"
-       href="/tags/methematical">
-        <span class="flex flex-row justify-start items-center
-                     dark:bg-zinc-900 dark:hover:bg-zinc-700
-                     hover:bg-zinc-200 bg-zinc-100
-                     dark:border-zinc-600 py-0.5
-                     px-1 rounded-t border-b-2 border-zinc-300
-                     hover:border-zinc-500">
-            
-            <img class="h-4 mr-2 inline" src="https://joelyyoung.github.io/images/tag_logo.svg"
-                 alt="Logo of a tag: indicates that a tag item follows.">
-            Methematical
-        </span>
-    </a>
-    
-    <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200"
-       href="/tags/computing">
-        <span class="flex flex-row justify-start items-center
-                     dark:bg-zinc-900 dark:hover:bg-zinc-700
-                     hover:bg-zinc-200 bg-zinc-100
-                     dark:border-zinc-600 py-0.5
-                     px-1 rounded-t border-b-2 border-zinc-300
-                     hover:border-zinc-500">
-            
-            <img class="h-4 mr-2 inline" src="https://joelyyoung.github.io/images/tag_logo.svg"
-                 alt="Logo of a tag: indicates that a tag item follows.">
-            Computing
-        </span>
-    </a>
-    
-    <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200"
-       href="/tags/stanford">
-        <span class="flex flex-row justify-start items-center
-                     dark:bg-zinc-900 dark:hover:bg-zinc-700
-                     hover:bg-zinc-200 bg-zinc-100
-                     dark:border-zinc-600 py-0.5
-                     px-1 rounded-t border-b-2 border-zinc-300
-                     hover:border-zinc-500">
-            
-            <img class="h-4 mr-2 inline" src="https://joelyyoung.github.io/images/tag_logo.svg"
-                 alt="Logo of a tag: indicates that a tag item follows.">
-            Stanford
-        </span>
-    </a>
-    
-    <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200"
-       href="/tags/cs103">
-        <span class="flex flex-row justify-start items-center
-                     dark:bg-zinc-900 dark:hover:bg-zinc-700
-                     hover:bg-zinc-200 bg-zinc-100
-                     dark:border-zinc-600 py-0.5
-                     px-1 rounded-t border-b-2 border-zinc-300
-                     hover:border-zinc-500">
-            
-            <img class="h-4 mr-2 inline" src="https://joelyyoung.github.io/images/tag_logo.svg"
-                 alt="Logo of a tag: indicates that a tag item follows.">
-            CS103
-        </span>
-    </a>
-    
-</li>
-
-</ul>
-
-
-
-    
-    
-    <div class="text-neutral-500 mb-4">
-        Last modified <span itemprop="dateModified"
-                            datetime="2022-12-05T00:00:00Z"
-                            content="2022-12-05T00:00:00Z">
-        2022.12.05
-        </span>
-    </div>
-    
-</article>
-
-    </main>
-    <footer class="footer container h-10 text-center mt-1">
-<hr class="my-4">
-  <ul class="pl-0 mt-1">
-    
-    <li class="ml-2 first:before:content-none before:content-['•']
-               inline-block list-none">
-      <a class="ml-2 text-neutral-800
-                dark:text-neutral-400 border-none"
-          href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-    </li>
-    <li class="ml-2 first:before:content-none before:content-['•']
-                text-neutral-800 dark:text-neutral-400 inline-block list-none">
-      <span class="ml-2">© Joel Yang 2023</span>
-    </li>
-  </ul>
-</footer>
-
-
-<link rel="stylesheet" href="/js/katex/katex.min.css">
-<script src="/js/katex/katex.min.js"></script>
-<script src="/js/katex/contrib/auto-render.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-            delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false},
-                {left: "\\(", right: "\\)", display: false},
-                {left: "\\[", right: "\\]", display: true}
-            ]
-        });
-    });
-</script>
-
-  </body>
-</html>
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1"><title>Methematical Fundations of Computing: Study Note of CS103 - Joel Yang</title>
+<meta property="og:title" content="Methematical Fundations of Computing: Study Note of CS103 - Joel Yang"><meta property="og:type" content="article"><meta property="og:image" content="img/main.jpg"><meta property="og:url" content="https://joelyyoung.github.io/methematical-fundations-of-computing-study-note/"><meta property="og:description" content="Joel Yang's blog."><meta name=Description property="description" content="Joel Yang's blog."><meta property="keywords" content="methematical, computing, stanford, cs103"><link rel=stylesheet href=https://joelyyoung.github.io/css/style.min.css><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/svg+xml href=/favicon.svg><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link href=https://joelyyoung.github.io/index.xml type=application/atom+xml rel=alternate title="Sitewide Atom feed"><meta name=theme-color content="#ffffff"><script>function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}</script></head><body><header class="md:px-0 px-2"><nav><div class="container flex flex-wrap justify-between items-center mx-auto"><div class="nav-main my-2.5"><a href=https://joelyyoung.github.io/ class="nav-title py-2.5 text-2xl
+text-zinc-600 dark:text-zinc-300 hover:border-b-0">Joel Yang</a></div><button type=button onclick=toggleMenu() class="inline-flex items-center p-2 ml-3
+text-sm text-gray-500
+rounded-lg md:hidden hover:bg-gray-100
+focus:outline-none focus:ring-2
+focus:ring-gray-200 dark:text-gray-400
+dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls=navbar-default aria-expanded=false>
+<span class=sr-only>Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/></svg></button><div class="hidden w-full md:block md:w-auto" id=navbar-default><ul class="grid md:grid-flow-col items-center justify-between text-lg
+my-2.5 grid-cols-1 pl-0 text-center"><li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none"><a class="text-zinc-600 dark:text-zinc-300
+hover:border-b-0" href=/post/>Posts</a></li><li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none"><a class="text-zinc-600 dark:text-zinc-300
+hover:border-b-0" href=/categories/>Categories</a></li><li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none"><a class="text-zinc-600 dark:text-zinc-300
+hover:border-b-0" href=/tags/>Tags</a></li><li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none"><a class="text-zinc-600 dark:text-zinc-300
+hover:border-b-0" href=/contact/>Contact</a></li><li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none"><a class="text-zinc-600 dark:text-zinc-300
+hover:border-b-0" href=/demopage/>Demo Page</a></li><li class="h-7 pl-2.5 pr-0 list-none"><button type=button onclick=toggleMode() class=h-full aria-label="Toggle between dark and light mode">
+<img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id=ligh-mode-button-img alt="A sun icon for switching to light mode" src=https://joelyyoung.github.io/img/light_mode.svg>
+<img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id=dark-mode-button-img alt="A moon icon for switching to dark mode" src=https://joelyyoung.github.io/img/dark_mode.svg></button></li></ul></div></div></nav></header><main class="content h-card container mt-2 m-auto
+leading-loose md:px-0 px-2 z-0" role=main><article class="article h-entry" itemprop=mainEntity itemscope itemtype=http://schema.org/BlogPosting><div class=title-container><h1 class="article-title p-name" itemprop=name>Methematical Fundations of Computing: Study Note of CS103</h1><div class="flex justify-between items-center"><a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href=https://joelyyoung.github.io/methematical-fundations-of-computing-study-note/><time itemprop=datePublished class=dt-published datetime=2022-12-05T00:00:00Z content="2022-12-05T00:00:00Z">2022.12.05
+</time></a><a class="text-gray-600 dark:text-gray-400 text-right border-none p-author h-card" rel=author href=https://joelyyoung.github.io/ itemprop=author itemscope itemtype=http://schema.org/Person><span itemprop=name>Joel Yang</span></a></div></div><div class="article-content e-content" itemprop=articleBody><h1 id=abstract>Abstract</h1><p><strong>Keywords</strong>: Computing Model, Finite Automata (FA or DFA), Undeterministic Finite Automata (UFA), Problem, Decision Problem, Function Problem, Turing Machine (TM), Language, Recognizable Language, Regular Language, Decidable Language</p><p>Above are the major topic that will be talked in this artical. And this artical is basically a digest of <a href=https://web.stanford.edu/class/archive/cs/cs103/cs103.1134/>Stanford CS103</a> course slides, which ignores the proof of some conclusion and detailed explainations of some ideas, but just lists the critical conclusions and notions that are helpful for understanding Static Program Analysis.</p><p>Advanced classes are <a href=http://infolab.stanford.edu/~ullman/ialc/spr10/spr10.html>CS154</a> and <a href=http://theory.stanford.edu/~liyang/teaching/complexity22.html>CS254</a>. And this is <a href=http://web.stanford.edu/class/archive/cs/cs103/cs103.1184/>2018 version of CS103</a>, this is <a href=https://web.stanford.edu/class/cs103/>2022 Version of CS103</a>.</p><h1 id=computability>Computability</h1><h2 id=how-to-define-the-terminology-problem>How to define the terminology <em>problem</em>?</h2><blockquote><p>We want a definition that</p><ul><li>corresponds to the problems we want to solve,</li><li>captures a large class of problems, and</li><li>is mathematically simple to reason about.</li></ul><p>No one definition has all three properties.</p></blockquote><p>So we focus on <em><strong>Decision Problems</strong></em>.</p><blockquote><p><strong>Definition</strong>: A <em><strong>decision problem</strong></em> is the problem of determining an answer to <strong>a class of</strong> yes/no <strong>questions</strong> about some <strong>objects</strong> of interest.</p></blockquote><p><strong>Note</strong>: the above definition points out that a <em><strong>decision problem</strong></em> should contain <strong>a class of</strong> yes/no questions，And these questions should be about some <strong>objects</strong> of interest. <strong>&ldquo;A class of&rdquo;</strong> here should be payed special attention to, which emphasizes that those questions should be of similar forms, i.e., they are about the <strong>same</strong> property of a <strong>same</strong> class of <strong>objects</strong>. <strong>A class of objects</strong> also have some restrictions, there must exist an alphabet $\Sigma$ that and the each object in the <strong>class of objects</strong> has an one-one correspondence to a specific <strong>string</strong> in the string set $\Sigma*$.</p><p>The other types of <em>problems</em> are <em>function problems</em>, which require to <strong>take in an input and produce some output object rather than just a yes/no answer</strong>.</p><p><em><strong>Decision Problems</strong></em> has the following advantages over none-decision problems:</p><ul><li>Convenient to reason methematically,</li><li>Have simple methematical forms,</li><li>etc.</li></ul><h2 id=how-do-we-encode-a-problem-language>How do we <em>encode</em> a <em>problem</em>: <em>language</em></h2><blockquote><p>Any <em><strong>Decision Problems</strong></em> can be transformed into the problem of <em>recognizing strings&rsquo; membership in a language</em>, i.e., to decide whether a given string <em><strong>belongs to</strong></em> a defined <em><strong>language</strong></em>.</p></blockquote><p>This claim seems unreasonable, but remember how we defined the terminology <em><strong>class of objects</strong></em>? We have required them to be <em>encodable</em>!</p><p>Since <em><strong>Solving Decision Problem = Strings Recognizing</strong></em>, we can talk about <em><strong>Languages</strong></em> instead of a specific Decision Problem in the rest part of this artical. As for <strong>how</strong> a problem could be transformed, it&rsquo;s another story, and <a href=https://www.ccs.neu.edu/home/rjw/csu390-sp06/LectureMaterials/Decision-Problems.pdf>this pdf</a> explains some details. Basically it is the notion same as <em><strong>encoding</strong></em> a class of objects or combinations of classes of objects.</p><p>Note that <em><strong>Finite Automata</strong></em> as a <em><strong>class of objects</strong></em> is encodable!</p><h1 id=finite-automata>Finite Automata</h1><p><strong>Note</strong>: this is correspondent to CS103 Lecture 11-13</p><blockquote><p><em>automaton</em> (/ɔːˈtɒmətən/; plural: <em>automata</em> or <em>automatons</em>)</p></blockquote><p>Three crutial aspects of finite automata:</p><ul><li>finite states</li><li>transition over specific inputs (be with an <em><strong>alphabet</strong></em> $\Sigma$)</li><li>only one <em><strong>start state</strong></em> & multiple <em><strong>stop states</strong></em></li></ul><p>And we can define our automata&rsquo;s stop states by deviding them into 2 types: <strong>accept states</strong> and <strong>reject states</strong>, so that we can use this automata to solve <em><strong>Decision Problems</strong></em>.</p><h2 id=language-of-fa-regular-languages>Language of FA: <em>Regular Languages</em></h2><p><strong>Definition</strong>: Languages defined by <em>regular expression</em> are <em><strong>Regular Languages</strong></em>.</p><blockquote><p><strong>Conclusion</strong>: For any single <em><strong>regular language</strong></em>, there exists an finite automata that:</p><ul><li>gets into <em><strong>Accept States</strong></em> and <em><strong>halts</strong></em> with string s, when s <em><strong>belongs to</strong></em> the language, and</li><li>gets into <em><strong>Reject States</strong></em> and halts with string s, when s does NOT <em><strong>belongs to</strong></em> the language.</li></ul></blockquote><p>We call a language that satisfies the above condition to a specific automata as <em>the language of that automata</em>.</p><h2 id=undeterministic-finite-automata>Undeterministic Finite Automata</h2><p>to be completed&mldr;</p><h1 id=turing-machines>Turing Machines</h1><p>A <em><strong>Turing Machine</strong></em> consists of:</p><ul><li>a finite automata as controler,</li><li>a <strong>infinite long</strong> tape with a head pointing to one position on the tape</li></ul><p>The <em><strong>Start State</strong></em> of a <em>Turing Machine</em> means:</p><ul><li>the FA is at the <em><strong>Start State</strong></em> and</li><li>the input string is somewhere on the tape (where exactly doesn&rsquo;t really matter), and if not given a input, the tape is defaultly set to all <em>Blank Character</em>.</li><li>the head of the tape points to the first character of the input string.</li></ul><p>The <em><strong>execution</strong></em> of a <em>Turing Machine</em> works by repeating the 3 steps until it gets into a <em><strong>Stop State</strong></em>:</p><ul><li>Read the pointed character of the head as input</li><li>Write back to the pointed position</li><li>Transist to the next state</li></ul><h2 id=language-of-tm-recognizability-and-re-languages>Language of TM: <em>Recognizability</em> and <em>RE</em> Languages</h2><p>We can define <em>Language of a Turing Machine</em> just like the <em>Language of a Finite Automata</em>, i.e., the set of strings containing all strings that could be the input of that TM and make the TM to get into an <em><strong>Accept State</strong></em>.</p><p>Then we can define <em><strong>Recognizable Languages</strong></em>, which is a sub set of <em><strong>Languages</strong></em> in which <em><strong>Language</strong></em> $L$ satisfies: there exisit a <em><strong>Turing Machine</strong></em> $M$ that $L$ is the language of $M$. We denote <em><strong>Recognizable Languages</strong></em> as $RE$ <em><strong>Languages</strong></em>.</p><p>Note: <strong>NOT</strong> all languages has it&rsquo;s correspondent Turing Machine, only <em>RE</em> has!</p><h2 id=decidability-and-r-languages><em>Decidability</em> and <em>R​</em> Languages</h2><p>Since the <em><strong>execution</strong></em> of a <em><strong>Turing Machine</strong></em> with an input s could be devided into exactly 3 categories: ending at <em><strong>Accept State</strong></em>, ending at <em><strong>Reject State</strong></em> and does <strong>NOT</strong> end at all (i.e. diverge). And if we input a <em><strong>string</strong></em> $S \notin L$, then the <em><strong>Turing Machine</strong></em> $M$ may and may not stop.</p><p>If for any $S \notin L$, the <em><strong>Turing Machine</strong></em> $M$ stops (at an <em><strong>Reject State</strong></em>), then $L$ is <em><strong>Decidable</strong></em>, and the <em><strong>Turing Machine</strong></em> $M$ is a <em><strong>Decider</strong></em>. We denote <em><strong>Decidable Languages</strong></em> as $R$ <em><strong>Languages</strong></em>.</p><p>It is instantly available that $R \subseteq RE$, but is $R = RE$?</p><h2 id=conclusion-r--re>Conclusion: <em>R ≠ RE</em>​!</h2><p>It has been proved.</p><h2 id=how-to-encode-a-tm--its-input>How to <em>encode</em> a TM + its input?</h2><p>We denote the encoding of <em><strong>Turing Machine</strong></em> $M$ plus its <em><strong>input string</strong></em> $s$ as $e&lt;M,s>$ .</p><p>to be continued&mldr;</p><h1 id=universal-turing-machines>Universal Turing Machines</h1><p><strong>Definition</strong>: a <em><strong>Universal Turing Machine</strong></em> ($U_{TM}$) takes in the encoding $e&lt; M,s >$, where $M$ is any Turing machine and $s$ is any string in the set of $\Sigma*$. And the $U_{TM}$ should satisfy:</p><ul><li>it rejects $e&lt;M,s>$ iff $M$ reject $s$,</li><li>it accepts $e&lt;M,s>$ iff $M$ accept $s$</li></ul><blockquote><p>Theorem (Turing, 1936): There is a Turing machine UT called the universal Turing machine that, when run on an input of the form ⟨M, w⟩, where M is a Turing machine and w is a string, simulates M running on w and does whatever M does on w (accepts, rejects, or loops). <a href=http://web.stanford.edu/class/archive/cs/cs103/cs103.1184/lectures/22/Small22.pdf>CS103 2018 Small22.pdf</a></p></blockquote><h1 id=static-program-analyzer>Static Program Analyzer</h1><h2 id=fail-state-of-a-tm><em>Fail state</em> of a TM</h2><blockquote><p>If we model programs as deterministic Turing machines, program failure can be modeled using a special fail state.2 That is, on a given input, a Turing machine will eventually halt in its accept state (intuitively returning “yes”), in its reject state (intuitively returning “no”), in its fail state (meaning that the correctness condition has been violated), or the machine diverges (i.e., never halts). A Turing machine is correct if its fail state is unreachable. <a href=https://cs.au.dk/~amoeller/spa/spa.pdf>Static Program Anaysis Section 1.1</a></p></blockquote><h2 id=does-perfect-universal-analyzer-exist>Does perfect universal analyzer exist?</h2><blockquote><p>It is impossible to build a static program analysis that can decide whether a given program may fail when executed. Moreover, this result holds even if the analysis is only required to work for programs that halt on all inputs.</p></blockquote><p><strong>Note</strong>: such an analyzer is not a $U_{TM}$, because it takes in only $e&lt; M >$ and accept not based on $M$&rsquo;s execution on a single $s$, but based on any of $M$&rsquo;s execution on all $s\in \Sigma*$. And it accepts when $M$&rsquo;s fail state is <em><strong>unreachable</strong></em>.</p><p><strong>Thinking</strong>: is it possible to built such machine if we make more restriction on the input TM?</p><h1 id=reference>Reference</h1><p><a href="https://www.google.com/search?q=decision+problem+encode&amp;oq=&amp;aqs=chrome.2.69i59i450l8.405798079j0j15&amp;sourceid=chrome&amp;ie=UTF-8">Google Search Results</a></p></div><ul class="list-none pl-0 font-sm align-left"><hr><li class=list-none>Categories:
+<a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href=/categories/theory-of-computing><span class="tag-item dark:bg-zinc-900 dark:hover:bg-zinc-700
+hover:bg-zinc-200 bg-zinc-100
+dark:border-zinc-600 py-0.5
+px-1 rounded-t border-b-2 border-zinc-300
+hover:border-zinc-500">Theory of Computing</span></a></li><li class=list-none>Tags:
+<a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href=/tags/methematical><span class="flex flex-row justify-start items-center
+dark:bg-zinc-900 dark:hover:bg-zinc-700
+hover:bg-zinc-300 bg-zinc-200
+dark:border-zinc-600 py-0.5
+px-1 rounded-t border-b-2 border-zinc-300
+hover:border-zinc-500"><img class="h-4 mr-2 inline" src=https://joelyyoung.github.io/images/tag_logo.svg alt="Logo of a tag: indicates that a tag item follows.">
+Methematical
+</span></a><a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href=/tags/computing><span class="flex flex-row justify-start items-center
+dark:bg-zinc-900 dark:hover:bg-zinc-700
+hover:bg-zinc-300 bg-zinc-200
+dark:border-zinc-600 py-0.5
+px-1 rounded-t border-b-2 border-zinc-300
+hover:border-zinc-500"><img class="h-4 mr-2 inline" src=https://joelyyoung.github.io/images/tag_logo.svg alt="Logo of a tag: indicates that a tag item follows.">
+Computing
+</span></a><a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href=/tags/stanford><span class="flex flex-row justify-start items-center
+dark:bg-zinc-900 dark:hover:bg-zinc-700
+hover:bg-zinc-300 bg-zinc-200
+dark:border-zinc-600 py-0.5
+px-1 rounded-t border-b-2 border-zinc-300
+hover:border-zinc-500"><img class="h-4 mr-2 inline" src=https://joelyyoung.github.io/images/tag_logo.svg alt="Logo of a tag: indicates that a tag item follows.">
+Stanford
+</span></a><a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href=/tags/cs103><span class="flex flex-row justify-start items-center
+dark:bg-zinc-900 dark:hover:bg-zinc-700
+hover:bg-zinc-300 bg-zinc-200
+dark:border-zinc-600 py-0.5
+px-1 rounded-t border-b-2 border-zinc-300
+hover:border-zinc-500"><img class="h-4 mr-2 inline" src=https://joelyyoung.github.io/images/tag_logo.svg alt="Logo of a tag: indicates that a tag item follows.">
+CS103</span></a></li></ul><div class="text-neutral-500 mb-4">Last modified <span itemprop=dateModified datetime=2022-12-05T00:00:00Z content="2022-12-05T00:00:00Z">2022.12.05</span></div></article></main><footer class="footer container h-10 text-center mt-1"><hr class=my-4><ul class="pl-0 mt-1"><li class="ml-2 first:before:content-none before:content-['•']
+inline-block list-none"><a class="ml-2 text-neutral-800
+dark:text-neutral-400 border-none" href=https://github.com/hugcis/hugo-astatine-theme>Code</a></li><li class="ml-2 first:before:content-none before:content-['•']
+text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class=ml-2>© Joel Yang 2025</span></li></ul></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css integrity=sha384-Juol1FqnotbkyZUT5Z7gUPjQ9gzlwCENvUZTpQBAPxtusdwFLRy382PSDx5UUJ4/ crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js integrity=sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js integrity=sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05 crossorigin=anonymous onload=renderMathInElement(document.body)></script></body></html>
