@@ -23,8 +23,6 @@ jobs:
 
       - name: Build
         run: |
-          mkdir themes
-          git clone https://github.com/hugcis/hugo-astatine-theme themes/hugo-astatine-theme
           rm -rf docs/
           hugo --minify
           touch docs/.nojekyll
