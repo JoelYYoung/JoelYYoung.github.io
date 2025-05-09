@@ -11,8 +11,7 @@
         {{ end }}
     </div>
     <div class="publication grow shrink-2 basis-3/4 my-1.5 mx-2">
-        {{ $has_equal_contribution := false }}
-        {{ $has_corresponding := false }}
+        (<sup>#</sup> Equal contribution, <sup>*</sup> Corresponding author)
         {{ if .authors }}
             {{ range $author_index, $author_val := .authors }}
                 {{ if $author_val.me }}
@@ -37,13 +36,6 @@
             {{ end }}
         {{ else }}
             <span>No authors specified</span>
-        {{ end }}
-        {{ if or $has_equal_contribution $has_corresponding }}
-            <br>
-            <small>
-                {{ if $has_equal_contribution }}<sup>#</sup> Equal contribution{{ if $has_corresponding }}; {{ end }}{{ end }}
-                {{ if $has_corresponding }}<sup>*</sup> Corresponding author{{ end }}
-            </small>
         {{ end }}
         <br>
         {{ if .title }}

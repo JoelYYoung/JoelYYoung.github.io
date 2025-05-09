@@ -88,6 +88,9 @@ publications:
     journal: ECOOP
     image: img/ecoop_25.png
     pdf: img/ecoop_25.png
+    links:
+      - name: Main URL
+        url: "https://2025.ecoop.org/info/accepted-papers"
 ---
 
 # Bio
