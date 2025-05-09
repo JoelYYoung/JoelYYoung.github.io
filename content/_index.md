@@ -18,7 +18,7 @@ imgname:
 personal_title: "MPhil Student"
 # An address (you can list multiple)
 address: 
-  - name: Jiawei Yang
+  - name: COMP
     street: The Hong Kong Polytechnic University
     locality: Kawloon, Hong Kong
     email: joelyyang@outlook.com
