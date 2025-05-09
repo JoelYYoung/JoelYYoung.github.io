@@ -21,11 +21,9 @@
                     {{- $author_val.name -}}
                     {{ if $author_val.equal_contribution }}
                         <sup>#</sup>
-                        {{ $has_equal_contribution = true }}
                     {{ end }}
                     {{ if $author_val.corresponding }}
                         <sup>*</sup>
-                        {{ $has_corresponding = true }}
                     {{ end }}
                 </span>
                 {{- /* Add comma if not last author */ -}}
