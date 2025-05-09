@@ -26,7 +26,7 @@
                     {{ end }}
                 </span>
                 {{- /* Add comma if not last author */ -}}
-                {{- if le $author_index (len .) -}},{{- end -}}
+                {{- if lt $author_index (sub (len $.authors) 1) -}},{{- end -}}
                 {{ if $author_val.me }}
                     </b>
                 {{ end }}
