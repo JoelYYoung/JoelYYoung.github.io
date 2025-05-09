@@ -31,14 +31,9 @@ jobs:
           hugo --minify
           touch docs/.nojekyll
 
-      - name: Update master branch
+      # Set github deploy from master branch docs folder!
+      - name: Commit docs to master branch)
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update example site
           file_pattern: docs/*
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs
