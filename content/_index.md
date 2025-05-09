@@ -35,8 +35,7 @@ address:
 # List your publications. The required fields are pdf, title, and image 
 # (which should be the image path). The other fields are optional.
 #publications:
-  #- 
-    #authors:
+  #- authors:
         #- name: Rothe, S. 
         #  me: true
         #- name: Andreyev, A. N. 
@@ -75,8 +74,7 @@ address:
     #description: The radioactive element astatine exists only in trace amounts in nature. Its properties can therefore only be explored by study of the minute quantities of artificially produced isotopes or by performing theoretical calculations. One of the most important properties influencing the chemical behaviour is the energy required to remove one electron from the valence shell, referred to as the ionization potential.
 
 publications:
-  - 
-    authors:
+  - authors:
         - name: Jiawei Yang
           me: true
           equal_contribution: true
