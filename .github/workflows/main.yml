@@ -23,28 +23,6 @@ jobs:
         with: 
           ref: master
 
-      - name: Ensure publish branch exists
-        run: |
-          git fetch origin
-          if ! git ls-remote --heads origin publish | grep publish; then
-            git checkout -b publish
-            git push origin publish
-          fi
-    
-      - name: Merge master -> publish
-        uses: devmasx/merge-branch@master
-        with:
-          type: now
-          message: 'Merge master in publish'
-          from_branch: master
-          target_branch: publish
-          github_token: ${{ github.token }}
-      
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it  
-      - uses: actions/checkout@v2
-        with: 
-          ref: publish
-
       - name: Build
         run: |
           mkdir themes
@@ -52,7 +30,7 @@ jobs:
           rm -rf docs/
           hugo --minify
 
-      - name: Publish
+      - name: Update master branch
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update example site
