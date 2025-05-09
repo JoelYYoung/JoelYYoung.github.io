@@ -76,4 +76,4 @@ address:
 
 # Bio
 
-I am a 4th grade undergrate at HUST, and I am going to UTS as a PhD candidate majoring in Software Analysis. Welcome to contact with me if you find we have common interests, and you can track my works through my [GitHub Homepage](https://github.com/JoelYYoung)!
+I am a MPhil, and I am going to UTS as a PhD candidate majoring in Software Analysis. Welcome to contact with me if you find we have common interests, and you can track my works through my [GitHub Homepage](https://github.com/JoelYYoung)!
