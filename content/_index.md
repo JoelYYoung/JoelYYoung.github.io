@@ -18,8 +18,7 @@ imgname:
 personal_title: "MPhil Student"
 # An address (you can list multiple)
 address: 
-  - 
-    name: Jiawei Yang
+  - name: Jiawei Yang
     street: The Hong Kong Polytechnic University
     locality: Kawloon, Hong Kong
     email: joelyyang@outlook.com
@@ -74,8 +73,7 @@ address:
     #description: The radioactive element astatine exists only in trace amounts in nature. Its properties can therefore only be explored by study of the minute quantities of artificially produced isotopes or by performing theoretical calculations. One of the most important properties influencing the chemical behaviour is the energy required to remove one electron from the valence shell, referred to as the ionization potential.
 
 publications:
-  - 
-    authors:
+  - authors:
       - name: Jiawei Yang
         me: true
         equal_contribution: true
@@ -95,5 +93,3 @@ publications:
 # Bio
 
 I am a second-year MPhil student under the supervision of Prof. Luo Xiapu. My research focuses on static analysis, encompassing abstract interpretation, pointer analysis, binary analysis, and symbolic execution, as well as the applications of large language models in software engineering (LLM4SE). If our interests align, feel free to reach out—I always welcome engaging discussions and collaborations. You can follow my work on my [GitHub Homepage](https://github.com/JoelYYoung)!
-
-# Porjects
