@@ -1,7 +1,7 @@
 ---
 # === Required fields  ===
 # Your name 
-name: "Joel Yang"
+name: "Jiawei Yang"
 # Your profile picture
 imgname: 
   name: "img/main.jpg"
@@ -15,11 +15,11 @@ imgname:
 #     type: $IMAGE_TYPE
 # ...
 # A title (job title or "Researcher", "PhD student", etc.)
-personal_title: "Undergraduate Student"
+personal_title: "MPhil Student"
 # An address (you can list multiple)
 address: 
   - 
-    name: YANG Jiawei
+    name: Jiawei Yang
     locality: Kawloon, Hong Kong
     email: joelyyang@outlook.com
 
@@ -72,8 +72,26 @@ address:
         #url: "https://www.researchgate.net/publication/236836716_Measurement_of_the_first_ionization_potential_of_astatine_by_laser_ionization_spectroscopy"
     # A description for the paper.
     #description: The radioactive element astatine exists only in trace amounts in nature. Its properties can therefore only be explored by study of the minute quantities of artificially produced isotopes or by performing theoretical calculations. One of the most important properties influencing the chemical behaviour is the energy required to remove one electron from the valence shell, referred to as the ionization potential.
+
+publications:
+  - 
+    authors:
+        - name: Jiawei Yang
+          me: true
+          equal_contribution: true
+        - name: Xiao Cheng
+          equal_contribution: true
+        - name: Bor-Yuh Evan Chang
+        - name: Xiapu Luo
+        - name: Yulei Sui
+    title: "Taming and Dissecting Recursions through Interprocedural Weak Topological Ordering"
+    date: 2025
+    journal: ECOOP
+    image: img/ecoop_25.png
+    pdf: img/ecoop_25.png
+
 ---
 
 # Bio
 
-I am a MPhil, and I am going to UTS as a PhD candidate majoring in Software Analysis. Welcome to contact with me if you find we have common interests, and you can track my works through my [GitHub Homepage](https://github.com/JoelYYoung)!
+I am a second-year MPhil student under the supervision of Prof. Luo Xiapu. My research focuses on static analysis, encompassing abstract interpretation, pointer analysis, binary analysis, and symbolic execution, as well as the applications of large language models in software engineering (LLM4SE). If our interests align, feel free to reach out—I always welcome engaging discussions and collaborations. You can follow my work on my [GitHub Homepage](https://github.com/JoelYYoung)!
