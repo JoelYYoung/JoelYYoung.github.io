@@ -52,6 +52,7 @@ jobs:
           git clone https://github.com/hugcis/hugo-astatine-theme themes/hugo-astatine-theme
           rm -rf docs/
           hugo --minify
+          ls
           cp -r public docs
 
       - name: Publish
