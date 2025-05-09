@@ -50,9 +50,9 @@ jobs:
         run: |
           mkdir themes
           git clone https://github.com/hugcis/hugo-astatine-theme themes/hugo-astatine-theme
-          hugo --minify
           rm -rf docs/
-          cp -r public/ docs/
+          hugo --minify
+          cp -r public docs
 
       - name: Publish
         uses: stefanzweifel/git-auto-commit-action@v4
