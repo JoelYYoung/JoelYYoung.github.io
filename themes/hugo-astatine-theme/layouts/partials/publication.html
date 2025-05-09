@@ -4,33 +4,39 @@
      itemscope itemtype="http://schema.org/ScholarlyArticle">
     <div class="pub-image basis-40 grow-0 shrink" itemprop="image"
          itemscope itemtype="http://schema.org/ImageObject">
+        {{ if .image }}
         <img alt="{{ .title }} paper illustration"
              itemprop="url" src="{{ .image }}"
              class="w-full"/>
+        {{ end }}
     </div>
     <div class="publication grow shrink-2 basis-3/4 my-1.5 mx-2">
         {{ $has_equal_contribution := false }}
         {{ $has_corresponding := false }}
-        {{ range $author_index, $author_val := .authors }}
-            {{ if $author_val.me }}
-                <b>
-            {{ end }}
-            <span itemprop="author">
-                {{- $author_val.name -}}
-                {{ if $author_val.equal_contribution }}
-                    <sup>#</sup>
-                    {{ $has_equal_contribution = true }}
+        {{ if .authors }}
+            {{ range $author_index, $author_val := .authors }}
+                {{ if $author_val.me }}
+                    <b>
                 {{ end }}
-                {{ if $author_val.corresponding }}
-                    <sup>*</sup>
-                    {{ $has_corresponding = true }}
+                <span itemprop="author">
+                    {{- $author_val.name -}}
+                    {{ if $author_val.equal_contribution }}
+                        <sup>#</sup>
+                        {{ $has_equal_contribution = true }}
+                    {{ end }}
+                    {{ if $author_val.corresponding }}
+                        <sup>*</sup>
+                        {{ $has_corresponding = true }}
+                    {{ end }}
+                </span>
+                {{- /* Add comma if not last author */ -}}
+                {{ if lt $author_index (sub (len .authors) 1) }},{{ end }}
+                {{ if $author_val.me }}
+                    </b>
                 {{ end }}
-            </span>
-            {{- /* Add comma if not last author */ -}}
-            {{- if lt $author_index (sub (len .authors) 1) -}},{{- end -}}
-            {{ if $author_val.me }}
-                </b>
             {{ end }}
+        {{ else }}
+            <span>No authors specified</span>
         {{ end }}
         {{ if or $has_equal_contribution $has_corresponding }}
             <br>
@@ -40,12 +46,14 @@
             </small>
         {{ end }}
         <br>
+        {{ if .title }}
         <b>
-            <a href="{{ .pdf }}">
+            <a href="{{ .pdf | default "#" }}">
                 <span itemprop="name">{{ .title }}</span>
             </a>
         </b>
         <meta itemprop="headline" content="{{ .title }}"/>
+        {{ end }}
         <br>
         {{ if .journal }}
         <div>
