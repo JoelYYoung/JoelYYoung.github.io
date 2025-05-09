@@ -9,7 +9,7 @@ publishDir = "docs"
 
 preserveTaxonomyNames = true
 rssLimit = 10
-paginate = 10
+pagerSize = 10
 
 # Code highlighting
 pygmentsCodefences = true
