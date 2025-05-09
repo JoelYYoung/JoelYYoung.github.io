@@ -19,10 +19,8 @@ personal_title: "Undergraduate Student"
 # An address (you can list multiple)
 address: 
   - 
-    name: Huazhong University of Science and Technology
-    street: Luoyu Lu Road
-    postal_code: "420111"
-    locality: Wuhan, China
+    name: YANG Jiawei
+    locality: Kawloon, Hong Kong
     email: joelyyang@outlook.com
 
 # === Optional fields ===
