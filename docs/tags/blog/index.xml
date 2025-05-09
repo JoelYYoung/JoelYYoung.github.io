@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Joel Yang</title><link>https://joelyyoung.github.io/tags/blog/</link><description>Recent content in Blog on Joel Yang</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 04 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Use Hugo and GitHub Pages to Build Personal Blog</title><link>https://joelyyoung.github.io/how-to-use-hugo-and-github-pages/</link><pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate><guid>https://joelyyoung.github.io/how-to-use-hugo-and-github-pages/</guid><description>&lt;h1 id="my-needs">My Needs&lt;/h1>
-&lt;p>I want to build a personal academic blog, which should contain:&lt;/p>
-&lt;ul>
-&lt;li>A simple bio page that lists my CV, and publications.&lt;/li>
-&lt;li>Pages of my blog articals, like technique articals and reading notes etc.&lt;/li>
-&lt;li>&lt;strong>Catagory&lt;/strong> and &lt;strong>tag&lt;/strong> system to help me organize my published blog articals.&lt;/li>
-&lt;/ul>
-&lt;h1 id="hugo--github-pages--perfect-solution">Hugo + Github Pages = Perfect Solution&lt;/h1>
-&lt;h2 id="step1-install-hugo">Step1: Install Hugo&lt;/h2>
-&lt;p>Follow the &lt;a href="https://gohugo.io/installation/">Tutorial of Installation&lt;/a> is enough. It provides 4 optional ways to install Hugo on Windows: downloading prebuilt binaries, use Chocolatey package manager, use docker image and run in docker, and build from source. And I choosed to download the prebuilt binary file.&lt;/p></description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Joel Yang</title><link>https://joelyyoung.github.io/tags/blog/</link><description>Recent content on Joel Yang</description><language>en-us</language><lastBuildDate>Sun, 04 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joelyyoung.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml"/></channel></rss>

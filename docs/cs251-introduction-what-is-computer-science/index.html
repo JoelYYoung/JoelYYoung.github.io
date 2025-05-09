@@ -1,0 +1,62 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1"><title>CS251 Introduction: What is Computer Science? - Joel Yang</title>
+<meta property="og:title" content="CS251 Introduction: What is Computer Science? - Joel Yang"><meta property="og:type" content="article"><meta property="og:image" content="img/main.jpg"><meta property="og:url" content="https://joelyyoung.github.io/cs251-introduction-what-is-computer-science/"><meta property="og:description" content="Joel Yang's blog."><meta name=Description property="description" content="Joel Yang's blog."><meta property="keywords" content="methematical, computer science, theory, cs251, cmu"><link rel=stylesheet href=https://joelyyoung.github.io/css/style.min.css><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/svg+xml href=/favicon.svg><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link href=https://joelyyoung.github.io/index.xml type=application/atom+xml rel=alternate title="Sitewide Atom feed"><meta name=theme-color content="#ffffff"><script>function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}</script></head><body><header class="md:px-0 px-2"><nav><div class="container flex flex-wrap justify-between items-center mx-auto"><div class="nav-main my-2.5"><a href=https://joelyyoung.github.io/ class="nav-title py-2.5 text-2xl
+text-zinc-600 dark:text-zinc-300 hover:border-b-0">Joel Yang</a></div><button type=button onclick=toggleMenu() class="inline-flex items-center p-2 ml-3
+text-sm text-gray-500
+rounded-lg md:hidden hover:bg-gray-100
+focus:outline-none focus:ring-2
+focus:ring-gray-200 dark:text-gray-400
+dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls=navbar-default aria-expanded=false>
+<span class=sr-only>Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/></svg></button><div class="hidden w-full md:block md:w-auto" id=navbar-default><ul class="grid md:grid-flow-col items-center justify-between text-lg
+my-2.5 grid-cols-1 pl-0 text-center"><li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none"><a class="text-zinc-600 dark:text-zinc-300
+hover:border-b-0" href=/post/>Posts</a></li><li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none"><a class="text-zinc-600 dark:text-zinc-300
+hover:border-b-0" href=/categories/>Categories</a></li><li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none"><a class="text-zinc-600 dark:text-zinc-300
+hover:border-b-0" href=/tags/>Tags</a></li><li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none"><a class="text-zinc-600 dark:text-zinc-300
+hover:border-b-0" href=/contact/>Contact</a></li><li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none"><a class="text-zinc-600 dark:text-zinc-300
+hover:border-b-0" href=/demopage/>Demo Page</a></li><li class="h-7 pl-2.5 pr-0 list-none"><button type=button onclick=toggleMode() class=h-full aria-label="Toggle between dark and light mode">
+<img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id=ligh-mode-button-img alt="A sun icon for switching to light mode" src=https://joelyyoung.github.io/img/light_mode.svg>
+<img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id=dark-mode-button-img alt="A moon icon for switching to dark mode" src=https://joelyyoung.github.io/img/dark_mode.svg></button></li></ul></div></div></nav></header><main class="content h-card container mt-2 m-auto
+leading-loose md:px-0 px-2 z-0" role=main><article class="article h-entry" itemprop=mainEntity itemscope itemtype=http://schema.org/BlogPosting><div class=title-container><h1 class="article-title p-name" itemprop=name>CS251 Introduction: What is Computer Science?</h1><div class="flex justify-between items-center"><a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href=https://joelyyoung.github.io/cs251-introduction-what-is-computer-science/><time itemprop=datePublished class=dt-published datetime=2022-12-12T00:00:00Z content="2022-12-12T00:00:00Z">2022.12.12
+</time></a><a class="text-gray-600 dark:text-gray-400 text-right border-none p-author h-card" rel=author href=https://joelyyoung.github.io/ itemprop=author itemscope itemtype=http://schema.org/Person><span itemprop=name>Joel Yang</span></a></div></div><div class="article-content e-content" itemprop=articleBody><blockquote><p>Computer Science is no more about computers than astronomy is about telescopes.</p><p>&ndash; <cite><strong>Edsger Wybe Dijkstra</strong></cite></p></blockquote><h1 id=what-about-mathematics>What about Mathematics?</h1><p>Before diving into the question of <em>what is computer science</em>, let&rsquo;s deal with the question of <em>what is mathematics</em> first. Obviously it is a big question that no one would ever be confident to answer to. However, I still want to share some of my ideas of <em>what mathematics is</em>.</p><p>I hold the belief that mathematics is basically an inhesion quality to all human beings, which is an integration of the abilities of abstraction and logical reasoning. And also, there are a set of widely accepted conceptions and mathematical notations, as well as theories on them, which are the <em>math</em> we are mostly talking about.</p><p>Mathematics comes from our observation of the world, and is an abstraction at a <em>higher level</em> than those more concrete abstractions like <em>apple</em>.</p><h1 id=what-is-computer-science>What is Computer Science?</h1><p>Know the history when computer science came into being will provide a helpful point of view to answer this question. When Turing first proposed <em>Turing Machine</em>, which is one of the widly accepted methematical models of <em>computation</em>, he aimed to answer the <a href=https://en.wikipedia.org/wiki/Church%27s_thesis_(constructive_mathematics)>question proposed by <em>Church</em></a>. Note that the proposal of <em>turing machine</em> did not define any new mathematical notions or modify existing theories, but just built a <em>formal methematical model</em> using those notions and theories (set theory for example).</p><p>Along with its proposal, <em>turing machine</em> was proved by its proposer, Alan Turing, to have some limitations. Like being unable to solve Church&rsquo;s problem. And here we have another limitation of <em>turing machine</em> that it can not perform real number calculations (approximations are solvable though).</p><p>As far as I see, <em>turing machine</em> is build as a model of &ldquo;computers&rdquo; (human calculator when automated calculaters had not been invented) and many of our <em>theoretical computer science</em> researches are of the question of whether a formally defined problem is solvable, or designing a less complex algorithm to solve it. There are also more general questions in <em>CS</em> like <em>can neural network generate intelligence</em>, and experiments go futher than theoretical proof to such a question.</p><h1 id=cs-vs-mathematics>CS vs. Mathematics</h1><p>In a word, I tend to hold that mathematics is more like a religion shared by most poeple, while CS is about observing the world&rsquo;s <em><strong>input-output stuffs</strong></em> and puting forward to <em><strong>mathematical models</strong></em> (like TM and <em>lambda caculus</em>), and then, reasoning formally or performing experiments on the model (like building a real computer).</p><p>Other science subjects are using computer as tools to experiment on their concerned questions. In cog-sci for example, we may perform a computing model after we propose a model of the process of cognition.</p><h1 id=computer-engeneering>Computer Engeneering</h1><p>Like engeneering physics, it aims to use our knowledge in CS to create real tools to improve our life.</p></div><ul class="list-none pl-0 font-sm align-left"><hr><li class=list-none>Categories:
+<a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href=/categories/theory-of-computing><span class="tag-item dark:bg-zinc-900 dark:hover:bg-zinc-700
+hover:bg-zinc-200 bg-zinc-100
+dark:border-zinc-600 py-0.5
+px-1 rounded-t border-b-2 border-zinc-300
+hover:border-zinc-500">Theory of Computing</span></a></li><li class=list-none>Tags:
+<a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href=/tags/methematical><span class="flex flex-row justify-start items-center
+dark:bg-zinc-900 dark:hover:bg-zinc-700
+hover:bg-zinc-300 bg-zinc-200
+dark:border-zinc-600 py-0.5
+px-1 rounded-t border-b-2 border-zinc-300
+hover:border-zinc-500"><img class="h-4 mr-2 inline" src=https://joelyyoung.github.io/images/tag_logo.svg alt="Logo of a tag: indicates that a tag item follows.">
+Methematical
+</span></a><a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href=/tags/computer-science><span class="flex flex-row justify-start items-center
+dark:bg-zinc-900 dark:hover:bg-zinc-700
+hover:bg-zinc-300 bg-zinc-200
+dark:border-zinc-600 py-0.5
+px-1 rounded-t border-b-2 border-zinc-300
+hover:border-zinc-500"><img class="h-4 mr-2 inline" src=https://joelyyoung.github.io/images/tag_logo.svg alt="Logo of a tag: indicates that a tag item follows.">
+Computer Science
+</span></a><a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href=/tags/theory><span class="flex flex-row justify-start items-center
+dark:bg-zinc-900 dark:hover:bg-zinc-700
+hover:bg-zinc-300 bg-zinc-200
+dark:border-zinc-600 py-0.5
+px-1 rounded-t border-b-2 border-zinc-300
+hover:border-zinc-500"><img class="h-4 mr-2 inline" src=https://joelyyoung.github.io/images/tag_logo.svg alt="Logo of a tag: indicates that a tag item follows.">
+Theory
+</span></a><a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href=/tags/cs251><span class="flex flex-row justify-start items-center
+dark:bg-zinc-900 dark:hover:bg-zinc-700
+hover:bg-zinc-300 bg-zinc-200
+dark:border-zinc-600 py-0.5
+px-1 rounded-t border-b-2 border-zinc-300
+hover:border-zinc-500"><img class="h-4 mr-2 inline" src=https://joelyyoung.github.io/images/tag_logo.svg alt="Logo of a tag: indicates that a tag item follows.">
+CS251
+</span></a><a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href=/tags/cmu><span class="flex flex-row justify-start items-center
+dark:bg-zinc-900 dark:hover:bg-zinc-700
+hover:bg-zinc-300 bg-zinc-200
+dark:border-zinc-600 py-0.5
+px-1 rounded-t border-b-2 border-zinc-300
+hover:border-zinc-500"><img class="h-4 mr-2 inline" src=https://joelyyoung.github.io/images/tag_logo.svg alt="Logo of a tag: indicates that a tag item follows.">
+CMU</span></a></li></ul><div class="text-neutral-500 mb-4">Last modified <span itemprop=dateModified datetime=2022-12-12T00:00:00Z content="2022-12-12T00:00:00Z">2022.12.12</span></div></article></main><footer class="footer container h-10 text-center mt-1"><hr class=my-4><ul class="pl-0 mt-1"><li class="ml-2 first:before:content-none before:content-['•']
+inline-block list-none"><a class="ml-2 text-neutral-800
+dark:text-neutral-400 border-none" href=https://github.com/hugcis/hugo-astatine-theme>Code</a></li><li class="ml-2 first:before:content-none before:content-['•']
+text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class=ml-2>© Joel Yang 2025</span></li></ul></footer></body></html>
