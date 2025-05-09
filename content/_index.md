@@ -20,6 +20,7 @@ personal_title: "MPhil Student"
 address: 
   - 
     name: Jiawei Yang
+    street: The Hong Kong Polytechnic University
     locality: Kawloon, Hong Kong
     email: joelyyang@outlook.com
 
