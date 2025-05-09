@@ -30,9 +30,8 @@ jobs:
             git checkout -b publish
             git push origin publish
           fi
-
     
-      - name: Merge main -> publish
+      - name: Merge master -> publish
         uses: devmasx/merge-branch@master
         with:
           type: now
@@ -52,8 +51,6 @@ jobs:
           git clone https://github.com/hugcis/hugo-astatine-theme themes/hugo-astatine-theme
           rm -rf docs/
           hugo --minify
-          ls
-          cp -r public docs
 
       - name: Publish
         uses: stefanzweifel/git-auto-commit-action@v4
