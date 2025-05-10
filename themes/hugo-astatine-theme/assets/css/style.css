@@ -2006,6 +2006,35 @@ blockquote p {
 }
 
 #copy-tooltip {
-    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(98, 91, 100, 0.8); /* Semi-transparent gray-800 */
+    color: #ffffff;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    opacity: 0;
     transition: opacity 0.3s ease;
+}
+#copy-tooltip.visible {
+    opacity: 1;
+}
+#copy-tooltip.hidden {
+    display: none;
+}
+
+button:hover {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+}
+
+.dark button:hover {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
