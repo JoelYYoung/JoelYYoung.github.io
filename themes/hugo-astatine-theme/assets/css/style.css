@@ -2029,7 +2029,7 @@ blockquote p {
     opacity: 1;
 }
 
-button:hover {
+/* button:hover {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
   border-bottom-width: 2px;
@@ -2051,4 +2051,4 @@ button[data-tooltip]:hover::after {
     border-radius: 4px;
     font-size: 12px;
     white-space: nowrap;
-}
+} */

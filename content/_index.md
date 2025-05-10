@@ -89,7 +89,7 @@ publications:
       - name: Yulei Sui
         corresponding: true
     title: "Taming and Dissecting Recursions through Interprocedural Weak Topological Ordering"
-    journal: ECOOP
+    journal: "2025 European Conference on Object-Oriented Programming (ECOOP '25)"
     image: img/ecoop_25.png
     pdf: img/ecoop_25.png
     links:
