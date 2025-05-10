@@ -39,18 +39,6 @@ pygmentsStyle = "native"
     url = "/post/"
     weight = -150
 
-# This links to the page about.md
-[[menu.main]]
-    name = "Contact"
-    url = "/contact/"
-    weight = -110
-
-# This links to the page about.md
-[[menu.main]]
-    name = "Demo Page"
-    url = "/demopage/"
-    weight = -100
-
 # Make the tags and categories pages accessible directly from the navbar.
 [[menu.main]]
     name = "Tags"
