@@ -33,7 +33,7 @@
 
         <h2 itemprop="jobTitle" class="text-xl my-0 border-none">{{ .Params.Personal_title }}</h2>
         
-        {{range .Params.Address }}
+        {{ with .Params.Address }}
             <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                 <span itemprop="streetAddress">
                     {{ .name }}
