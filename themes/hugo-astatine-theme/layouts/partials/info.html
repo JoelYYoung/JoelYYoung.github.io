@@ -25,15 +25,15 @@
             </h1>
         </a>
         
-        {{ if .Params.sameas }}
+        <!-- {{ if .Params.sameas }}
         {{ range .Params.sameas }}
         <link href="{{ . }}" rel="me" itemprop="sameAs">
         {{ end }}
-        {{ end }}
-        
+        {{ end }} -->
+
         <h2 itemprop="jobTitle" class="text-xl my-0 border-none">{{ .Params.Personal_title }}</h2>
         
-        {{range .Params.address }}
+        {{range .Params.Address }}
             <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                 <span itemprop="streetAddress">
                     {{ .name }}
@@ -48,9 +48,9 @@
 
         <br>
 
-        {{ with .Params.email }}
+        {{ with .Params.Email }}
             <a href="mailto:{{ . }}">
-                {{ with .Params.emailimg }}
+                {{ with .Params.Emailimg }}
                     <picture>
                         {{ if .dark }}
                             <source srcset="{{ .dark }}" class="email"
@@ -65,9 +65,9 @@
             </a>
         {{ end }}
 
-        {{ with .Params.github }}
+        {{ with .Params.Github }}
             <a href="{{ . }}" target="_blank">
-                {{ with .githubimg }}
+                {{ with .Githubimg }}
                     <picture>
                         {{ if .dark }}
                             <source srcset="{{ .dark }}" class="github-icon"
