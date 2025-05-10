@@ -50,8 +50,8 @@
 
         {{ printf "%#v" .Params }}
 
-        {{ with .Params.Email }}
-            <a href="mailto:{{ . }}">
+        {{ if .Params.Email }}
+            <a href="mailto:{{ .Params.Email }}">
                 {{ with .Params.Emailimg }}
                     <picture>
                         {{ with .dark }}
@@ -67,9 +67,9 @@
             </a>
         {{ end }}
 
-        {{ with .Params.Github }}
-            <a href="{{ . }}" target="_blank">
-                {{ with .Githubimg }}
+        {{ if .Params.Github }}
+            <a href="{{ .Params.Github }}" target="_blank">
+                {{ with .Params.Githubimg }}
                     <picture>
                         {{ with .dark }}
                             <source srcset="{{ . }}" class="github-icon"
