@@ -21,14 +21,14 @@ address:
   name: COMP
   street: The Hong Kong Polytechnic University
   locality: Kawloon, Hong Kong
-email: joelyyang@outlook.com
+email: "joelyyang@outlook.com"
 emailimg: 
-  dark: /img/email_dark.png
-  light: /img/email_light.png
-github: https://github.com/JoelYYoung
+  dark: "/img/email_dark.png"
+  light: "/img/email_light.png"
+github: "https://github.com/JoelYYoung"
 githubimg: 
-  dark: /img/github_dark.png
-  light: /img/github_light.png
+  dark: "/img/github_dark.png"
+  light: "/img/github_light.png"
 
 # === Optional fields ===
 # Add an email with a mailto: hyperlink

@@ -48,6 +48,8 @@
 
         <br>
 
+        {{ printf "%#v" .Params }}
+        
         {{ with .Params.Email }}
             <a href="mailto:{{ . }}">
                 {{ with .Params.Emailimg }}
