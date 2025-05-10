@@ -17,16 +17,16 @@ imgname:
 # A title (job title or "Researcher", "PhD student", etc.)
 personal_title: "MPhil Student"
 # An address (you can list multiple)
-address: 
+address:
   name: COMP
   street: The Hong Kong Polytechnic University
   locality: Kawloon, Hong Kong
 email: "joelyyang@outlook.com"
-emailimg: 
+emailimg:
   dark: "/img/email_dark.png"
   light: "/img/email_light.png"
 github: "https://github.com/JoelYYoung"
-githubimg: 
+githubimg:
   dark: "/img/github_dark.png"
   light: "/img/github_light.png"
 
