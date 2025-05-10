@@ -36,12 +36,12 @@ function copyText(button) {
             const tooltip = document.getElementById('copy-tooltip');
             
             tooltip.classList.remove('hidden');
-            tooltip.classList.add('opacity-100');
+            tooltip.classList.add('visible');
 
             setTimeout(() => {
-                tooltip.classList.remove('opacity-100');
+                tooltip.classList.remove('visible');
                 tooltip.classList.add('hidden');
-            }, 2000);
+            }, 1000);
         })
         .catch(err => {
             console.error('Failed to copy: ', err);

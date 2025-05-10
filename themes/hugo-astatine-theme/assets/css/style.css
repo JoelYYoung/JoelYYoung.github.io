@@ -2019,11 +2019,14 @@ blockquote p {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-#copy-tooltip.visible {
-    opacity: 1;
-}
+
 #copy-tooltip.hidden {
     display: none;
+}
+
+#copy-tooltip.visible {
+    display: inline-block;
+    opacity: 1;
 }
 
 button:hover {
@@ -2037,4 +2040,15 @@ button:hover {
 .dark button:hover {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+button[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
 }

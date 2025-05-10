@@ -89,7 +89,7 @@
         <div class="flex items-center gap-4">
             {{ if .Params.Email }}
                 <div class="relative inline-flex items-center gap-2">
-                    <button title="Copy" data-email="{{ .Params.Email }}" type="button" onclick="copyText(this)" class="flex items-center gap-2" aria-label="Copy Email Address">
+                    <button data-tooltip="Copy" data-email="{{ .Params.Email }}" type="button" onclick="copyText(this)" class="flex items-center gap-2" aria-label="Copy Email Address">
                         {{ with .Params.Emailimg }}
                             <picture>
                                 {{ with .dark }}
