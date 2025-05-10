@@ -49,7 +49,7 @@
         <br>
 
         {{ if .Params.Email }}
-            <button data-email="{{ .Params.Email }}" type="button" onclick="copyText()" class="h-full flex items-center gap-2" aria-label="Copy Email Address">
+            <button data-email="{{ .Params.Email }}" type="button" onclick="copyText(this)" class="h-full flex items-center gap-2" aria-label="Copy Email Address">
                 {{ with .Params.Emailimg }}
                     <picture>
                         {{ with .dark }}
