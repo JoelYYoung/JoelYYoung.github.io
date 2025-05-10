@@ -2004,3 +2004,8 @@ blockquote p {
     margin-right: 2rem;
   }
 }
+
+#copy-tooltip {
+    z-index: 10;
+    transition: opacity 0.3s ease;
+}

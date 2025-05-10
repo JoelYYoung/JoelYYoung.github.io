@@ -29,14 +29,21 @@ function toggleMenu() {
 }
 
 function copyText(button) {
-    let email = button.getAttribute("data-email");
-    if (email) {
-        navigator.clipboard.writeText(email).then(() => {
-            alert("Coppied: " + email);
-        }).catch(err => {
-            console.error("Fail to copy", err);
+    const email = button.getAttribute('data-email');
+    
+    navigator.clipboard.writeText(email)
+        .then(() => {
+            const tooltip = document.getElementById('copy-tooltip');
+            
+            tooltip.classList.remove('hidden');
+            tooltip.classList.add('opacity-100');
+
+            setTimeout(() => {
+                tooltip.classList.remove('opacity-100');
+                tooltip.classList.add('hidden');
+            }, 2000);
+        })
+        .catch(err => {
+            console.error('Failed to copy: ', err);
         });
-    } else {
-        alert("No email found");
-    }
 }

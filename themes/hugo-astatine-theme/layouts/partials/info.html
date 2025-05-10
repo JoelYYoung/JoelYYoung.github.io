@@ -48,7 +48,7 @@
 
         <br>
 
-        {{ if .Params.Email }}
+        <!-- {{ if .Params.Email }}
             <button data-email="{{ .Params.Email }}" type="button" onclick="copyText(this)" class="h-full flex items-center gap-2" aria-label="Copy Email Address">
                 {{ with .Params.Emailimg }}
                     <picture>
@@ -84,6 +84,52 @@
                     </picture>
                 {{ end }}
             </a>
-        {{ end }}
+        {{ end }} -->
+
+        <div class="flex items-center gap-4">
+            {{ if .Params.Email }}
+                <div class="relative inline-flex items-center gap-2">
+                    <button data-email="{{ .Params.Email }}" type="button" onclick="copyText(this)" class="flex items-center gap-2" aria-label="Copy Email Address">
+                        {{ with .Params.Emailimg }}
+                            <picture>
+                                {{ with .dark }}
+                                    <img class="email h-5 hidden dark:inline" 
+                                        src="{{ . }}" 
+                                        alt="{{ $.Params.Email }}">
+                                {{ end }}
+                                {{ with .light }}
+                                    <img class="email h-5 inline dark:hidden" 
+                                        src="{{ . }}" 
+                                        alt="{{ $.Params.Email }}">
+                                {{ end }}
+                            </picture>
+                        {{ end }}
+                    </button>
+                    <span id="copy-tooltip" class="absolute left-0 top-full mt-2 hidden text-sm text-white bg-gray-800 px-2 py-1 rounded opacity-0 transition-opacity duration-300">
+                        Copied!
+                    </span>
+                </div>
+            {{ end }}
+
+            {{ if .Params.Github }}
+                <a href="{{ .Params.Github }}" target="_blank" class="flex items-center">
+                    {{ with .Params.Githubimg }}
+                        <picture>
+                            {{ with .dark }}
+                                <img class="github-icon h-5 hidden dark:inline" 
+                                    src="{{ . }}" 
+                                    alt="{{ $.Params.Github }}">
+                            {{ end }}
+                            {{ with .light }}
+                                <img class="github-icon h-5 inline dark:hidden" 
+                                    src="{{ . }}" 
+                                    alt="{{ $.Params.Github }}">
+                            {{ end }}
+                        </picture>
+                    {{ end }}
+                </a>
+            {{ end }}
+        </div>
+        
     </div>
 </div>
