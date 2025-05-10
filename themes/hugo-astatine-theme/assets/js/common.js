@@ -27,3 +27,16 @@ function toggleMenu() {
         navbar.classList.add("hidden");
     }
 }
+
+function copyText(button) {
+    let email = button.getAttribute("data-email");
+    if (email) {
+        navigator.clipboard.writeText(email).then(() => {
+            alert("Coppied: " + email);
+        }).catch(err => {
+            console.error("Fail to copy", err);
+        });
+    } else {
+        alert("No email found");
+    }
+}
