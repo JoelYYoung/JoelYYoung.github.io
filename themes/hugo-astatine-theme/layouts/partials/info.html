@@ -48,20 +48,21 @@
 
         <br>
 
-        {{ printf "%#v" .Params }}
-
         {{ if .Params.Email }}
             <a href="mailto:{{ .Params.Email }}">
                 {{ with .Params.Emailimg }}
                     <picture>
                         {{ with .dark }}
-                            <source srcset="{{ . }}" class="email"
-                                    alt="Email icon"
+                            <source srcset="{{ . }}" 
+                                    class="email" 
+                                    alt="{{ $.Params.Email }}"
                                     media="(prefers-color-scheme: dark)">
                         {{ end }}
-                        {{ with .light }}
-                            <img class="email h-5 inline" src="{{ . }}" alt="Email icon">
-                        {{ end }}
+                        <!-- {{ with .light }}
+                            <img class="email h-5 inline" 
+                                 src="{{ . }}" 
+                                 alt="{{ $.Params.Email }}">
+                        {{ end }} -->
                     </picture>
                 {{ end }}
             </a>
@@ -73,11 +74,11 @@
                     <picture>
                         {{ with .dark }}
                             <source srcset="{{ . }}" class="github-icon"
-                                    alt="GitHub icon"
+                                    alt="{{ $.Params.Github }}"
                                     media="(prefers-color-scheme: dark)">
                         {{ end }}
                         {{ with .light }}
-                            <img class="github-icon h-5 inline" src="{{ . }}" alt="GitHub icon">
+                            <img class="github-icon h-5 inline" src="{{ . }}" alt="{{ $.Params.Github }}">
                         {{ end }}
                     </picture>
                 {{ end }}
