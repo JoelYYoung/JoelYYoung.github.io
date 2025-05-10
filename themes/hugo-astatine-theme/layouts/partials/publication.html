@@ -46,7 +46,7 @@
         <br>
         {{ if .journal }}
         <div>
-            In <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+            <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
                 <i itemprop="name">{{- .journal -}}</i></span>,
         {{ end }}
         <meta itemprop="datePublished" content="{{- .date -}}">{{- .date -}}.

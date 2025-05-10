@@ -18,18 +18,23 @@ imgname:
 personal_title: "MPhil Student"
 # An address (you can list multiple)
 address: 
-  - name: COMP
-    street: The Hong Kong Polytechnic University
-    locality: Kawloon, Hong Kong
-    email: joelyyang@outlook.com
+  name: COMP
+  street: The Hong Kong Polytechnic University
+  locality: Kawloon, Hong Kong
+email: joelyyang@outlook.com
+emailimg: 
+  dark: /img/email_dark.png
+  light: /img/email_light.png
+github: https://github.com/JoelYYoung
+githubimg: 
+  dark: /img/github_dark.png
+  light: /img/github_light.png
 
 # === Optional fields ===
 # Add an email with a mailto: hyperlink
 
 # Add an email "image" for spam protection. With light and dark mode
-# emailImg: 
-#   dark: /img/dark_email.png
-#   light: /img/light_email.png
+
 
 # List your publications. The required fields are pdf, title, and image 
 # (which should be the image path). The other fields are optional.
@@ -84,7 +89,6 @@ publications:
       - name: Yulei Sui
         corresponding: true
     title: "Taming and Dissecting Recursions through Interprocedural Weak Topological Ordering"
-    date: 2025
     journal: ECOOP
     image: img/ecoop_25.png
     pdf: img/ecoop_25.png
