@@ -89,14 +89,16 @@ publications:
       - name: Yulei Sui
         corresponding: true
     title: "Taming and Dissecting Recursions through Interprocedural Weak Topological Ordering"
-    journal: "2025 European Conference on Object-Oriented Programming (ECOOP '25)"
+    journal: "European Conference on Object-Oriented Programming, 2025."
     image: img/ecoop_25.png
     pdf: img/ecoop_25.png
     links:
-      - name: Main URL
+      - name: ECOOP'25
         url: "https://2025.ecoop.org/info/accepted-papers"
+      - name: Code
+        url: "https://github.com/JoelYYoung/RecTopo"
 ---
 
 # Bio
 
-I am a second-year MPhil student under the supervision of Prof. Luo Xiapu. My research focuses on static analysis, encompassing abstract interpretation, pointer analysis, binary analysis, and symbolic execution, as well as the applications of large language models in software engineering (LLM4SE). If our interests align, feel free to reach out—I always welcome engaging discussions and collaborations.
+I am a second-year MPhil student under the supervision of Prof. [Xiapu Luo](https://www4.comp.polyu.edu.hk/~csxluo/). My research focuses on static analysis, encompassing abstract interpretation, pointer analysis, binary analysis, and symbolic execution, as well as the applications of large language models in software engineering (LLM4SE). If our interests align, feel free to reach out—I always welcome engaging discussions and collaborations.
