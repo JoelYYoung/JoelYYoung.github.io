@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build-and-upload:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.134.2  # Use the latest Hugo version
@@ -42,27 +42,27 @@ jobs:
           hugo --minify # rm docs and rebuild the page
           touch docs/.nojekyll  # Prevent Jekyll processing on GitHub Pages
 
-      # Deploy to publish branch
-      - name: Upload Artifact to publish Branch
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: publish  # Your custom branch for deployment
-          publish_dir: ./docs  # Directory to deploy
-          keep_files: false  # Overwrite existing content in publish branch
+      # # Deploy to publish branch
+      # - name: Upload Artifact to publish Branch
+      #   uses: peaceiris/actions-gh-pages@v4
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_branch: publish  # Your custom branch for deployment
+      #     publish_dir: ./docs  # Directory to deploy
+      #     keep_files: false  # Overwrite existing content in publish branch
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs
 
-deploy:
-  environment:
-    name: github-pages
-    url: ${{ steps.deployment.outputs.page_url }}
-  runs-on: ubuntu-latest
-  needs: build
-  steps:
-    - name: Deploy to gitHub pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to gitHub pages
+        id: deployment
+        uses: actions/deploy-pages@v4
