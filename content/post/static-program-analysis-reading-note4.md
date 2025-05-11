@@ -16,7 +16,7 @@ modified = "2023-02-21"
 
 **Recap**: In Chapter 5, we introduced *Iterative Algorithm* and *Worklist Algorithm* to calculate the $lfp$ of the given constraint (for *May Analysis*). The correctness of the mentioned algorithm demands that the lattice has **limited height**.
 
-**Problem**: What happens if the lattice has infinit height? E.g., in interval analysis, we use $\{[l,u]|l,u \in N \}$ as the lattice, which has infinit height.
+**Problem**: What happens if the lattice has inftyit height? E.g., in interval analysis, we use $\{[l,u]|l,u \in N \}$ as the lattice, which has inftyit height.
 
 **Intuitional Answer**: Take a simple loop as example,
 
@@ -30,9 +30,9 @@ for(int j = 0; j < i; j++){
 
 If we do analysis on this program, it will be following iterations:
 
-1. $[i\mapsto[-\infin,+\infin],j\mapsto[0, 0],x\mapsto[0,0]]$
-2. $[i\mapsto[-\infin,+\infin],j\mapsto[0, 1],x\mapsto[0,1]]$
-3. $[i\mapsto[-\infin,+\infin],j\mapsto[0, 2],x\mapsto[0,4]]$
+1. $[i\mapsto[-\infty,+\infty],j\mapsto[0, 0],x\mapsto[0,0]]$
+2. $[i\mapsto[-\infty,+\infty],j\mapsto[0, 1],x\mapsto[0,1]]$
+3. $[i\mapsto[-\infty,+\infty],j\mapsto[0, 2],x\mapsto[0,4]]$
 4. $...$
 
 It will never stop!
@@ -49,7 +49,7 @@ $$
 $$
 to represent a lattice, where
 $$
-N=\\{-\infin,...,-2,-1,0,1,2,\infin\\}
+N=\\{-\infty,...,-2,-1,0,1,2,\infty\\}
 $$
 And We define the ralation on the lattice as follows
 $$
@@ -66,7 +66,7 @@ $$
 
 1. if $E$ is a variable $y$, then we have $eval(IN[s_i],E)=IN[s_i][x\mapsto IN[s_i](y)]$
 2. if $E$ is a constant value $C$, $eval(IN[s_i],E)=IN[s_i][x\mapsto [C,C]]$
-3. if $E$ is an external input value, then $eval(IN[s_i],E)=IN[s_i][x\mapsto [-\infin,\infin]]$
+3. if $E$ is an external input value, then $eval(IN[s_i],E)=IN[s_i][x\mapsto [-\infty,\infty]]$
 4. else if $E$ is an expression $E_1 op E_2$, then we have $eval(IN[s_i,E])=IN[s_i][x\mapsto [l,h]]$, where
 
 $$
@@ -82,7 +82,7 @@ $$
 
 Control handling is simple that we take *least upper bound* of each $OUT$ of predecessors.
 
-## A New Framework: Lattice with Infinit Height
+## A New Framework: Lattice with inftyit Height
 
 ### Does $lfp$ exist?
 
@@ -96,15 +96,15 @@ Let $D=\\{x|x\in L\\}$, then we have $\forall x \in D, d\sqsubseteq x$. Therefor
 
 **Answer**: NOT necessarily! 
 
-E.g., in the above example of a simple loop, the iteration will never come to an end. An intuitive explaination is that although the $lfp$ is proved to uniquely exist, it takes **infinite steps** to iterate from $\bot$ to $lfp$. 
+E.g., in the above example of a simple loop, the iteration will never come to an end. An intuitive explaination is that although the $lfp$ is proved to uniquely exist, it takes **inftyite steps** to iterate from $\bot$ to $lfp$. 
 
-### Widening: step over infinit heights at one time
+### Widening: step over inftyit heights at one time
 
 #### An insight into widening
 
-Since iterating from $\bot$ to $lfp$ **one step at a time** seems to take infinite rounds, we would like to solve the problem by stepping over those inifite steps at one time, and that's how widening works.
+Since iterating from $\bot$ to $lfp$ **one step at a time** seems to take inftyite rounds, we would like to solve the problem by stepping over those inifite steps at one time, and that's how widening works.
 
-We can achieve this by mapping the infinit interval lattice to an finite one. This is done by restricting the interval lattice's $l$ and $h$ to a **finite set** $B$, which contians $-\infin,\infin$ and several other integers. Those integers can be specially choosen (heuristically), e.g., all integers occurring in the program.  
+We can achieve this by mapping the inftyit interval lattice to an finite one. This is done by restricting the interval lattice's $l$ and $h$ to a **finite set** $B$, which contians $-\infty,\infty$ and several other integers. Those integers can be specially choosen (heuristically), e.g., all integers occurring in the program.  
 
 We just need to apply $\omega'$ function to each variable respectively after calculating $f_s(IN[s_i])$ of each node iteratively. The $\omega'$ function is defined as follows:$\omega'([l,h])=[a, b]$, where
 $$
@@ -133,7 +133,7 @@ for(int i = 0; i < input; i++){
 }
 ```
 
-Assume $B=\\{-\infin,-1,0,1,7,\infin\\}$, if we do widening to $x$, then we will get $x\mapsto[7,\infin]$, but if we do not do widening on $x$, we will have $x\mapsto [8,8]$, which is obviously more precise than the former result.
+Assume $B=\\{-\infty,-1,0,1,7,\infty\\}$, if we do widening to $x$, then we will get $x\mapsto[7,\infty]$, but if we do not do widening on $x$, we will have $x\mapsto [8,8]$, which is obviously more precise than the former result.
 
 **Def**: $\nabla'([l,h],f([l,h]))$ is defined as follows: 
 $$
