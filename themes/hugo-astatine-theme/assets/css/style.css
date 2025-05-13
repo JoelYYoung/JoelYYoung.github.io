@@ -2006,17 +2006,17 @@ blockquote p {
 /* Email Button */
 button:hover {
   transform: scale(0.9);
-  --tw-text-opacity: 1;
+  /* --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
   border-bottom-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+  border-color: rgb(226 232 240 / var(--tw-border-opacity)); */
 }
 
-.dark button:hover {
+/* .dark button:hover {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
-}
+} */
 
 
 /* Github Link */
@@ -2030,21 +2030,16 @@ a {
   color: rgb(147 197 253 / var(--tw-text-opacity));
 }
 
-a:hover {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
-.dark a:hover {
+/* .dark a:hover {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
-}
+} */
 
 a:hover {
   transform: scale(0.9);
-  border-bottom-width: 2px;
-  --tw-border-opacity: 1;
-  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+/*  border-bottom-width: 2px;*/
+  /* --tw-border-opacity: 1; */
+  /* border-color: rgb(226 232 240 / var(--tw-border-opacity)); */
 }
 
 /* button[data-tooltip]:hover::after {
