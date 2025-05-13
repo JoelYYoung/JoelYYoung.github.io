@@ -2005,7 +2005,7 @@ blockquote p {
 
 /* Email Button */
 button:hover {
-  transform: scale(0.9);
+  transform: scale(0.93);
   color: rgb(17 24 39 / var(--tw-text-opacity));
   --tw-text-opacity: 1;
   /* border-bottom-width: 2px;
@@ -2035,7 +2035,7 @@ a {
   color: rgb(229 231 235 / var(--tw-text-opacity));
 } */
 
-a:hover {
+#github-link:hover {
   transform: scale(0.93);
 /*  border-bottom-width: 2px;*/
   /* --tw-border-opacity: 1; */
