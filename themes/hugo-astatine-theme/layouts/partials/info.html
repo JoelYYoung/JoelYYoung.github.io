@@ -93,12 +93,12 @@
                         {{ with .Params.Emailimg }}
                             <picture>
                                 {{ with .dark }}
-                                    <img class="email h-5 hidden dark:inline" 
+                                    <img class="email absolute left-0 top-0 h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" 
                                         src="{{ . }}" 
                                         alt="{{ $.Params.Email }}">
                                 {{ end }}
                                 {{ with .light }}
-                                    <img class="email h-5 inline dark:hidden" 
+                                    <img class="email absolute left-0 top-0 h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" 
                                         src="{{ . }}" 
                                         alt="{{ $.Params.Email }}">
                                 {{ end }}
@@ -116,12 +116,12 @@
                     {{ with .Params.Githubimg }}
                         <picture>
                             {{ with .dark }}
-                                <img class="github-icon h-5 hidden dark:inline" 
+                                <img class="github-icon absolute left-0 top-0 h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" 
                                     src="{{ . }}" 
                                     alt="{{ $.Params.Github }}">
                             {{ end }}
                             {{ with .light }}
-                                <img class="github-icon h-5 inline dark:hidden" 
+                                <img class="github-icon absolute left-0 top-0 h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" 
                                     src="{{ . }}" 
                                     alt="{{ $.Params.Github }}">
                             {{ end }}
