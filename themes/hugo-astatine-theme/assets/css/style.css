@@ -2006,9 +2006,9 @@ blockquote p {
 /* Email Button */
 button:hover {
   transform: scale(0.9);
-  /* --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
-  border-bottom-width: 2px;
+  --tw-text-opacity: 1;
+  /* border-bottom-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(226 232 240 / var(--tw-border-opacity)); */
 }
@@ -2036,7 +2036,7 @@ a {
 } */
 
 a:hover {
-  transform: scale(0.9);
+  transform: scale(0.93);
 /*  border-bottom-width: 2px;*/
   /* --tw-border-opacity: 1; */
   /* border-color: rgb(226 232 240 / var(--tw-border-opacity)); */

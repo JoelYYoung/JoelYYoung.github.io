@@ -93,12 +93,12 @@
                         {{ with .Params.Emailimg }}
                             <picture>
                                 {{ with .dark }}
-                                    <img class="email absolute left-0 top-0 h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" 
+                                    <img class="email h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" 
                                         src="{{ . }}" 
                                         alt="{{ $.Params.Email }}">
                                 {{ end }}
                                 {{ with .light }}
-                                    <img class="email absolute left-0 top-0 h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" 
+                                    <img class="email h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" 
                                         src="{{ . }}" 
                                         alt="{{ $.Params.Email }}">
                                 {{ end }}
