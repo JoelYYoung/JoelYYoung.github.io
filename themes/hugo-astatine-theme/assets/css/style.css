@@ -2048,7 +2048,7 @@ button:hover {
 /* Github Link */
 #github-link:hover {
   transform: scale(0.93);
-/*  border-bottom-width: 2px;*/
+  border-bottom-width: 0px;
   /* --tw-border-opacity: 1; */
   /* border-color: rgb(226 232 240 / var(--tw-border-opacity)); */
 }
