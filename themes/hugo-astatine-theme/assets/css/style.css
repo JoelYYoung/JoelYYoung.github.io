@@ -2030,6 +2030,7 @@ blockquote p {
 }
 
 button:hover {
+  transform: scale(0.8);
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
   border-bottom-width: 2px;
