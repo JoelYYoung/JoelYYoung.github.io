@@ -123,7 +123,7 @@ a {
 a:hover {
   border-bottom-width: 2px; 
   --tw-border-opacity: 1;
-  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+  border-color: rgb(20, 50, 150 / var(--tw-border-opacity));
 }
 
 /*
