@@ -118,7 +118,7 @@ a {
 a:hover {
   border-bottom-width: 2px; 
   --tw-border-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
+  color: rgb(10, 40, 130 / var(--tw-text-opacity));
   /* border-color: rgb(10, 40, 130 / var(--tw-border-opacity)); */
 }
 
