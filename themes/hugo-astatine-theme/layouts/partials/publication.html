@@ -18,15 +18,15 @@
                 {{ end }}
                 <span itemprop="author">
                     {{- $author_val.name -}}
-                    {{ if $author_val.equal_contribution }}
+                    {{- if $author_val.equal_contribution -}}
                         <sup>#</sup>
-                    {{ end }}
-                    {{ if $author_val.corresponding }}
+                    {{- end -}}
+                    {{- if $author_val.corresponding -}}
                         <sup>*</sup>
-                    {{ end }}
+                    {{- end -}}
                 </span>
                 {{- /* Add comma if not last author */ -}}
-                {{- if lt $author_index (sub (len $.authors) 1) -}},{{- end -}}
+                {{- if lt $author_index (sub (len $.authors) 1) -}}, {{- end -}}
                 {{ if $author_val.me }}
                     </b>
                 {{ end }}
