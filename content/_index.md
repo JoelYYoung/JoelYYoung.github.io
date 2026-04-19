@@ -88,8 +88,6 @@ publications:
       - name: Yulei Sui
     title: "Multi-Stage On-Demand Program Slicing for Modular Analysis of Multi-Threaded Programs"
     journal: "ISSTA, 2026"
-    image: img/ecoop_25.png
-    pdf: img/ecoop_25.png
   - authors:
       - name: Jiawei Yang
         me: true
