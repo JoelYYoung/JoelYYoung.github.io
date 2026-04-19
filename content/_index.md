@@ -88,8 +88,6 @@ publications:
       - name: Yulei Sui
     title: "Multi-Stage On-Demand Program Slicing for Modular Analysis of Multi-Threaded Programs"
     journal: "CORE-A, CCF-A"
-    image: img/slicing_paper.png
-    pdf: img/slicing_paper.pdf
   - authors:
       - name: Jiawei Yang
         me: true
