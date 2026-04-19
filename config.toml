@@ -50,11 +50,6 @@ pygmentsStyle = "native"
     url = "/categories/"
     weight = -130
 
-# Author information for RSS feed
-[author]
-    name = "Jiawei Yang"
-    email = "joelyyang@outlook.com"
-
 # Site wide params and SEO
 [params]
     # Site description. Individual pages can have descriptions too but if
@@ -62,6 +57,11 @@ pygmentsStyle = "native"
     description = """Joel's blog."""
     # Author of the site
     authorName = "Joel"
+
+    # Author information for RSS feed
+    [params.author]
+        name = "Jiawei Yang"
+        email = "joelyyang@outlook.com"
 
     # Main image for the author. This will be the default image for SEO.
     [params.imgname]
