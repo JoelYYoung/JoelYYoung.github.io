@@ -15,12 +15,12 @@ imgname:
 #     type: $IMAGE_TYPE
 # ...
 # A title (job title or "Researcher", "PhD student", etc.)
-personal_title: "MPhil Student"
+personal_title: "PhD Student"
 # An address (you can list multiple)
 address:
-  name: COMP
-  street: The Hong Kong Polytechnic University
-  locality: Kawloon, Hong Kong
+  name: School of Computer Science and Engineering
+  street: The University of New South Wales
+  locality: Sydney, Australia
 email: "joelyyang@outlook.com"
 emailimg:
   dark: "/img/email_dark.png"
@@ -81,6 +81,18 @@ publications:
   - authors:
       - name: Jiawei Yang
         me: true
+      - name: Xiao Cheng
+        corresponding: true
+      - name: Jiawei Wang
+      - name: Xiapu Luo
+      - name: Yulei Sui
+    title: "Multi-Stage On-Demand Program Slicing for Modular Analysis of Multi-Threaded Programs"
+    journal: "CORE-A, CCF-A"
+    image: img/slicing_paper.png
+    pdf: img/slicing_paper.pdf
+  - authors:
+      - name: Jiawei Yang
+        me: true
         equal_contribution: true
       - name: Xiao Cheng
         equal_contribution: true
@@ -101,4 +113,4 @@ publications:
 
 # Bio
 
-I am a second-year MPhil student under the supervision of Prof. [Xiapu Luo](https://www4.comp.polyu.edu.hk/~csxluo/). My research focuses on static analysis, encompassing abstract interpretation, pointer analysis, binary analysis, and symbolic execution, as well as the applications of large language models in software engineering (LLM4SE). If our interests align, feel free to reach out—I always welcome engaging discussions and collaborations.
+I am a PhD student at the University of New South Wales (UNSW). My research focuses on static analysis, encompassing abstract interpretation, pointer analysis, binary analysis, and symbolic execution, as well as the applications of large language models in software engineering (LLM4SE). If our interests align, feel free to reach out—I always welcome engaging discussions and collaborations.
