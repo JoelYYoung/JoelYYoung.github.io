@@ -105,7 +105,6 @@ publications:
       - name: Bor-Yuh Evan Chang
       - name: Xiapu Luo
       - name: Yulei Sui
-        corresponding: true
     title: "Taming and Dissecting Recursions through Interprocedural Weak Topological Ordering"
     journal: "European Conference on Object-Oriented Programming, 2025."
     pdf: "https://drops.dagstuhl.de/storage/00lipics/lipics-vol333-ecoop2025/LIPIcs.ECOOP.2025.34/LIPIcs.ECOOP.2025.34.pdf"
