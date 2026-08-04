@@ -1,11 +1,14 @@
 baseURL = 'https://joelyyoung.github.io/'
 languageCode = "en-us"
 # Website title
-title = "Joel"
+title = "Xavier"
 # Theme used
 theme = "hugo-astatine-theme"
 # Public dir
 publishDir = "docs"
+
+# Keep archived posts outside Hugo's content and taxonomy indexes.
+ignoreFiles = ['content/post_backup/.*']
 
 preserveTaxonomyNames = true
 rssLimit = 10
@@ -39,6 +42,11 @@ pygmentsStyle = "native"
     url = "/post/"
     weight = -150
 
+[[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = -140
+
 # Make the tags and categories pages accessible directly from the navbar.
 [[menu.main]]
     name = "Tags"
@@ -54,9 +62,9 @@ pygmentsStyle = "native"
 [params]
     # Site description. Individual pages can have descriptions too but if
     # missing it will fallback to that one.
-    description = """Joel's blog."""
+    description = """Xavier Yang's personal homepage."""
     # Author of the site
-    authorName = "Joel"
+    authorName = "Xavier"
 
     # Author information for RSS feed
     [params.author]
@@ -65,7 +73,7 @@ pygmentsStyle = "native"
 
     # Main image for the author. This will be the default image for SEO.
     [params.imgname]
-        name = "img/main.jpg"
+        name = "img/xavier-yang-clean.jpg"
         # Add an alt description for the image
         alt = "Profile picture"
 

@@ -1,8 +1,6 @@
 {{ define "main" }}
-    <p>All the tags in the website, weighted by their frequency.</p>
-  <hr>
   <div>
-    <h2>{{ i18n "tags" }}</h2>
+    <h1>{{ i18n "tags" }}</h1>
     {{ if not (eq (len $.Site.Taxonomies.tags) 0) }}
     {{ $fontUnit := "rem" }}
     {{ $largestFontSize := 2.8 }}

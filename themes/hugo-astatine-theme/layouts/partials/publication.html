@@ -1,16 +1,8 @@
 <div class="pub-wrapper w-full inline-flex flex-wrap items-center
             my-1.5 p-2.5 rounded bg-slate-200 dark:bg-slate-700 box-border
-            leading-tight justify-around" id="{{anchorize .title}}"
+            leading-tight" id="{{anchorize .title}}"
      itemscope itemtype="http://schema.org/ScholarlyArticle">
-    <div class="pub-image basis-40 grow-0 shrink" itemprop="image"
-         itemscope itemtype="http://schema.org/ImageObject">
-        {{ if .image }}
-        <img alt="{{ .title }} paper illustration"
-             itemprop="url" src="{{ .image }}"
-             class="w-full"/>
-        {{ end }}
-    </div>
-    <div class="publication grow shrink-2 basis-3/4 my-1.5 mx-2">
+    <div class="publication w-full my-1.5 mx-2">
         {{ if .authors }}
             {{ range $author_index, $author_val := .authors }}
                 {{ if $author_val.me }}

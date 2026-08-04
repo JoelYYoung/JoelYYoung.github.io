@@ -19,11 +19,9 @@
 
     <div class="mx-4 ml-8 basis-60 grow shrink-2 leading-snug text-base">
         
-        <a  class="u-url font-bold" rel="me" itemprop="url" href="{{ .Permalink }}">
-            <h1 class="text-black dark:text-zinc-300 p-name border-0"
-                itemprop="name">{{ .Params.Name }}
-            </h1>
-        </a>
+        <h1 class="font-bold text-black dark:text-zinc-300 p-name border-0"
+            itemprop="name">{{ .Params.Name }}
+        </h1>
         
         <!-- {{ if .Params.sameas }}
         {{ range .Params.sameas }}
@@ -89,7 +87,7 @@
         <div class="flex items-center gap-4">
             {{ if .Params.Email }}
                 <div class="relative inline-flex items-center gap-2">
-                    <button data-email="{{ .Params.Email }}" type="button" onclick="copyText(this)" class="flex items-center gap-2" aria-label="Copy Email Address">
+                    <button data-email="{{ .Params.Email }}" type="button" onclick="copyText(this)" class="profile-icon-link flex items-center gap-2" aria-label="Copy Email Address">
                         {{ with .Params.Emailimg }}
                             <picture>
                                 {{ with .dark }}
@@ -112,7 +110,7 @@
             {{ end }}
 
             {{ if .Params.Github }}
-                <a id="github-link" href="{{ .Params.Github }}" target="_blank" class="flex items-center">
+                <a id="github-link" href="{{ .Params.Github }}" target="_blank" rel="me noopener" class="profile-icon-link flex items-center" aria-label="GitHub profile">
                     {{ with .Params.Githubimg }}
                         <picture>
                             {{ with .dark }}
@@ -127,6 +125,12 @@
                             {{ end }}
                         </picture>
                     {{ end }}
+                </a>
+            {{ end }}
+
+            {{ if .Params.Orcid }}
+                <a href="{{ .Params.Orcid }}" target="_blank" rel="me noopener" class="profile-icon-link flex h-8 w-8 items-center justify-center" aria-label="View ORCID record 0009-0009-3785-1849">
+                    <img class="h-6 w-6 max-h-full" src="{{ .Params.Orcidimg }}" alt="ORCID iD">
                 </a>
             {{ end }}
         </div>

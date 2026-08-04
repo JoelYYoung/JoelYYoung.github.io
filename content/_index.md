@@ -4,8 +4,8 @@
 name: "Jiawei Yang"
 # Your profile picture
 imgname: 
-  name: "img/main.jpg"
-  alt: "Picture of me"
+  name: "img/xavier-yang-clean.jpg"
+  alt: "Portrait of Xavier Yang"
   type: image/jpeg
 # More sources can be added (optional) using 
 # imgOther:
@@ -29,6 +29,8 @@ github: "https://github.com/JoelYYoung"
 githubimg:
   dark: "/img/github_dark.png"
   light: "/img/github_light.png"
+orcid: "https://orcid.org/0009-0009-3785-1849"
+orcidimg: "/img/orcid.svg"
 
 # === Optional fields ===
 # Add an email with a mailto: hyperlink
@@ -88,6 +90,12 @@ publications:
       - name: Yulei Sui
     title: "Multi-Stage On-Demand Program Slicing for Modular Analysis of Multi-Threaded Programs"
     journal: "ISSTA, 2026"
+    pdf: "https://conf.researchr.org/track/issta-2026/issta-2026-research-papers"
+    links:
+      - name: ISSTA'26
+        url: "https://conf.researchr.org/track/issta-2026/issta-2026-research-papers"
+      - name: Code
+        url: "https://doi.org/10.5281/zenodo.21785499"
   - authors:
       - name: Jiawei Yang
         me: true
@@ -100,8 +108,7 @@ publications:
         corresponding: true
     title: "Taming and Dissecting Recursions through Interprocedural Weak Topological Ordering"
     journal: "European Conference on Object-Oriented Programming, 2025."
-    image: img/ecoop_25.png
-    pdf: img/ecoop_25.png
+    pdf: "https://drops.dagstuhl.de/storage/00lipics/lipics-vol333-ecoop2025/LIPIcs.ECOOP.2025.34/LIPIcs.ECOOP.2025.34.pdf"
     links:
       - name: ECOOP'25
         url: "https://2025.ecoop.org/info/accepted-papers"

@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="category">
-  <h2 class="category-title">{{ i18n "categories" }}</h2>
+  <h1 class="category-title">{{ i18n "categories" }}</h1>
   {{ $data := .Data }}
   {{ range $key, $value := .Data.Terms.Alphabetical }}
   <ul class="category-item">

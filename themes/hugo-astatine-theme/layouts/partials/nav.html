@@ -1,8 +1,17 @@
 <nav >
   <div class="container flex flex-wrap justify-between items-center mx-auto">
     <div class="nav-main my-2.5">
-      <a href="{{ .Site.BaseURL }}" class="nav-title py-2.5 text-2xl
-               text-zinc-600 dark:text-zinc-300 hover:border-b-0">{{ .Site.Title }}</a>
+      <a href="{{ .Site.BaseURL }}" aria-label="Home"
+         class="nav-title inline-flex items-center gap-2 py-2.5 text-2xl
+                text-zinc-600 dark:text-zinc-300 hover:border-b-0">
+        <svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="1.8"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 10.75 12 3l9 7.75"/>
+          <path d="M5.5 9.5V21h13V9.5M9 21v-6h6v6"/>
+        </svg>
+        <span>{{ .Site.Title }}</span>
+      </a>
     </div>
     <button type="button"
             onclick="toggleMenu()"
@@ -27,10 +36,20 @@
       <ul class="grid md:grid-flow-col items-center justify-between text-lg
                  my-2.5 grid-cols-1 pl-0 text-center">
         {{ range  sort .Site.Menus.main "Weight" }}
+        {{ $showMenuItem := true }}
+        {{ if and (eq .Name "Posts") (eq (len (where $.Site.RegularPages "Section" "post")) 0) }}
+          {{ $showMenuItem = false }}
+        {{ else if and (eq .Name "Categories") (eq (len $.Site.Taxonomies.categories) 0) }}
+          {{ $showMenuItem = false }}
+        {{ else if and (eq .Name "Tags") (eq (len $.Site.Taxonomies.tags) 0) }}
+          {{ $showMenuItem = false }}
+        {{ end }}
+        {{ if $showMenuItem }}
         <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
           <a class="text-zinc-600 dark:text-zinc-300
                     hover:border-b-0" href="{{ .URL }}">{{ .Name }}</a>
         </li>
+        {{ end }}
         {{ end }}
         <li class="h-7 pl-2.5 pr-0 list-none">
           <button type="button" onclick="toggleMode()" class="h-full"  aria-label="Toggle between dark and light mode">
