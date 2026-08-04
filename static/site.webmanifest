@@ -3,17 +3,17 @@
   "short_name": "Xavier",
   "icons": [
     {
-      "src": "/favicon-32x32.png",
+      "src": "/favicon-32x32.png?v=2",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/apple-touch-icon.png",
+      "src": "/apple-touch-icon.png?v=2",
       "sizes": "180x180",
       "type": "image/png"
     }
   ],
-  "theme_color": "#172554",
-  "background_color": "#172554",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "display": "standalone"
 }
