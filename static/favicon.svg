@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Xavier Yang monogram">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="57" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172554"/>
+      <stop offset="0.58" stop-color="#312e81"/>
+      <stop offset="1" stop-color="#581c87"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="18" y1="12" x2="47" y2="53" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e0f2fe"/>
+      <stop offset="0.5" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#bg)"/>
+  <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="14.25" fill="none" stroke="#bae6fd" stroke-opacity="0.22" stroke-width="1.5"/>
+  <text x="29" y="49" fill="url(#ink)" font-family="Georgia, 'Times New Roman', serif" font-size="49" font-style="italic" font-weight="700" text-anchor="middle">Y</text>
+  <path d="M43 13.5c4.8 1.4 7.8 4.2 9.1 8.6" fill="none" stroke="#a5f3fc" stroke-linecap="round" stroke-width="2.2"/>
+</svg>
