@@ -40,62 +40,71 @@
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
+  gap: 1rem;
   margin: 1.5rem 0 3rem;
 }
 
 .project-card {
   display: flex;
-  min-height: 17rem;
+  min-height: 12rem;
   flex-direction: column;
-  padding: 1.5rem;
-  color: #e0f2fe;
+  padding: 1.25rem;
+  color: #27272a;
   text-decoration: none;
-  border: 1px solid rgba(56, 189, 248, 0.28);
-  border-radius: 0.75rem;
-  background: linear-gradient(145deg, #082f49, #172554 70%, #312e81);
-  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.13);
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.375rem;
+  background: #e2e8f0;
+  font-family: inherit;
+  transition: transform 150ms ease, border-color 150ms ease;
 }
 
-.project-card-violet {
-  border-color: rgba(167, 139, 250, 0.3);
-  background: linear-gradient(145deg, #312e81, #4c1d95 68%, #701a75);
+.dark .project-card {
+  color: #e4e4e7;
+  border-color: #52525b;
+  background: #3f3f46;
 }
 
 .project-card:hover {
-  color: #fff;
-  border-bottom-width: 1px;
-  transform: translateY(-3px);
-  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.2);
+  color: #18181b;
+  border: 1px solid #94a3b8;
+  transform: scale(0.99);
 }
 
-.project-card-topline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #bae6fd;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.dark .project-card:hover {
+  color: #fafafa;
+  border-color: #71717a;
 }
 
 .project-card h2 {
-  margin: 2rem 0 0.75rem;
-  color: #fff;
+  margin: 0 0 0.5rem;
+  color: inherit;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
 }
 
 .project-card p {
-  margin: 0 0 2rem;
-  color: #e2e8f0;
-  line-height: 1.65;
+  margin: 0 0 1.5rem;
+  color: #52525b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.dark .project-card p {
+  color: #d4d4d8;
 }
 
 .project-link {
   margin-top: auto;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #475569;
+}
+
+.dark .project-link {
+  color: #d4d4d8;
 }
 
 @media (max-width: 640px) {

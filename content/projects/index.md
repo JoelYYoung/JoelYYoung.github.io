@@ -7,22 +7,14 @@ hideAuthor: true
 
 <div class="project-grid">
   <a class="project-card" href="https://github.com/JoelYYoung/vibe-typst" target="_blank" rel="noopener">
-    <div class="project-card-topline">
-      <span class="project-kicker">AI · Typst</span>
-      <span aria-hidden="true">↗</span>
-    </div>
     <h2>Vibe Typst</h2>
-    <p>A live Typst slide editor where comments anchored directly to rendered elements guide precise AI-assisted source edits.</p>
-    <span class="project-link">View on GitHub</span>
+    <p>A collaborative Typst slide editor for precise, live AI-assisted revisions.</p>
+    <span class="project-link">GitHub&nbsp;↗</span>
   </a>
 
-  <a class="project-card project-card-violet" href="https://community.obsidian.md/plugins/memo-ai" target="_blank" rel="noopener">
-    <div class="project-card-topline">
-      <span class="project-kicker">AI · Learning</span>
-      <span aria-hidden="true">↗</span>
-    </div>
+  <a class="project-card" href="https://community.obsidian.md/plugins/memo-ai" target="_blank" rel="noopener">
     <h2>Memo AI</h2>
-    <p>An Obsidian plugin that extracts knowledge from notes and combines AI-guided review with SM2 spaced repetition.</p>
-    <span class="project-link">View Obsidian plugin</span>
+    <p>An Obsidian plugin for extracting and reviewing knowledge with spaced repetition.</p>
+    <span class="project-link">Obsidian&nbsp;↗</span>
   </a>
 </div>
