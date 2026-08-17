@@ -90,7 +90,7 @@ publications:
       - name: Yulei Sui
     title: "Multi-Stage On-Demand Program Slicing for Modular Analysis of Multi-Threaded Programs"
     journal: "ISSTA, 2026"
-    pdf: "https://conf.researchr.org/track/issta-2026/issta-2026-research-papers"
+    pdf: "/pdf/issta26.pdf"
     links:
       - name: ISSTA'26
         url: "https://conf.researchr.org/track/issta-2026/issta-2026-research-papers"
@@ -107,10 +107,10 @@ publications:
       - name: Yulei Sui
     title: "Taming and Dissecting Recursions through Interprocedural Weak Topological Ordering"
     journal: "European Conference on Object-Oriented Programming, 2025."
-    pdf: "https://drops.dagstuhl.de/storage/00lipics/lipics-vol333-ecoop2025/LIPIcs.ECOOP.2025.34/LIPIcs.ECOOP.2025.34.pdf"
+    pdf: "/pdf/ecoop25.pdf"
     links:
       - name: ECOOP'25
-        url: "https://2025.ecoop.org/info/accepted-papers"
+        url: "https://2025.ecoop.org/track/ecoop-2025-technical-papers"
       - name: Code
         url: "https://github.com/JoelYYoung/RecTopo"
 ---

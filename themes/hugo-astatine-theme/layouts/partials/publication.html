@@ -29,9 +29,7 @@
         <br>
         {{ if .title }}
         <b>
-            <a href="{{ .pdf | default "#" }}">
-                <span itemprop="name">{{ .title }}</span>
-            </a>
+            <span itemprop="name">{{ .title }}</span>
         </b>
         <meta itemprop="headline" content="{{ .title }}"/>
         {{ end }}
@@ -63,7 +61,7 @@
                 <button class="open-modal text-inherit"
                         data-target="#open-modal-{{- .title | urlize -}}">Cite</button></span>
             {{- end -}}
-            {{- range .links -}}
+            {{- range $link_index, $link := .links -}}
             <span class="publication-link bg-sky-600
                          dark:bg-sky-700 rounded-sm p-1
                          dark:hover:bg-sky-500
@@ -72,9 +70,20 @@
                          dark:text-zinc-200
                          hover:text-gray-900
                          hover:dark:text-gray-800"
-                   itemprop="mainEntityOfPage" href="{{ .url }}">
-                    {{- .name -}}
+                   itemprop="mainEntityOfPage" href="{{ $link.url }}">
+                    {{- $link.name -}}
                 </a></span>
+                {{- if and (eq $link_index 0) $.pdf -}}
+                <span class="publication-link bg-sky-600
+                             dark:bg-sky-700 rounded-sm p-1
+                             dark:hover:bg-sky-500
+                             hover:bg-sky-800 mr-1"><a class="border-none
+                             text-white
+                             dark:text-zinc-200
+                             hover:text-gray-900
+                             hover:dark:text-gray-800"
+                       href="{{ $.pdf }}">PDF</a></span>
+                {{- end -}}
             {{- end -}}
         </div>
     </div>
