@@ -4,7 +4,7 @@
 name: "Jiawei Yang"
 # Your profile picture
 imgname: 
-  name: "img/xavier-yang-clean.jpg"
+  name: "img/xavier-yang.jpg"
   alt: "Portrait of Xavier Yang"
   type: image/jpeg
 # More sources can be added (optional) using 

@@ -73,7 +73,7 @@ pygmentsStyle = "native"
 
     # Main image for the author. This will be the default image for SEO.
     [params.imgname]
-        name = "img/xavier-yang-clean.jpg"
+        name = "img/xavier-yang.jpg"
         # Add an alt description for the image
         alt = "Profile picture"
 
