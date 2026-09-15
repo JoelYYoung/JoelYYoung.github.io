@@ -95,7 +95,7 @@ publications:
       - name: ISSTA'26
         url: "https://conf.researchr.org/track/issta-2026/issta-2026-research-papers"
       - name: Code
-        url: "https://doi.org/10.5281/zenodo.21785499"
+        url: "https://github.com/SVF-tools/SVF/tree/master/svf/include/MTA"
   - authors:
       - name: Jiawei Yang
         me: true
